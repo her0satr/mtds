@@ -1,0 +1,246 @@
+@charset "utf-8";
+/* CSS Document */
+
+/***************************
+GLOBAL/BASE STYLES
+***************************/
+html,body									{background:url(../img/global/sitebgd.jpg) top center repeat-x #F1EEEB;}
+body										{font:12px/20px Arial, Helvetica, sans-serif; color:#333; position:relative;}
+a											{color:#318091; text-decoration:underline;}
+a:hover										{color:#000; text-decoration:underline;}
+#header										{height:121px; position:fixed; width:100%; z-index:10000; background:url(../img/global/headerback.gif);}
+#wrapper									{height:auto%; min-height: 100%; width: 100%; padding-top:120px;}
+#container									{height:100%; padding-bottom:318px;}
+#footer 									{margin-top: -318px; height: 318px; background:#225E6A; color:#fff;}
+
+/***************************
+HEADER
+***************************/
+#headercont									{width:980px; margin:auto; height:120px;}
+#logo										{float:left; padding-top:20px; width:285px; height:61px;}
+#contactdetails								{float:left; padding-top:24px; width:385px; color:#fff; font-size:17px; color:#fff;}
+#login										{width:290px; float:right; padding-top:15px; font-size:11px;}
+	#login p								{display:block; background:url(../img/icons/lock.png) left top no-repeat; padding:5px 0 0 25px; color:#fff; margin-bottom:5px;}
+	#login #clientlogin						{height:26px; background:#30828F; border:1px solid #30828F; text-indent:5px; font-size:11px; color:#fff; width:210px;}
+	#addthis a								{float:left; margin-top:5px;}
+#nav										{}
+#nav a										{float:left; display:block; line-height:40px; color:#fff; text-decoration:none; padding:0 25px; height:40px; font-size:14px;}
+#nav a:hover								{background:#122F34;}
+#navOn a, #navOn a:hover					{background:#fff; color:#333; border:1px solid #ccc; line-height:40px;}
+#nav a.active								{background:#122F34; color:#fff;}
+#headerquote								{float:left; width:198px; margin-right:11px; border-right:1px solid #ccc; padding-right:10px;}
+#headerslide								{float:left; width:738px;}
+
+/***************************
+FOOTER
+***************************/
+.footercol									{width:220px; margin:10px 33px 0 0; float:left; font-size:11px; color:#E4E0D8;}
+	.footercol a							{color:#9FB8BF; display:block; text-decoration:none; line-height:18px;}
+	.footercol a:hover						{color:#fff;}
+	.footercol p							{margin:10px 0;}
+.others a									{margin:5px 0 0 0; display:block; float:left; height:25px;}
+#rarrec										{float:left; width:124px; margin-top:10px;}
+#sagepay									{float:left; width:209px; margin-top:10px;}
+#w3c										{float:right; width:80px; margin:0 50px 0 20px; padding-top:20px;}
+	#w3c img								{margin-top:5px;}
+#fsb										{float:left; width:68px; margin:10px 20px 0 0;}
+#footer .content							{position:relative;}
+
+/***************************
+HOME
+***************************/
+#hometop									{-webkit-border-radius:0 0 5px 5px; -moz-border-radius:0 0 5px 5px; border-radius:0 0 5px 5px; behavior: url(PIE.htc); position:relative; padding:10px; border:1px solid #ccc; border-top:0; background:#fff;}
+.headerthreebox								{width:297px; float:left; margin:10px 20px 0 0; border-right:1px solid #ccc; padding-right:10px; height:120px; position:relative; font-size:11px;}
+.headerthreebox a							{font-size:12px; text-decoration:none; letter-spacing:1px; color:#555;}
+#headerthreebox	a							{width:297px; float:left; margin:10px 0 0 0; height:120px; position:relative; background:url(../img/home/seboost.png) top center no-repeat; font-size:11px; display:block;}
+#headerthreebox span						{display:none;}
+#quotebuilder								{background:url(../img/home/quote-builder.png) no-repeat;}
+#quotebuilder p								{font-size:12px; letter-spacing:1px;}
+#findoutmore								{margin-top:10px;}
+.findoutmorefield							{width:225px; margin-bottom:10px; padding:7px; font-size:11px; color:#555;}
+
+.headerthreeboxinner						{width:300px; float:left; margin:10px 20px 0 0; border-right:1px solid #ccc; padding-right:10px;height:60px; position:relative; font-size:11px;}
+#headerthreeboxinner						{width:295px; float:left; margin:10px 0 0 0; height:60px; position:relative; font-size:11px;}
+
+/***************************
+CONTENT
+***************************/
+.content									{width:980px; margin:auto;}
+#banner										{position:relative; width:960px; height:146px;}
+#bannertext									{position:absolute; top:10px; right:10px;}
+#bannertext img								{margin-bottom:10px;}
+.roundedbox									{-webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; behavior: url(PIE.htc); position:relative; border:1px solid #ccc; background:#fff; padding: 10px; margin: 0 0 5px 0;}
+.roundedboxqg								{-webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; behavior: url(PIE.htc); position:relative; background:#3BA4B9; padding:10px; margin:10px 0;}
+.roundedboxorange							{-webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; behavior: url(PIE.htc); position:relative; background:#122F34; padding:10px; margin:10px 0;}
+
+#hometop .roundedbox						{margin:0;}
+#leftcol, #rightcol							{float:left; width:220px; padding-bottom:10px;}
+#centercol									{float:left; width:520px; margin:0 10px; padding-bottom:10px;}
+#centertwocol								{float:left; width:750px; margin:0 0 0 10px; padding-bottom:10px;}
+.pricediv									{border-bottom:1px solid #ccc; margin-top:10px; background:url(../img/global/bluebullet.png) right center no-repeat;}
+.pricediv:hover								{display:block; background:url(../img/global/blackbullet.png) right center no-repeat;}
+.pricediv p									{color:#256370; font-size:20px; line-height:30px;}
+.pricediv a									{text-decoration:none; color:#333; display:block;}
+.pricediv a:hover 							{color:#FF9900;}
+.standardlist a								{display:block; padding-left:40px; color:#333; text-decoration:none; margin-bottom:10px;}
+.standardlist a:hover						{color:#47ACC1; text-decoration:none;}
+#blog										{min-height:260px;}
+#blog p										{margin:10px 0; font-size:11px;}
+#iconphone									{background:url(../img/contact-us/icon-phone.png) left center no-repeat; padding-left:40px; line-height:34px; margin-top:10px;}
+#iconemail									{background:url(../img/contact-us/icon-email.png) left center no-repeat; padding-left:40px; line-height:24px;}
+#iconsupport								{background:url(../img/contact-us/icon-support.png) left center no-repeat; padding-left:40px; line-height:24px; margin:5px 0 0 0;}
+
+/***************************
+BUTTONS
+***************************/
+.button	a									{-webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px; behavior: url(PIE.htc); position:relative; background:url(arrow.png) right center no-repeat #48ADC2; line-height:30px; padding:0 30px 0 10px; display:block; color:#fff; text-decoration:none; font-size:11px;}
+.button a:hover								{background:url(arrow.png) right center no-repeat #FF9900;}
+
+.button2	a								{-webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px; behavior: url(PIE.htc); position:relative; background:url(arrow.png) right center no-repeat #223232; line-height:30px; padding:0 30px 0 10px; display:block; color:#fff; text-decoration:none; font-size:11px;}
+.button2 a:hover							{background:url(arrow.png) right center no-repeat #000;}
+
+.button3	a								{-webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px; behavior: url(PIE.htc); position:relative; background:url(arrow.png) right center no-repeat #30828F; line-height:30px; padding:0 30px 0 10px; display:block; color:#fff; text-decoration:none; font-size:11px;}
+.button3 a:hover							{background:url(arrow.png) right center no-repeat #00ADEC;}
+
+.button4	a									{-webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px; behavior: url(PIE.htc); position:relative; background:url(arrow.png) right center no-repeat #223232; line-height:30px; padding:0 30px 0 10px; display:block; color:#fff; text-decoration:none; font-size:13px;}
+.button4 a:hover								{background:url(arrow.png) right center no-repeat #48ADC2;}
+
+.viewmore a									{background:url(viewmore.png); width:91px; height:29px; display:block; position:absolute; bottom:-27px; right:110px;}
+.viewmore a:hover							{background-position:0 29px;}
+.viewmore span								{display:none;}
+
+/***************************
+FONTS
+***************************/
+h1											{font:lighter 20px/25px Arial, Helvetica, sans-serif; color:#333; display:block; margin-bottom:10px; padding-bottom:5px;}
+h2											{font:bold 16px/40px Arial, Helvetica, sans-serif; color:#333; margin-bottom:10px; display:inline; padding-bottom:5px;}
+h3											{font:lighter 13px/43px Arial, Helvetica, sans-serif; color:#333; display:block; margin-bottom:10px; padding-bottom:5px;}
+#getquote h3								{margin-bottom:0px;}
+h4											{font:13px/20px Arial, Helvetica, sans-serif; color:#243434;}
+h5											{font:lighter 16px/45px Arial, Helvetica, sans-serif; color:#000; margin-bottom:10px;}
+h5#pricespage								{margin-top:10px;}
+#aboutpom h5								{font:bold 14px/35px Arial, Helvetica, sans-serif; color:#466868; margin-bottom:0px; border-top:4px solid #e9e9e9; margin-top:10px;}
+.footercol h4								{font:11px/20px Arial, Helvetica, sans-serif; color:#fff; border-bottom:1px dotted #A9C0C5; margin-bottom:10px; padding-bottom:5px;}
+.headerthreebox h4							{font:lighter 23px/22px Arial, Helvetica, sans-serif; color:#333; display:inline;}
+.bluesixteen								{color:#47ACC1; font-size:16px; font-weight:bold;}
+.blue										{color:#47ACC1;}
+.dbluesixteen								{color:#213232; font-size:15px; font-weight:bold;}
+.orangesixteen								{color:#FF9900; font-size:15px; font-weight:bold;}
+.orangesixteen a							{color:#FF9900; font-size:15px; font-weight:bold; text-decoration:none;}
+.orangesixteen a:hover						{color:#000; text-decoration:none;}
+.orange										{color:#FF9900; font-weight:bold;}
+.orangelight								{color:#FF9900;}
+.sizeeleven									{font-size:11px;}
+.large										{font-size:30px; line-height:40px; color:#47ACC1;}
+
+/***************************
+MISC
+***************************/
+.poounder									{border-bottom:3px solid #CCC77A;}
+.poounderpad								{border-bottom:3px solid #CCC77A; margin:10px 0;}
+.orangeunder								{border-bottom:3px solid #FF9900;}
+.blueunder									{border-bottom:3px solid #47ACC1;}
+.blueback									{color:#fff; background:url(sidebarback.png); height:34px; line-height:32px; text-indent:10px; font-weight:bold; display:block;}
+.bluebacktwo								{color:#fff; background:url(sidebarback2.png); height:34px; line-height:32px; text-indent:10px; font-weight:bold; display:block;}
+#iconPig									{background:url(../img/icons/pig.png) left center no-repeat; padding-left:45px;}
+#iconChalk									{background:url(../img/icons/chalkboard.png) left center no-repeat; padding-left:45px;}
+#iconMega									{background:url(../img/icons/megaphone.png) left center no-repeat; padding-left:45px;}
+#iconSpeech									{background:url(../img/icons/speech.png) left center no-repeat; padding-left:45px;}
+#iconMic									{background:url(../img/icons/microphone.png) left center no-repeat; padding-left:45px;}
+#iconStandard								{background:url(../img/icons/tools.png) left center no-repeat; padding-left:45px;}
+#iconScreen									{background:url(screen.png) left center no-repeat; padding-left:28px; line-height:30px; padding-top:2px;}
+
+ul.poolist, ul.poolist li					{list-style:none; padding:0; margin:0;}
+ul.poolist 									{margin-top:10px;}
+ul.poolist li								{background:url(orangebullet.png) left top no-repeat; padding-left:18px; margin-bottom:5px;}
+
+ul.bluelist, ul.bluelist li					{list-style:none; padding:0; margin:0;}
+ul.bluelist 								{margin:20px 10px;}
+ul.bluelist li								{background:url(../img/global/greybullet.png) left top no-repeat; padding-left:18px; margin-bottom:7px;}
+
+#listleft									{width:230px; padding-right:10px; float:left;}
+#listright									{width:230px; padding-left:10px; float:left;}
+.freequotefield								{font-size:11px; color:#666; width:180px; padding:7px; border:1px solid #ccc; margin-top:5px;}
+.promocheck									{float:left; width:20px; padding-right:5px; margin:5px 0;}
+.promotext									{float:left; width:168px; font-size:10px; color:#555; line-height:15px; margin:5px 0;}
+.promotext2									{float:left; width:350px; font-size:10px; color:#555; line-height:15px; margin:5px 0; line-height:20px;}
+.pricematch img								{margin-bottom:10px;}
+
+a.sfdomain									{background:url(sf-domain.png) left center no-repeat;}
+a.sfvoucher									{background:url(sf-voucher.png) left center no-repeat;}
+a.sfhosting									{background:url(sf-hosting.png) left center no-repeat;}
+a.sfemail									{background:url(sf-email.png) left center no-repeat;}
+a.sfsupport									{background:url(sf-support.png) left center no-repeat;}
+a.sfseo										{background:url(sf-seo.png) left center no-repeat;}
+a.sfstats									{background:url(sf-stats.png) left center no-repeat;}
+a.sflogo									{background:url(sf-logo.png) left center no-repeat;}
+a.sfphoto									{background:url(sf-photo.png) left center no-repeat;}
+a.sfcms										{background:url(sf-cms.png) left center no-repeat;}
+/** **/
+a.sfvoucher,
+a.sfemail,
+a.sfseo,
+a.sfstats									{line-height:17px;}
+/** **/
+a.sfdomain,
+a.sfhosting,
+a.sfsupport,
+a.sflogo,
+a.sfphoto,
+a.sfcms										{background-position:left center; background-repeat:none; line-height:30px;}
+.testimonaials								{font-size:11px; line-height:18px;}
+.testimonaials .orange						{padding-top:10px;}
+.magtop										{margin-top:10px;}
+ul.bluebull 								{margin:10px 0; padding:0;}
+ul.bluebull li								{list-style:none; margin:0 0 15px 0; padding:0 20px 0 20px; background:url(../img/global/greybullet.png) left top no-repeat; display:block;}
+#paymentform								{width:300px; float:left;}
+#cclogos									{background:url(../img/misc/secure-website-payments.jpg); width:280px; height:94px; float:left; margin-top:20px;}
+#formcontainer form p 						{position: relative; margin: 1px 0;}
+#formcontainer form p label 				{position: absolute; top: 5px; left: 0; margin: 5px 5px 5px 6px; padding: 0; font-size:11px; color:#555;}
+
+.quoteforml, .quoteformr			{width:226px; font-size:11px; color:#666; padding:7px; border:1px solid #ccc; margin:5px 0;}
+.quoteformr							{margin-left:10px;}
+.quoteformin						{width:240px; font-size:11px; color:#666; padding:7px; border:1px solid #ccc; margin:5px 0;}
+.quoteformtxt						{width:480px; font-size:11px; color:#666; padding:7px; border:1px solid #ccc; margin:5px 0;}
+
+.labell, .labelr					{width:226px; font-size:11px; color:#666; margin:0; display:block; float:left; font-weight:bold; color:#000;}
+.labelr								{margin-left:29px;}
+
+.quoteforml, .quoteformr			{width:226px; font-size:11px; color:#666; padding:7px; border:1px solid #ccc; margin:5px 0;}
+.quoteformr							{margin-left:10px;}
+.quoteformin						{width:240px; font-size:11px; color:#666; padding:7px; border:1px solid #ccc; margin:5px 0;}
+.quoteformtxt						{width:480px; font-size:11px; color:#666; padding:7px; border:1px solid #ccc; margin:5px 0;}
+
+.qlabell, .qlabelr					{width:226px; font-size:11px; color:#666; margin:0; display:block; float:left; font-weight:bold; color:#000;}
+.qlabelr							{margin-left:30px;}
+#getquote							{}
+#moreinfo							{margin-top:10px;}
+
+#backtotop a						{background:url(../img/global/back-top.png); width:38px; height:37px; display:block; position:absolute; top:-15px; right:0px; z-index:1000;}
+#backtotop span						{display:none;}
+.imgright							{margin:0 0 10px 10px;}
+#latestbox							{ }
+
+#undernav	{margin-top:10px;}
+.navigation { list-style:none; width:800px; height:60px;}
+.navigation { display:inline; text-indent:-9999px; }
+.navigation a { display:block; float:left; width:290px; height:60px; background-image:url("../img/banners/undernav.png");}
+
+.navigation a.portfolio { background-position:0 0; margin-right:44px;}
+.navigation a.quotegen { background-position:-290px 0; margin-right:44px;}
+.navigation a.cms { background-position:-580px 0;}
+
+
+.qggreen
+{color:#B2D44C;}
+.qgblue
+{color:#00ADEC;}
+.qgorange
+{color:#F1752B;}
+.qgpink
+{color:#D23A83;}
+.qggrey
+{color:#8EADB0;}
+
+.hpot
+{display:none;}
