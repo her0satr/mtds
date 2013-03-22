@@ -1,0 +1,51 @@
+/**
+* @author    JoomlaShine.com http://www.joomlashine.com
+* @copyright Copyright (C) 2008 - 2011 JoomlaShine.com. All rights reserved.
+* @license   JoomlaShine.com Proprietary License
+*/
+@import url(http://fonts.googleapis.com/css?family=Nobile:regular,bold);
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body #jsn-menu a,
+body #jsn-menu span,
+body #jsn-gotoplink,
+body .componentheading,
+body .contentheading {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+body.jsn-specialfont h1,
+body.jsn-specialfont h2,
+body.jsn-specialfont h3,
+body.jsn-specialfont h4,
+body.jsn-specialfont h5,
+body.jsn-specialfont h6,
+body.jsn-specialfont #jsn-menu a,
+body.jsn-specialfont #jsn-menu span,
+body.jsn-specialfont #jsn-gotoplink,
+body.jsn-specialfont .componentheading,
+body.jsn-specialfont .contentheading {
+	font-family: Nobile, Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+body.jsn-textsize-small {
+	font-size: 65%;
+}
+body.jsn-textsize-medium {
+	font-size: 75%;
+}
+body.jsn-textsize-big {
+	font-size: 85%;
+}
+body.jsn-textstyle-business.jsn-specialfont ul.menu-mainmenu > li > a {
+	padding-bottom: 8px;
+}
+body.jsn-textstyle-business.jsn-specialfont .jsn-moduletitle {
+	font-weight: normal;
+}

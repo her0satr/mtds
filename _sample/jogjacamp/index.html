@@ -1,0 +1,29 @@
+<style>
+.login { background: url("bgLogin-bot.png") no-repeat scroll left bottom transparent; margin-bottom: 10px; padding-bottom: 1px; }
+.loginCell { background: url("bgLogin-top.png") no-repeat scroll left top #EEEEEE; min-height: 153px; padding: 10px; }
+.loginCell h2.title { border-bottom: 1px solid #CCCCCC; margin: 5px 0 10px !important; color: #1C252E; font-size: 12px; padding: 2px 1px;  }
+h2 { font-size: 14px; }
+.loginCell p { margin: 4px 0 !important; padding: 5px 0 !important; }
+input.loginText { background: url("bgLoginInput.gif") no-repeat scroll left top transparent; border: medium none; color: #666666; font-size: 11px; padding: 6px 10px; width: 190px; }
+input.loginButton { background: url("bgLoginButton.gif") no-repeat scroll 0 0 transparent; border: medium none; color: #888888; cursor: pointer; font-size: 11px; font-weight: bold; height: 24px; padding-bottom: 1px; width: 80px; }
+input.loginButton:hover { color: #484848; }
+.loginLink { float: right; font-size: 10px; margin-top: -40px; padding: 0 2px; }
+.loginLink a { color: #747474; text-decoration: underline; }
+.clear { clear: both; }
+</style>
+<div style="padding: 10px; width: 211px;">
+	<div class="login">
+		<div class="loginCell">
+			<h2 class="title">User Login</h2>
+			<form method="post" action="index.php?action=admin.login">
+		<input type="hidden" value="user" name="login_as">
+		<input type="hidden" value="_home.main" name="back_url">
+		<input type="hidden" value="_users.editprofile" name="next_url">
+			<p><input type="text" value="Username" class="loginText" id="login_user" name="username"></p>
+		<p><input type="password" value="Password" class="loginText" id="login_pass" name="password"></p>
+		<p><input type="submit" class="loginButton" name="B12" value="Login"></p>
+	</form>
+	<div class="loginLink"><a href="index.php?action=chpasswd.forgotpass">Forgot Password?</a></div>
+	<div class="clear"></div>	</div>
+	</div>
+</div>

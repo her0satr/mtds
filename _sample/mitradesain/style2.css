@@ -1,0 +1,59 @@
+@charset "utf-8";
+.domain_ext {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+#domainname {
+	margin-bottom: 10px;
+	margin-top: 10px;
+	height: 20px;
+	margin-left: 5px;
+	padding-left: 5px;
+}
+
+.domain_ext li {
+	display: block;
+	padding: 0px 10px 0px 5px;
+	float: left;
+	width: 60px;
+	font: 12px Arial, Helvetica, sans-serif;
+	letter-spacing: normal;
+	word-spacing: normal;
+}
+#submitter {
+	margin: 5px;
+}
+#ajaxdomaintoggle{
+	margin: 10px 10px 10px 0px;
+	float: right;
+}
+.domainerrors{
+	color: #FF0000;
+	letter-spacing: normal;
+	word-spacing: normal;
+	font: 12px Arial, Helvetica, sans-serif;
+}
+.dtaken{
+	letter-spacing: normal;
+	word-spacing: normal;
+	list-style:none;
+}
+.dtaken span{
+	border-bottom: 1px solid #FF0000;
+	font-weight: bold;
+}
+.davailable{
+	letter-spacing: normal;
+	word-spacing: normal;
+	list-style:none;
+}
+.davailable span{
+	border-bottom: 1px solid #00CC00;
+	font-weight: bold;
+	color: #00CC00;
+}
+.davailable a{
+	color: #00CC00;
+}
+.ajaxdomains{margin-bottom:10px;}
