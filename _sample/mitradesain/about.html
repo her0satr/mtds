@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>About | PT. Mitra Desain</title>
+	<script src="http://localhost:8666/mitradesain/trunk/static/js/jquery.1.7.2.min.js"></script> 
+	<script src="jquery.bxSlider.min.js"></script>
+	<script src="jquery.blackandwhite.min.js"></script>
+	<style>
+body {height:100%;font:13px 'PT Sans', Arial, Tahoma, Verdana, Sans-Serif;color:#626363;}
+div, html, body, p, ul, ol, li, a, form, img, table, td, h1, h2, h3, h4, h5, h6, blockquote, header, section, footer, aside, nav, article, figure, figcaption, dl, dt, dd {margin:0;padding:0;} 
+img {border:none;}
+ul, li {list-style:none;}
+a, a:active, a:visited {text-decoration:none;color:#3fa3c9;}
+a:hover {text-decoration:none;color:#3fa3c9;}
+.clear { clear: both; }
+
+.bwWrapper {position:relative;display:block;}
+.featured_list {width:100%;overflow:hidden;clear:both;}
+.featured_list h3 {font-size:17px;color:#434242;padding:0 0 12px 0;margin:0 0 24px 0;border-bottom:1px solid #e7e6e6;}
+.featured_list ul {padding:0 0 50px 0;float:left;}
+.featured_list ul li {float:left;position:relative;width:221px;padding:0;margin:0 25px 28px 0;}
+.featured_list ul.features_slider li {width:250px;margin-right:0;}
+.featured_list ul li div {background:#f6f3f3;position:relative;text-align:center;width:202px;padding:5px;margin:0 25px 0 0;border-bottom:1px solid #c8c6c6;}
+.featured_list ul li .bwWrapper {width:auto;padding:0;margin:0;border-bottom:none;}
+.featured_list ul li:nth-child(4n+4) {margin-right:0;}
+.featured_list ul li:nth-child(4n+4) div {margin-right:0;}
+.featured_list ul.features_slider li:nth-child(4n+4) div {margin-right:28px;}
+.featured_list ul.features_slider li:nth-child(4n+4) .bwWrapper {margin-right:0;}
+.featured_list ul li:hover div {border-bottom:1px solid #5eafcd;}
+.featured_list ul li:hover .bwWrapper {border-bottom:none;}
+.featured_list ul li p {padding:4px 0 3px 0;}
+.featured_list ul li p strong {font-size:14px;}
+.featured_list ul li p strong a {color:#626363;}
+.featured_list ul li p span {color:#5eafcd;padding-top:2px;display:block;font-style:italic;}
+.featured_list ul li .zoom {visibility:hidden;position:absolute;top:101px;right:0px;display:none;width:23px;height:23px;background:#5eafcd url(../images/features/zoom.png) no-repeat;}
+.featured_list ul li:hover .zoom {visibility:visible;}
+
+.intro_text {padding:10px 0 50px 0;}
+.intro_text .bwWrapper {border:5px solid #f6f3f3;float:left;font-size:0;line-height:0;}
+.intro_text div.desc {float:right;width:475px;}
+.intro_text div.desc h4 {padding-bottom:15px;}
+.intro_text .intro_slider {margin:0;}
+.intro_text .intro_slider li {float:left;width:100%;}
+.intro_text .bx-pager {margin: 15px auto; width: 100px; }
+.intro_text .bx-pager a.pager-link {text-indent:-9999em;float:left;height:10px;width:10px;display:block;background:url(sprite.png) 0 -261px no-repeat;margin-right:4px;}
+.intro_text .bx-pager a.pager-active, .intro_text .bx-pager a.pager-link:hover {background-position:-15px -261px;background-color:#5eafcd;}
+
+.why_choose_explore {padding:0 0 45px 0;}
+.why_choose_explore h4 {margin:0 0 35px 0;padding-bottom:10px;border-bottom:1px solid #e7e6e6;}
+.why_choose_explore .features_explore {float:right;}
+.why_choose_explore .why_choose ul li:first-child {padding-top:0;}
+.why_choose_explore .why_choose ul li:first-child:before {top:0;}
+.why_choose_explore .why_choose {float:left;width:445px;padding:0 0 20px 0;}
+.why_choose_explore .why_choose h4 {padding:20px 0 10px 0;}
+.why_choose_explore .why_choose ul li {padding:10px 0 10px 35px;position:relative;}
+.why_choose_explore .why_choose ul li:before {content:'';position:absolute;top:10px;left:0;display:block;width:18px;height:18px;background:#5eafcd url(sprite.png) 0 -189px no-repeat;-webkit-border-radius:13px;-moz-border-radius:13px;border-radius:13px;behavior: url(PIE.htc);}
+
+.process h4 {margin:0 0 20px 0;padding:10px 0;border-bottom:1px solid #e7e6e6;}
+.process ul {padding-bottom:80px;}
+.process ul li {float:left;width:220px;padding:0 22px 0 0;}
+.process ul li:last-child {padding-right:0;}
+.process ul li h3 {color:#626363;font-size:34px;color:#d8d8d8;padding-bottom:15px;}
+.process ul li h3 span {font-size:11px;color:#fff;background:#5eafcd;padding:1px 8px;position:relative;top:-4px;font-weight:normal;}
+	</style>
+	<script>
+	$(document).ready(function() {
+		$('.intro_slider').bxSlider({ auto: false, controls : false, mode: 'fade', pager: true });
+		$('.bwWrapper').BlackAndWhite({ hoverEffect : true, webworkerPath : false, responsive:true, invertHoverEffect:false });
+	});
+	</script>
+</head>
+<body>
+
+
+<div class="content_block">
+	<div style="width: 960px; margin: 0 auto;">
+		<div class="intro_text">
+			<ul class="intro_slider">
+				<li>
+					<div class="bwWrapper"><img src="01.jpg" width="426" height="238" alt="" /></div>
+					<div class="desc">
+						<h4>Company's Profile!</h4>
+						<p>PT. Mitra Desain adalah sebuah penyelenggara JASA PEMBUTAN WEBSITE yang didirikan di JAKARTA pada 17 Januari 2004 dengan layanan utama pembuatan website untuk keperluan company profileperusahaan. Seiring waktu kami tumbuh dan berkembang dengan memberikan pelayanan tambahan berupa toko online, web lembaga, web sekolah, web pribadi, web blog, web portal dll.</p><br />
+						<p>PT. Mitra Desain memiliki VISI untuk berbagi kepada para perusahaan dan ukm untuk dapat meningkatkan penjualan dan memajukan bisnisnya dengan bantuan website, oleh karenanya kami memberikan jasa layanan pembuatan website dengan harga terjangkau.</p>
+					</div>
+				</li>
+				<li>
+					<div class="bwWrapper"><img src="02.png" width="426" height="238" alt="" /></div>
+					<div class="desc">
+						<h4>Visi</h4>
+						<p>PT. Mitra Desain memiliki VISI untuk berbagi kepada para perusahaan dan ukm untuk dapat meningkatkan penjualan dan memajukan bisnisnya dengan bantuan website, oleh karenanya kami memberikan jasa layanan pembuatan website dengan harga terjangkau.</p>
+					</div>
+				</li>
+				<li>
+					<div class="bwWrapper"><img src="03.jpg" width="426" height="238" alt="" /></div>
+					<div class="desc">
+						<h4>Profisional Website Design & Development</h4>
+						<p>PT. Mitra Desain merupakan penyedia jasa pembuatan website (web design), SEO & SEM dan web development. Dengan tim yang berisi profesional berpengalaman di bidangnya, kami berkomitmen memberikan layanan terbaik yang berfokus pada kebutuhan, keinginan dan kesuksesan brand klien kami.</p>
+					</div>
+				</li>
+				<li>
+					<div class="bwWrapper"><img src="04.jpg" width="426" height="238" alt="" /></div>
+					<div class="desc">
+						<h4>Our Work</h4>
+						<p>PT. Mitra Desain bekerja dengan prinsip service-oriented, selalu berusaha memahami kebutuhan dan kepentingan klien, mencari solusi dan ide-ide segar yang diaplikasikan dalam bentuk web design, strategi marketing dan rencana sistematis yang menguntungkan brand/bisnis klien.</p>	
+					</div>
+				</li>
+				<li>
+					<div class="bwWrapper"><img src="05.png" width="426" height="238" alt="" /></div>
+					<div class="desc">
+						<h4>Our Team</h4>
+						<table border="0"><tbody>
+						<tr>
+							<td>Direktur&nbsp;&nbsp;&nbsp;&nbsp; Utama&nbsp;&nbsp;</td>
+							<td>: Moch Wahib Dariyadi M.Pd</td></tr>
+						<tr>
+							<td>Wakil Direktur &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+							<td><p>: Betric Feriandika S.Pd</p></td></tr>
+						<tr>
+							<td>Marketing &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+							<td>: Naylul Maghfiroh</td></tr>
+						<tr>
+							<td>Desainer &amp; Progammer</td>
+							<td>: Faiqul Ihsan S.Kom</td></tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>: Andi Galih Zulkarnain S.Sn</td></tr>
+						<tr>
+											<td>&nbsp;</td>
+											<td>: Hery Santoso S.Kom</td>
+										</tr><tr>
+											<td>&nbsp;</td>
+											<td>: Dendy Tri Indra Wijaya</td>
+										</tr><tr>
+											<td>&nbsp;</td>
+											<td>: Umam</td>
+										</tr><tr>
+											<td>&nbsp;</td>
+											<td><p>: Ahmad Zidan</p></td>
+										</tr><tr>
+											<td>&nbsp;</td>
+											<td>: Eko Latif Hidayat</td>
+										</tr><tr>
+											<td>&nbsp;</td>
+											<td>: Dyah</td>
+										</tr><tr>
+											<td>&nbsp;</td>
+											<td>: Indra</td>
+										</tr><tr>
+											<td>&nbsp;</td>
+											<td>: Rhomadhona</td>
+										</tr><tr>
+											<td>&nbsp;</td>
+											<td>: Fahmi R</td>
+										</tr>
+										<tr>
+											<td>&nbsp;</td>
+											<td>: Dina Rahma</td>
+										</tr>
+						</tbody></table>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="process" style="padding: 0 0 25px 0px;">
+			<h4>Our Process</h4>
+			<ul>
+				<li>
+					<h3><span>Step 1</span> Research</h3>
+					<p>Mendengarkan dan memahami semua keinginan dan kebutuhan Anda untuk menghasilkan solusi yang maksimal.</p>
+				</li>
+				<li>
+					<h3><span>Step 2</span> Design</h3>
+					<p>Merancang strategi SEO & SEM sesuai kepentingan bisnis Anda untuk mencapai potensi keuntungan yang diharapkan.</p>
+				</li>
+				<li>
+					<h3><span>Step 3</span> Develop</h3>
+					<p>Menciptakan sarana dan alat bantu pemasaran bisnis yang kreatif, unik dan bermutu untuk mengkomunikasikan bisnis dan brand Anda.</p>
+				</li>
+				<li>
+					<h3><span>Step 4</span> Deliver</h3>
+					<p>Kami hanya memberikan layanan kreatif yang bermutu. Kreativitas yang akan selalu diingat konsumen dan berdaya jual tinggi.</p>
+				</li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+		
+		<div class="why_choose_explore">
+			<h4>Why Choose Mitra Desain ?  We’ll Tell You!</h4>
+			<div class="why_choose">
+				<ul>
+					<li>Dapat menyesuaikan dengan hosting server pilihan clien.</li>
+					<li>Dunia-Online bekerjasama dengan hosting server yang stabil.</li>
+					<li>Desain template menarik, unik dan mudah dikuasai pengunjung (user friendly).</li>
+					<li>First Impression adalah yang paling penting ketika pengunjung masuk ke website anda, dan kami memberikan website dengan tampilan yang profesional dan elegan sesuai bisnis anda.</li>
+				</ul>
+			</div>
+			<div class="why_choose">
+				<ul>
+					<li>Memberikan bantuan kepada klien dalam mengoperasikan situs.</li>
+					<li>Hasil desain dioptimasi lebih ringan & menghemat bandwith server.</li>
+					<li>Desain template (tampilan grafis) original dan profesional disesuaikan dengan profil dan kebutuhan customer.</li>
+					<li>Garansi sistem. Setiap masalah dan kerusakan sistem yang terjadi pada website klien akan kami perbaiki tanpa biaya tambahan.</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+		
+		<div class="featured_list">
+			<div class="features_slider_wrap">
+				<h3>Payment</h3>
+				<ul class="gallery" >
+					<li><div><div class="bwWrapper"><a href="bca.png" rel="prettyPhoto[gallery2]"><img src="bca.png" alt="" /></a><p><strong><a href="single_full.html">Transfer BCA</a></strong><span>No Rek : 8160683733 </span><span>an: Moch Wahib Dariyadi</span><span>BCA Borobudur</span></p></div></div></li>
+					<li><div><div class="bwWrapper"><a href="bni.png" rel="prettyPhoto[gallery2]"><img src="bni.png" alt="" /></a><p><strong><a href="single_full.html">Transfer BNI</a></strong><span>No Rek : 0132257978 </span><span>an: Moch Wahib Dariyadi</span><span>Cab Universitas Negeri Malang</span></p></div></div></li>
+					<li><div><div class="bwWrapper"><a href="mandiri.png" rel="prettyPhoto[gallery2]"><img src="mandiri.png" alt="" /></a><p><strong><a href="single_full.html">Transfer Mandiri</a></strong><span>No Rek : 1440010419270 </span><span>an: Moch Wahib Dariyadi</span><span>Cab. Wahid Hasyim Malang</span></p></div></div></li>
+					<li><div><div class="bwWrapper"><a href="paypal.png" rel="prettyPhoto[gallery2]"><img src="paypal.png" alt="" /></a><p><strong><a href="single_full.html">Transfer Paypal</a></strong><span>Account : mitradesain@yahoo.com</span><span>Paypal.com </span></p></div></div></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html> 
