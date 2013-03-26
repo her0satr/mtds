@@ -1,33 +1,32 @@
 <div><img src="static/image/header-logo.jpg" style="width: 100%;" /></div>
 
-<div id="selma">
-	<div class="dropdown">
-		<ul>
-			<li><a href="#">Beranda</a></li>
-			<li><a href="#">Produk Jasa</a>
+<div id="cssmenu">
+	<ul>
+	   <li class="main active"><a href='#'><span class="home">Home</span></a></li>
+	   <li class="main"><a href='#'><span class="product">Product</span></a></li>
+	   <li class="main"><a href='#'><span class="profile">Profile</span></a></li>
+	   <li class="main"><a href='#'><span class="payment">Pembayaran</span></a></li>
+	   <li class="main"><a href='#'><span class="porto">Protofolio</span></a></li>
+	   <li class="main has-sub">
+			<a href='#'><span class="news">News</span></a>
+			<ul>
+				<li class='has-sub'><a href='#'><span>Product 1</span></a>
 				<ul>
-					<li><a href="#">Jasa #1</a></li>
-					<li><a href="#">Jasa #2</a></li>
-					<li><a href="#">Jasa #3</a></li>
-					<li><a href="#">Jasa #4</a></li>
-					<li><a href="#">Jasa #5</a></li>
+				   <li><a href='#'><span>Sub Product</span></a></li>
+				   <li class='last'><a href='#'><span>Sub Product</span></a></li>
 				</ul>
-			</li>
-			<li><a href="#">Profil</a>
+			 </li>
+			 <li class='has-sub'><a href='#'><span>Product 2</span></a>
 				<ul>
-					<li><a href="#">Profil #1</a></li>
-					<li><a href="#">Profil #2</a></li>
-					<li><a href="#">Profil #3</a></li>
-					<li><a href="#">Profil #4</a></li>
+				   <li><a href='#'><span>Sub Product</span></a></li>
+				   <li class='last'><a href='#'><span>Sub Product</span></a></li>
 				</ul>
-			</li>
-			<li><a href="#">Pembayaran</a></li>
-			<li><a href="#">Portofolio</a></li>
-			<li><a href="#">News</a></li>
-			<li><a href="#">Hubungi Kami</a></li>
-			<li><a href="#">Penawaran</a></li>
-		</ul>
-	</div>
+			 </li>
+		  </ul>
+	   </li>
+	   <li class="main"><a href='#'><span class="mail">Hubungi Kami</span></a></li>
+	   <li class="main last"><a href='#'><span class="offet">Penawaran</span></a></li>
+	</ul>
 </div>
 
 <div style="color: #D4D4D4; padding-top: 3px; border-bottom: 4px solid #205E6D; background: url('static/image/promo-bg.png') repeat ;">

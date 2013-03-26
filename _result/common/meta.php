@@ -15,5 +15,6 @@
 	<script type="text/javascript" src="static/js/jquery.scrollTo-1.3.3.js"></script>
 	<script type="text/javascript" src="static/js/jquery.serialScroll-1.2.1.js"></script>
 	<script type="text/javascript" src="static/js/coda-slider.js"></script>
+	<script type="text/javascript" src="static/js/tabcontent.js"></script>
 	<script type="text/javascript" src="static/js/common.js"></script>
 </head>

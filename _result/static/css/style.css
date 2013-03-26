@@ -33,36 +33,35 @@ img { border:none; }
 .box_skitter .info_slide_dots .image_number_select {background:#cc0000;float:left;margin:0 5px 0 0;}
 .box_skitter .label_skitter {z-index:50;position:absolute;bottom:0px;left:0px;display:none;}
 
-#selma { height:36px; background:#FFB240; z-index:20; position: relative; font-size: 12px; }
-#selma ul, #selma li { display: block; margin: 0; padding: 0; }
-#selma a:hover { color: #08c; }
-#selma .dropdown { z-index: 10; display: block; position: relative; }
-#selma .dropdown ul { position: relative;visibility:inherit }
-#selma .dropdown ul li { font-weight: normal; float: left; zoom: 1; background: #FFB240; padding: 8px 0; transition: background .5s; -moz-transition: background .5s; -webkit-transition: background .5s; -o-transition: background .5s; }
-#selma .dropdown ul a:hover { color: #fff; }
-#selma .dropdown ul a:active { color: #FFB240; }
-#selma .dropdown ul li a { display: block; padding: 0px 20px; color: #fff; display:block; line-height:20px; border-right:solid 1px #fff}
-#selma .dropdown ul li:first-child a { border-left:solid 1px #fff } /* Doesn't work in IE */
-#selma .dropdown ul li.hover, #selma .dropdown ul li:hover { background: #08c	; color: black; position: relative; transition: background .5s; -moz-transition: background .5s; -webkit-transition: background .5s; -o-transition: background .5s; }
-#selma .dropdown ul li.hover a { color: #fff; }
-#selma .dropdown ul ul { width: 300px; visibility: hidden; position: absolute; top: 100%; left: 0;  background:#08c; padding:5px; }
-#selma .dropdown ul ul li { font-weight: normal; background: none; color: #000; float: none; border-right:none; display:block; background:#08c; }
-#selma .dropdown ul li li:first-child a { border-left:none } /* Doesn't work in IE */
-#selma .dropdown ul ul li:hover{ background:#FFB240; }
-#selma .dropdown ul ul li a { border-right: none;  display: block ; margin-left:0px; padding: 0 15px; line-height:16px; transition: margin-left .5s; -moz-transition: margin-left .5s; -webkit-transition: margin-left .5s; -o-transition: margin-left .5s; }
-#selma .dropdown ul ul li a:hover{ transition: margin-left .5s; -moz-transition: margin-left .5s; -webkit-transition: margin-left .5s; -o-transition: margin-left .5s; }
-#selma .dropdown ul ul ul { left: 100%; top: 0; }
-#selma .dropdown ul li:hover > ul { visibility: visible; }
-
-
-
-
-
-
-
-
+#cssmenu { background: #292728; font-weight: 600; height: 34px; }
+#cssmenu ul, #cssmenu li, #cssmenu span, #cssmenu a { border: 0; margin: 0; padding: 0; position: relative; }
+#cssmenu:after, #cssmenu ul:after { display: block; clear: both; }
+#cssmenu a { background: #292728; color: #CCCCCC; display: inline-block; font-family: Arial, Verdana, sans-serif; font-size: 12px; line-height: 34px; padding: 0 17px; text-decoration: none; }
+#cssmenu ul { list-style: none; }
+#cssmenu > ul { float: left; }
+#cssmenu > ul > li { float: left; }
+#cssmenu > ul > li.active a, #cssmenu > ul > li:hover > a { color: #FFFFFF; background: #413F40; }
+#cssmenu .main { border-right: 1px solid #000000; }
+#cssmenu .has-sub { z-index: 1; }
+#cssmenu .has-sub:hover > ul { display: block; }
+#cssmenu .has-sub ul { display: none; position: absolute; width: 200px; top: 100%; left: 0; }
+#cssmenu .has-sub ul li a { background: rgba(40,77,115,0.95); border-bottom: 1px solid #59636f; color: #FFFFFF; display: block; line-height: 160%; padding: 8px 10px; }
+#cssmenu .has-sub ul li:hover a { background: #1F3D59; }
+#cssmenu .has-sub .has-sub:hover > ul { display: block; }
+#cssmenu .has-sub .has-sub ul { display: none; position: absolute; left: 100%; top: 0; }
+#cssmenu .has-sub .has-sub ul li a { background: rgba(40,77,115,0.95); }
+#cssmenu .has-sub .has-sub ul li a:hover { background: #1F3D59; }
+#cssmenu .home { background-image: url('../image/icons-uni.png'); background-repeat: no-repeat; background-position: 0px -688px; padding: 0 0 2px 23px; }
+#cssmenu .product { background-image: url('../image/icons-uni.png'); background-repeat: no-repeat; background-position: 0 -1290px; padding: 0 0 2px 23px; }
+#cssmenu .profile { background-image: url('../image/icons-uni.png'); background-repeat: no-repeat; background-position: 0px -1634px; padding: 0 0 2px 23px; }
+#cssmenu .payment { background-image: url('../image/icons-uni.png'); background-repeat: no-repeat; background-position: 0px -173px; padding: 0 0 2px 23px; }
+#cssmenu .porto { background-image: url('../image/icons-uni.png'); background-repeat: no-repeat; background-position: 0px -1463px; padding: 0 0 2px 23px; }
+#cssmenu .news { background-image: url('../image/icons-uni.png'); background-repeat: no-repeat; background-position: 0px 0px; padding: 0 0 2px 23px; }
+#cssmenu .mail { background-image: url('../image/icons-uni.png'); background-repeat: no-repeat; background-position: 0px -947px; padding: 0 0 2px 23px; }
+#cssmenu .offet { background-image: url('../image/icons-uni.png'); background-repeat: no-repeat; background-position: 0 -430px; padding: 0 0 2px 23px; }
 
 .pom { background: #F1EEEB; padding: 10px 5px; font-size: 12px; }
+.pom a { color: #318091; }
 .pom-left { float: left; width: 220px; }
 .pom-right { float: right; width: 745px; }
 .pom .fl { float:left; }
@@ -70,6 +69,8 @@ img { border:none; }
 
 .pom .roundedbox {-webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; behavior: url(PIE.htc); position:relative; border:1px solid #ccc; background:#fff; padding: 10px; margin: 0 0 5px 0; font-size: 12px; }
 .pom .roundedbox	p { line-height: 18px; }
+.pom .poounderpad { border-bottom: 3px solid #CCC77A; margin: 10px 0; }
+.pom .blueunder { border-bottom: 3px solid #47ACC1; }
 
 .pom .standardlist a								{ display:block; padding-left:40px; color:#333; text-decoration:none; margin-bottom:10px; line-height:17px; }
 .pom .standardlist a:hover						{color:#47ACC1; text-decoration:none;}
@@ -295,3 +296,23 @@ img { border:none; }
 #list-port .link { color: #F79E19; border-bottom: 1px solid #225E69; padding: 0 0 3px 0; }
 #list-port .image { padding: 5px 0; }
 #list-port .image img { padding: 3px; border: 1px solid #2F97DE; }
+
+#pricescont {-webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; behavior: url(PIE.htc); position:relative; border:1px solid #ccc; background:#F4F4F4; float:left; width:151px; height:320px;}
+ul#pricestab	{position:absolute; top:10px; left:-5px; width:168px;}
+ul#pricestab, ul#pricestab li {margin:0; padding:0; list-style:none; width:168px;}
+ul#pricestab li a {text-decoration:none; color:#222; line-height:25px; display:block; padding:0 10px; height:31px;}
+ul#pricestab li a:hover {background:url(../image/website-price-hover.png);}
+ul#pricestab li a.selected {background:url(../image/website-price-on.png); color:#fff;}
+
+#priceinfo {float:left; width: 525px; margin-left:20px;}
+#priceinfo .tabcontent h1, #priceinfo .tabcontent2 h1 {font:lighter 25px/30px Arial, Helvetica, sans-serif; color:#333; display:block; margin-bottom:5px; padding:0;}
+#priceinfo .tabcontent2 h3 {font:bold 13px/20px Arial, Helvetica, sans-serif; color:#213232; margin:0; padding:0 0 5px;}
+#priceinfo .tabcontent ul {float:left; width: 260px; margin:10px 0; padding:10px 0 0 0; border-top:1px solid #dadada;}
+#priceinfo .tabcontent ul li {list-style:none; margin:0 0 8px 0; padding:0 20px 0 20px; background:url(../image/orangebullet.png) left top no-repeat; display:block;}
+#priceinfo .tabcontent2 ul {margin:0; padding:10px 0 0 0;}
+#priceinfo .tabcontent2 ul li {list-style:none; margin:0 0 8px 0; padding:0 20px 0 20px; background:url(../image/orangebullet.png) left top no-repeat; display:block;}
+
+#extras .extras {float:left; width: 162px; margin-right:20px; font-size:11px; line-height:17px; margin-bottom:10px;}
+#extras .extras img {margin-bottom:10px;}
+#extras .extras h3 {margin-bottom:5px; line-height:20px; font-size:15px;}
+#extras .extras h4 {font-size:25px; display:inline; font-weight:lighter; line-height:40px; color:#FF9900;}

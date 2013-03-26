@@ -43,4 +43,12 @@ $(document).ready(function(){
 	
 	// order
 	code_slider();
+	
+	// product
+	if ($('#pricestab').length == 1) {
+		var price = new ddtabcontent("pricestab")
+		price.setpersist(false)
+		price.setselectedClassTarget("link")
+		price.init()
+	}
 });
