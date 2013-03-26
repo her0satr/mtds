@@ -40,4 +40,7 @@ $(document).ready(function(){
 	// about us
 	$('.intro_slider').bxSlider({ auto: false, controls : false, mode: 'fade', pager: true });
 	$('.bwWrapper').BlackAndWhite({ hoverEffect : true, webworkerPath : false, responsive:true, invertHoverEffect:false });
+	
+	// order
+	code_slider();
 });

@@ -205,13 +205,12 @@ img { border:none; }
 #product_list .productItem .desc .brief a, #product_list .productItem .desc .brief a:hover { text-decoration: none; }
 #product_list .productItem .desc .price { font-size: 12px; font-weight: bold; color: #1c252e; }
 #product_list .productItem .desc .price span { padding-right: 10px; font-size: 11px; font-weight: lighter; color: #888; }
-#product_list .productItem .desc .buttons { padding: 18px 0px; }
+#product_list .productItem .desc .buttons { padding: 18px 0 0 0; }
 #product_list .productItem .desc .buttons input { margin-right: 8px; }
 #product_list .pagination { text-align: right; background-color: #ffffff; border: 1px solid #ebebeb; border-width: 0 0px; padding: 4px 0px 4px 0px; }
 #product_list .pagination a { padding: 2px 5px; text-decoration: none; color: #8d8c8c; background-color: white; border: 1px solid #d9d5cd; }
 #product_list .pagination a:hover, #product_list .pagination a.selected { color: #ff0000; background-color: #FEE496; }
 #product_list .noborder .productItem { border: none; }
-#product_list .noborder .buttons { padding: 18px 0 0 0 !important; }
 #product_list .noborder .pagination { padding: 0 0 8px 0; font-weight: bold; }
 
 #footer .email { color: #45B0C4; }
@@ -267,3 +266,32 @@ img { border:none; }
 .process ul li:last-child {padding-right:0;}
 .process ul li h3 { color:#626363; font-size: 24px; color:#d8d8d8; padding: 0px; margin: 0px; }
 .process ul li h3 span {font-size:11px;color:#fff;background:#5eafcd;padding:1px 8px;position:relative;top:-4px;font-weight:normal;}
+
+.order-form { color: #666666; }
+.order-form .title { background: #055789; border-bottom: 4px solid #0985CB; padding: 10px; color: #FFFFFF; margin: 0 0 25px 0; }
+.order-form .left { float: left; width: 200px; text-align: right; padding: 3px 0 75px 0; }
+.order-form .right { float: left; width: 400px; padding: 0 0 0 25px; }
+.order-form .right .domain { padding: 0 0 15px 0; }
+.order-form .right .text { width: 250px; }
+.order-form .right .select { color: #666666; }
+
+#order-step { width: 700px; margin: 0 auto; position: relative; }
+#order-step .scroll { height: 300px; width: 700px; overflow: auto; overflow-x: hidden; position: relative; clear: left; border-style:solid; border-width:1px; }
+#order-step .scrollContainer div.panel { padding: 20px; height: 260px; width: 660px; }
+#order-step ul.navigation { list-style: none; margin: 0; padding: 0; padding-bottom: 9px; }
+#order-step ul.navigation li { display: inline; margin-right: 10px; }
+#order-step ul.navigation a { padding: 10px; color: #000; text-decoration: none; opacity: 0.5; }
+#order-step ul.navigation a:hover { background-color: #fff; opacity: 1.0; }
+#order-step ul.navigation a.selected { background-color: #fff; opacity: 1.0; }
+#order-step ul.navigation a:focus { outline: none; }
+
+#portfolio .left { float: left; width: 250px; text-align: center; }
+#portfolio .right { float: left; width: 470px; text-align: justify; line-height: 20px; }
+#portfolio .right .title { font-weight: bold; color: #000000; }
+#portfolio .right .desc { color: #225E69; }
+
+#list-port .item { float: left; width: 220px; height: 190px; margin: 0 10px; }
+#list-port .title { color: #225E69; padding: 0 0 2px 0; }
+#list-port .link { color: #F79E19; border-bottom: 1px solid #225E69; padding: 0 0 3px 0; }
+#list-port .image { padding: 5px 0; }
+#list-port .image img { padding: 3px; border: 1px solid #2F97DE; }

@@ -108,30 +108,6 @@
 					</div>
 					
 					<div class="roundedbox">
-						<h2 class="poounder">Would you like to find out more about our web design services? </h2>
-						<p>To discuss your requiremaents with one of our website designers please feel free to call us on 0845 2577 187 orcomplete the form below and we'll call
-						or email you straight back.</p>
-						<div style="margin: 10px 0 0 0;">
-						<form id="moreinfo" name="moreinfo" action="sendscript/findoutmore.php" method="post">
-							<label class="qlabell">Name:</label>
-							<label class="qlabelr">Email address:</label>
-							<div class="fr"><input type="text" tabindex="2" class="findoutmorefield" name="email"></div>
-							<div class="fl"><input type="text" tabindex="1" class="findoutmorefield" name="name"></div>
-							<div class="clear"></div>
-							<label class="qlabell">Telephone number:</label>
-							<label class="qlabelr">Current website address:</label>        
-							<div class="fr"><input type="text" tabindex="4" class="findoutmorefield" name="website"></div>
-							<div class="fl"><input type="text" tabindex="3" class="findoutmorefield" name="telephone"></div>
-							<div class="clear"></div>
-							<div class="button2 fr"><input type="image" value="Submit" id="button" name="button" src="static/image/submit.png"></div>
-							<div class="promocheck"><input type="checkbox" value="Yes" id="mailing" name="mailing"></div>
-							<div class="promotext2">Keep me updated with promotions &amp; special offers from Pom Design</div>
-							<div class="clear"></div>
-						</form>                                  
-						</div>
-					</div>
-					
-					<div class="roundedbox">
 						<h2>Would you like to find out more about our web design services?</h2>
 						<div id="product_list">
 							<div class="noborder">

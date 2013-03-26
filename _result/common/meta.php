@@ -12,5 +12,8 @@
 	<script type="text/javascript" src="static/js/jquery.qtip.min.js"></script>
 	<script type="text/javascript" src="static/js/jquery.blackandwhite.min.js"></script>
 	<script type="text/javascript" src="static/js/liteaccordion.jquery.js"></script>
+	<script type="text/javascript" src="static/js/jquery.scrollTo-1.3.3.js"></script>
+	<script type="text/javascript" src="static/js/jquery.serialScroll-1.2.1.js"></script>
+	<script type="text/javascript" src="static/js/coda-slider.js"></script>
 	<script type="text/javascript" src="static/js/common.js"></script>
 </head>

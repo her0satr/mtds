@@ -15,16 +15,6 @@
 				<div class="roundedbox">
 					<div class="poounder">Order #1 [Pilih Domain]</div>
 					
-<style>
-.order-form { color: #666666; }
-.order-form .title { background: #055789; border-bottom: 4px solid #0985CB; padding: 10px; color: #FFFFFF; margin: 0 0 25px 0; }
-.order-form .left { float: left; width: 200px; text-align: right; padding: 3px 0 75px 0; }
-.order-form .right { float: left; width: 400px; padding: 0 0 0 25px; }
-.order-form .right .domain { padding: 0 0 15px 0; }
-.order-form .right .text { width: 250px; }
-.order-form .right .select { color: #666666; }
-</style>
-					
 					<div class="order-form">
 						<div class="title">Jika Anda belum mempunyai Domain</div>
 						<div class="left">Nama Domain</div>
