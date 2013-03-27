@@ -55,4 +55,22 @@ $(document).ready(function(){
 		price.setselectedClassTarget("link")
 		price.init()
 	}
+	
+	// footer
+	var init_button_top = function() {
+		var OffsetHeight = window.pageYOffset;
+		
+		if (OffsetHeight > 400) {
+			var page_width = parseInt($('body').css('width'), 10);
+			var body_width = 980;
+			var space = parseInt((page_width - body_width) / 2, 10);
+			space = space - 55;
+			$('#notice .top').css('right', space + 'px');
+			$('#notice .top').slideDown()
+		} else {
+			$('#notice .top').slideUp()
+		}
+	}
+	$(window).scroll(function () { init_button_top(); });
+	$(window).resize(function () { init_button_top(); });
 });

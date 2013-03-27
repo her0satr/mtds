@@ -93,6 +93,17 @@
 						</div>
 					</div>
 				</div>
+				
+				<div id="ordering" class="roundedbox">
+					<div style="color: #F79E19; font-size: 16px; text-align: center; font-weight: bold; padding: 0 0 20px 0;">Penjelasan Cara Pemesanan</div>
+					<div>
+						<strong>1. Pilih paket website :</strong> Jika Anda membutuhkan website dengan spesifikasi yang profesional. Kami beberapa paket website yang sudah dirancang khusus memenuhi kebutuhan Anda. Misal Anda pedagang maka kami memiliki website toko online, jika Anda pengusaha maka kami memiliki website profil usaha, begitu juga dengan kebutuhan lain seperti website sekolah. website universitas. website portal berita, iklan baris. dll. Silahkan mellhat penjelasan product website yang kami miliki di halaman <span class="orange">Service</span>.<br /><br />
+						<strong>2. Menunggu Tagihan Website + Melakukan pembayaran DP :</strong> Setelah Anda memastikan ingin membuat website dengan spesifikasi sesuai kebutuhan Anda. silahkan isi <span class="orange">form pemesanan</span> website. Kemudian tunggu email tagihan DP dari team billing kami. Tagihan akan dikirim lewat Email dan SMS. Silahkan melakukan pembayaran ke salah satu no <span class="orange">rekening kami</span> dan melakukan <span class="orange">konfirmasi pembayaran</span>.<br /><br />
+						<strong>3. Mengirim data — data :</strong> Setelah Anda melakukan konfirmasi pembayaran. maka kami akan mengirim permintaan data - data yang dibutuhkan untuk membuat website. kami akan pandu Anda menyiapkan data-data yang dibutuhkan. Data website seperti : profil usaha, contact us, product, dll. Sedangkan untuk design website, kami akan meminta Anda memilih design website yang kami miliki atau menunjukan sebuah referensi website yang Anda inginkan.<br /><br />
+						<strong>4. Proses pengerjaan website :</strong> Setelah data website dan konsep design kami terima, maka kami akan segera mengerjakan website Anda. Kami juga memberikan jadwal deadline. no hp programer. dan email programer untuk bisa Anda hubungi kapan saja. Sampai disini, kewajiban kami adalah mengerjakan website sesuai pesanan Anda. Sedangkan sampai proses ini. hal — hal yang bisa Anda lakukan adalah menunggu proses pengerjaan website team programer kami. Kami memberikan kesempatan revisi dalam pembuatan website sebanyak 2 kali.<br /><br />
+						<strong>5. Pelunasan dan penyerahan website :</strong> Setelah website jadi dan dilakukan revisi di tahap pengerjaan. maka kewajiban Anda adalah melakukan pelunasan kekurangan pembayaran website. Kami akan memberikan lagihan pelunasan website melaui SMS dan juga EMAIL. Jika website Anda sudah lunas, maka kami akan memberikan username dan password website. Anda bisa mengelola website. baik mengapdate artikel, menambah gambar menambah halaman, dan lain—lain. 100% website milik Anda.<br />
+					</div>
+				</div>
 			</div>
 			<div class="clear"></div>
 		</div>
