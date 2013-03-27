@@ -36,6 +36,10 @@ $(document).ready(function(){
 		easing: 'easeInOutQuad',
 		pause: 6000
 	});
+	$('a[href=#header]').click(function(){
+		$('html, body').animate({scrollTop:0}, 'slow');
+		return false;
+	});
 	
 	// about us
 	$('.intro_slider').bxSlider({ auto: false, controls : false, mode: 'fade', pager: true });

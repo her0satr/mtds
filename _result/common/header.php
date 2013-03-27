@@ -1,4 +1,4 @@
-<div><img src="static/image/header-logo.jpg" style="width: 100%;" /></div>
+<div id="header"><img src="static/image/header-logo.jpg" style="width: 100%;" /></div>
 
 <div id="cssmenu">
 	<ul>

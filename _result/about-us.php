@@ -104,7 +104,7 @@
 						</ul>
 					</div>
 					
-					<div class="process" style="padding: 0 0 25px 0px;">
+					<div class="process">
 						<h4>Our Process</h4>
 						<ul>
 							<li>

@@ -76,7 +76,7 @@
 							</li>                       
 						</ul>
 						<div class="clear"></div>
-						<div class="button fr" style="margin-left:5px;"><a href="get-a-quote.php">Get a Quote</a></div>
+						<div class="button fr space-left"><a href="get-a-quote.php">Get a Quote</a></div>
 						<div class="button2 fr"><a href="portfolio.php">View Our Portfolio</a></div>        
 						<div class="clear"></div>
 					</div>
@@ -136,7 +136,7 @@
 									</div>
 								</div>
 								<div class="pagination">
-									<a href="#" style="">More</a>
+									<a href="#">More</a>
 								</div>
 							</div>
 						</div>
@@ -195,7 +195,7 @@
 					<div class="roundedbox">
 						<p><span class="orangesixteen">Free</span> <span class="dbluesixteen">Content Management</span></p>
 						<img src="static/image/free-content-management.png" align="right" />All our clients enjoy the ability to update the contents of their websites whenever they like, for free, forever...
-						<div class="button2 fr" style="padding-top:10px;"><a href="/content-management-solutions.php">read more</a></div>
+						<div class="button2 fr space-top"><a href="/content-management-solutions.php">read more</a></div>
 						<div class="clear"></div>
 					</div>
 				</div>

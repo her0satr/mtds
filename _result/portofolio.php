@@ -79,7 +79,7 @@
 							<a href="#" class="">1</a>
 							<a href="#" class="selected">2</a>
 							<a href="#" class="">3</a>
-							<a style="font-weight: bold;" href="#">Next</a>
+							<a href="#" class="bold">Next</a>
 						</div>
 					</div>
 				</div>

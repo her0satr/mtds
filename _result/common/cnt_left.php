@@ -36,8 +36,43 @@
 	</ul>
 </div>
 
-<div style="padding: 10px 0;">
-	<img src="static/upload/login.png" style="width: 100%;" />
+<div id="service">
+	<div class="search">
+		<form action="http://jogjacamp.com/index.php?action=search.main" method="get" name="searchForm">
+			<input type="text" placeholder="Search keyword..." class="searchText" id="search_input" name="keyword">		
+		</form>
+	</div>
+	<div class="support">
+		<div class="title">Customer Support</div>
+		<div class="live"><img src="static/upload/live.png" /></div>
+		<div class="sales">
+			<div class="left">Sales <span>:</span></div>
+			<div class="right">
+				<div class="row">
+					<div class="name">Ronni</div>
+					<div class="widget"><img src="static/upload/yahoo.png" /></div>
+					<div class="clear"></div>
+				</div>
+				<div class="row">
+					<div class="name">Wawan</div>
+					<div class="widget"><img src="static/upload/yahoo.png" /></div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="hotline">
+			<div class="left">Hotline</div>
+			<div class="right">
+				<div class="phone">
+					021 - 3377 9000<br />
+					0274 - 415 585<br />
+					<span style="font-size: 11px;">sms  085741 444 520</span>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
 </div>
 
 <div class="login-jogja">
@@ -45,8 +80,8 @@
 		<div class="loginCell">
 			<h2 class="title">User Login</h2>
 			<form method="post" action="index.php?action=admin.login">
-				<p><input type="text" value="Username" class="loginText" id="login_user" name="username"></p>
-				<p><input type="password" value="Password" class="loginText" id="login_pass" name="password"></p>
+				<p><input type="text" class="loginText" name="username" value="Username" /></p>
+				<p><input type="password" class="loginText" name="password" value="Password" /></p>
 				<p><input type="submit" class="loginButton" name="B12" value="Login"></p>
 			</form>
 			<div class="loginLink"><a href="index.php?action=chpasswd.forgotpass">Forgot Password?</a></div>

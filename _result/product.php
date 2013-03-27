@@ -64,7 +64,7 @@
 					<p>&nbsp;</p>
 					<p>Here you will find a small selection of our web designs from standard brochure web sites to eCommerce solutions, online shops and bespoke web applications. </p><br /><br />
 					
-					<div style="font-size: 16px;">Select a website specification from the tabs below for more information.</div>
+					<div class="f-16">Select a website specification from the tabs below for more information.</div>
 					<div class="clear"></div>
 				</div>
 			
@@ -85,7 +85,7 @@
 					</div>
 					
 					<div id="priceinfo">
-						<div class="tabcontent" id="price1" style="display: block;">
+						<div class="tabcontent" id="price1">
 							<h1><span class="blue">1 Page Website</span> £295</h1>
 							<p>Our basic web design package. One page bespoke website design including  all our standard features at no extra cost.:</p>
 							
@@ -113,7 +113,7 @@
 							</ul>                    				
 							<div class="clear"></div>
 						</div>
-						<div class="tabcontent" id="price2" style="display: none;">
+						<div class="tabcontent hide" id="price2">
 							<h1><span class="blue">2-4 Page Website</span> £395</h1>
 							<p>Our 2-4 page website's are ideal for start up businesses taking their first steps towards establishing an online identity. They include all our standard features at no extra cost.</p>
 							
@@ -141,7 +141,7 @@
 							</ul>                    				
 							<div class="clear"></div>
 						</div>
-						<div class="tabcontent" id="price3" style="display: none;">
+						<div class="tabcontent hide" id="price3">
 							<h1><span class="blue">5-8 Page Website</span> £525</h1>
 							<p>The 5-8 page brochure package enables you to advertise your services in more depth and detail.  They include all our standard features at no extra cost.</p>
 							<ul>
@@ -168,7 +168,7 @@
 							</ul>                    				
 							<div class="clear"></div>  
 						</div>
-						<div class="tabcontent" id="price4" style="display: none;">
+						<div class="tabcontent hide" id="price4">
 							<h1><span class="blue">9-12 Page Website</span> £625</h1>
 							<p>Expand your site to 9-12 pages and take the opportunity to maximise your online sales and enquiries. Ideal for well established companies looking to advertise their services online through a professional, eye catching website. Our 9-12 page website's include all our standard features at no extra cost.</p>
 							<ul>
@@ -195,7 +195,7 @@
 							</ul>                    				
 							<div class="clear"></div>  
 						</div>
-						<div class="tabcontent2" id="price5" style="display: none;">
+						<div class="tabcontent2 hide" id="price5">
 							<h1><span class="blue">Premium Online Store</span> £975</h1>          
 							<p>Start trading online from only £975 and enjoy a fully admin controlled, unlimited eCommerce package.</p>
 							<p>&nbsp;</p>
@@ -274,7 +274,7 @@
 							<p>&nbsp;</p>      
 							<p>Alternatively please contact us or complete the form on the right hand side of this page.</p>
 						</div>
-						<div class="tabcontent2" id="price9" style="display: none;">
+						<div class="tabcontent2 hide" id="price9">
 							<h1><span class="blue">eShopper</span> £699</h1>
 							Our eShopper solution allows you to sell your products / virtual items via your website cost-effectively and easily through PayPal.  This solution is ideal for those customers with a small, fixed range of products.
 							<p>&nbsp;</p>
@@ -294,7 +294,7 @@
 								<li>Options for VAT and postage charges</li>
 							</ul>
 						</div>
-						<div class="tabcontent" id="price6" style="display: none;">
+						<div class="tabcontent hide" id="price6">
 							<h1><span class="blue">Property Rentals &amp; Sales / Estate Agency</span> £1250</h1>
 							<p>Our property listing developments are bursting with functionality, enabling your customers to easily locate and enquire about properties and you and your agents to manage properties from user friendly control panels. Our highly competitive prices start from £1250 and  include all our standard features along with additional functionality for the managing of properties and customer enquiries.</p>
 							
@@ -330,7 +330,7 @@
 							</ul>                    				
 							<div class="clear"></div>  
 						</div>
-						<div class="tabcontent" id="price7" style="display: none;">
+						<div class="tabcontent hide" id="price7">
 							<h1><span class="blue">Blog</span> £395</h1>
 							<p>Whether you already have a website and are seeking new way to engage your visitors, or are seeking a platform from which to tell the world about your products, services or opinions, our blogging system will arm you with all the tools you need.</p>
 							
@@ -365,7 +365,7 @@
 							</ul>                    				
 							<div class="clear"></div>
 						</div>
-						<div class="tabcontent" id="price8" style="display: none;">
+						<div class="tabcontent hide" id="price8">
 							<h1><span class="blue">Email Marketing</span> <em>from </em>£0.03 p/recipient</h1>
 							<p>Reach thousands of your customers instantly with our email marketing campaigns.</p>
 							<p>&nbsp;</p>
@@ -375,7 +375,7 @@
 							<p>&nbsp;</p>
 							<p>Not only will we create the newsletter for your business and send it to your customer database, we will also supply feedback and reports including:</p>
 							
-							<ul style="width:500px;">
+							<ul class="full">
 								<li>Who opened your email</li>
 								<li>Who clicked what link, when and how many times</li>
 								<li>Who subscribed / unsubscribed</li>
@@ -390,7 +390,7 @@
 							devices and other text based email clients.</p>
 							<p>&nbsp;</p>
 							<p>As a customer you will receive your own unique login from which you can chose to mange your campaigns entirely by yourself if you prefer. Some of the features included are:</p>
-							<ul style="width:550px;">
+							<ul class="full">
 								<li>Start your own campaigns, use one of the templates we have created for you (or ask us to create you a new one), edit the content and send your newsletter.</li>
 								<li>Define the campaign start date - set the newsletter to send whenever you like in the future.</li>
 								<li>View extensive live reports and user feedback</li>
@@ -424,7 +424,7 @@
 							<p>Add a fully integrated, custom designed blog to your website and keep your client up to date whilst boosting your SEO.</p>
 							<h4>£150</h4> <em>(save £299)</em>
 						</div>
-						<div style="margin:0;" class="extras">
+						<div class="extras no-margin">
 							<h3>Advanced Gallery</h3>
 							<p>Present your images with impact and take  control via a custom built management system</p>
 							<h4>£125</h4> <em>(save £125)</em>    

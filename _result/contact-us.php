@@ -19,7 +19,7 @@
 				
 				<div class="roundedbox">
 					<p>To discuss your requiremaents with one of our website designers please feel free to call us on 0845 2577 187 orcomplete the form below and we'll call or email you straight back.</p>
-					<div style="margin: 10px 0 0 0;">
+					<div class="space-top">
 						<form id="moreinfo" action="sendscript/findoutmore.php" method="post" class="form-more">
 							<label class="qlabell">Name:</label>
 							<label class="qlabelr">Email address:</label>
