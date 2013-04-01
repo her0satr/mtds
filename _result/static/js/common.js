@@ -71,6 +71,7 @@ $(document).ready(function(){
 			$('#notice .top').slideUp()
 		}
 	}
+	init_button_top();
 	$(window).scroll(function () { init_button_top(); });
 	$(window).resize(function () { init_button_top(); });
 });
