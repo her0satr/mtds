@@ -12,7 +12,11 @@ body {
 	color: #2e2e2e;
 	text-align: center;
 }
-.clear {clear: both;}
+.cursor { cursor: pointer; }
+.center { text-align: center; }
+.clear { clear: both; }
+.red { color: #FF0000; }
+.hide { display: none; }
 small {font-size: 11px; color: 5b5b5b;}
 img {border: none;}
 a {color: #527e19; text-decoration: none;}
@@ -115,7 +119,7 @@ tr.data:hover small {color: #5b5b5b;}
 }
 .inHeader {
 	float: center;
-	background: url(../upload/logo.png) no-repeat left center;
+	background: url(../image/logo-pt.png) no-repeat left center;
 	margin: auto;
 	width: 920px;
 	height: 50px;
@@ -216,8 +220,10 @@ tr.data:hover small {color: #5b5b5b;}
 	border-left: 0px solid #dcdcdc;
 	text-align: left;
 	background: #fff;
+	margin: 0 0 15px 0;
 }
-#rightContent h3 {font-size: 20px; font-weight: normal; padding: 0; margin: 5px; border-bottom: 1px dashed #dcdcdc; }
+#rightContent .pad { padding: 8px 0; }
+#rightContent h3 {font-size: 20px; font-weight: normal; padding: 0; margin: 5px 5px 20px 5px; border-bottom: 1px dashed #dcdcdc; }
 .shortcutHome a{
 	width: 65px;
 	padding: 20px;
@@ -259,10 +265,21 @@ tr.data:hover small {color: #5b5b5b;}
 #smallRight h3 {font-size: 16px; padding: 5px; margin: 0px; border-bottom: 1px solid #dcdcdc;}
 #footer {
 	width: 950px;
-	margin: 0 auto;
+	margin: 0 auto 25px auto;
 	text-align: center;
 	padding: 15px 0 15px 0;
 	text-align: center;
 	font-size: 11px;
 	background: #fff;
 }
+
+table.common { width: 90%; }
+.common input { width: 100%; }
+.common input.datepicker { width: 150px; }
+.common input.image { width: 250px; }
+.common input.button { width: 100px; }
+.common select { width: 100%; }
+.common textarea { width: 80%; }
+
+.upload_left { float: left; width: 260px; }
+.upload_right { float: left; width: 225px; }
