@@ -19,9 +19,12 @@
 				<td width="70">Title</td>
 				<td><input type="text" name="product_title" value="<?php echo @$product['product_title']; ?>" /></td></tr>
 			<tr>
+				<td width="70">Name</td>
+				<td><input type="text" name="product_name" value="<?php echo @$product['product_name']; ?>" /></td></tr>
+			<tr>
 				<td width="70">Category</td>
 				<td><select name="product_category_id">
-					<?php echo ShowOption(array('Array' => $array_product_category, 'ArrayID' => 'product_category_id', 'ArrayTitle' => 'product_category_name')) ?>
+					<?php echo ShowOption(array('Array' => $array_product_category, 'ArrayID' => 'product_category_id', 'ArrayTitle' => 'product_category_name', 'Selected' => @$product['product_category_id'])) ?>
 				</select></td></tr>
 			<tr>
 				<td width="70">Desc</td>

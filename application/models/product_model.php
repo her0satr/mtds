@@ -4,7 +4,7 @@ class Product_model extends CI_Model {
 	function __construct() {
         parent::__construct();
 		
-        $this->Field = array('product_id', 'product_category_id', 'product_title', 'product_desc', 'product_image', 'product_date');
+        $this->Field = array('product_id', 'product_category_id', 'product_name', 'product_title', 'product_desc', 'product_image', 'product_date');
     }
 	
 	function update($param) {
@@ -42,7 +42,7 @@ class Product_model extends CI_Model {
         
 		$SelectResult = mysql_query($SelectQuery) or die(mysql_error());
 		if (false !== $Row = mysql_fetch_assoc($SelectResult)) {
-			$Array = StripArray($Row);
+			$Array = $this->sync($Row);
 		}
 		
 		return $Array;
@@ -65,8 +65,7 @@ class Product_model extends CI_Model {
 		";
 		$SelectResult = mysql_query($SelectQuery) or die(mysql_error());
 		while (false !== $Row = mysql_fetch_assoc($SelectResult)) {
-			$Row = StripArray($Row);
-			$Array[] = $Row;
+			$Array[] = $this->sync($Row);
 		}
 		
 		return $Array;
@@ -98,5 +97,13 @@ class Product_model extends CI_Model {
         $Result['Message'] = 'Data berhasil dihapus.';
 		
 		return $Result;
+	}
+	
+	function sync($row) {
+		$row = StripArray($row);
+		$row['product_link'] = base_url('product/'.$row['product_name']);
+		$row['product_image_link'] = base_url('static/upload/'.$row['product_image']);
+		
+		return $row;
 	}
 }

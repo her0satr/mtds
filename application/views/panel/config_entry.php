@@ -3,6 +3,7 @@
 	$config_title = (empty($config_category)) ? 'Config' : $config_category;
 	
 	$config = $this->Config_model->get_by_id(array('config_id' => $config_id));
+	$config_category = (! empty($config_category)) ? $config_category : @$config['config_category'];
 ?>
 <?php $this->load->view( 'panel/common/meta' ); ?>
 
@@ -48,6 +49,7 @@
 					if (result.QueryStatus == 1) {
 						var config_category = $('input[name="config_category"]').val();
 						var link = Site.Host + 'panel/config/?config_category=' + config_category;
+						
 						window.location = link;
 					} else {
 						$('#FormEntry .message').show().html(result.message);

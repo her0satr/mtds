@@ -5,7 +5,7 @@
 		<li><a href="<?php echo base_url('panel/portofolio'); ?>">Portofolio</a></li>
 		<li><a href="<?php echo base_url('panel/user'); ?>">User</a></li>
 		<li><a href="<?php echo base_url('panel/config/?config_category=Company Profile'); ?>">Company Profile</a></li>
-		<li><a href="<?php echo base_url('panel/config/?config_category=Our Research'); ?>">Our Research</a></li>
+		<li><a href="<?php echo base_url('panel/config/?config_category=Our Process'); ?>">Our Process</a></li>
 		<li><a href="<?php echo base_url('panel/config/?config_category=Why Choose'); ?>">Why Choose</a></li>
 		<li><a href="<?php echo base_url('panel/config/?config_category=Payment'); ?>">Payment</a></li>
 		<li><a href="<?php echo base_url('panel/config/?config_category=Cara Pemesanan'); ?>">Cara Pemesanan</a></li>

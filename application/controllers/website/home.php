@@ -21,7 +21,13 @@ class home extends CI_Controller {
 	}
 	
 	function product() {
-		$this->load->view( 'website/product' );
+		$product_name = (empty($this->uri->segments[2])) ? '' : $this->uri->segments[2];
+		
+		if (empty($product_name)) {
+			$this->load->view( 'website/product' );
+		} else {
+			$this->load->view( 'website/product_detail' );
+		}
 	}
 	
 	function portofolio() {

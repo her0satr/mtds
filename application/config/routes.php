@@ -41,6 +41,7 @@
 $route['order'] = "website/home/order";
 $route['about'] = "website/home/about";
 $route['product'] = "website/home/product";
+$route['product/(:any)'] = "website/home/product";
 $route['service'] = "website/home/service";
 $route['contact'] = "website/home/contact";
 $route['portofolio'] = "website/home/portofolio";

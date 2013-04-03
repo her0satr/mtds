@@ -17,25 +17,25 @@
 			
 			<div class="pom-right">
 				<div class="roundedbox">
-					<div class="poounder">Contact Us</div>
+					<div class="poounder">Hubungi Kami</div>
 					<?php echo $array_config['hubungi-kami']['config_content']; ?>
 				</div>
 				
 				<div class="roundedbox">
 					<div class="space-top">
 						<form id="moreinfo" action="sendscript/findoutmore.php" method="post" class="form-more">
-							<label class="qlabell">Nama:</label>
-							<label class="qlabelr">Email:</label>
+							<label class="qlabell">Nama Lengkap :</label>
+							<label class="qlabelr">Email :</label>
 							<div class="fr"><input type="text" class="findoutmorefield" name="email" /></div>
 							<div class="fl"><input type="text" class="findoutmorefield" name="name" /></div>
 							<div class="clear"></div>
-							<label class="qlabell">Telepon:</label>
-							<label class="qlabelr">Website:</label>        
+							<label class="qlabell">Telepon :</label>
+							<label class="qlabelr">Website :</label>        
 							<div class="fr"><input type="text" class="findoutmorefield" name="website" /></div>
 							<div class="fl"><input type="text" class="findoutmorefield" name="telephone" /></div>
 							<div class="clear"></div>
-							<label class="qlabell">Permintaan:</label>
-							<label class="qlabelr">Dari mana anda mengetahui kami?</label>        
+							<label class="qlabell">Permintaan :</label>
+							<label class="qlabelr">Dari mana anda mengetahui kami ?</label>        
 							<div class="fl"><select class="findoutmorefield select">
 								<option>--- Silahkan pilih ---</option>
 								<option value="Kerjasama">Kerjasama</option>

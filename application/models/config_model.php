@@ -17,7 +17,7 @@ class Config_model extends CI_Model {
 		$result = array();
 		foreach ($array as $config) {
 			$result[$config['config_name']] = $config;
-			$result[$config['config_name']]['config_content_clean'] = strip_tags($config['config_content']);
+//			$result[$config['config_name']]['config_content_clean'] = strip_tags($config['config_content']);
 		}
 		
 		return $result;
@@ -58,7 +58,7 @@ class Config_model extends CI_Model {
         
 		$SelectResult = mysql_query($SelectQuery) or die(mysql_error());
 		if (false !== $Row = mysql_fetch_assoc($SelectResult)) {
-			$Array = StripArray($Row);
+			$Array = $this->sync($Row);
 		}
 		
 		return $Array;
@@ -81,8 +81,7 @@ class Config_model extends CI_Model {
 		";
 		$SelectResult = mysql_query($SelectQuery) or die(mysql_error());
 		while (false !== $Row = mysql_fetch_assoc($SelectResult)) {
-			$Row = StripArray($Row);
-			$Array[] = $Row;
+			$Array[] = $this->sync($Row);
 		}
 		
 		return $Array;
@@ -114,5 +113,12 @@ class Config_model extends CI_Model {
         $Result['Message'] = 'Data berhasil dihapus.';
 		
 		return $Result;
+	}
+	
+	function sync($row) {
+		$row = StripArray($row);
+		$row['config_content_clean'] = strip_tags($row['config_content']);
+		
+		return $row;
 	}
 }

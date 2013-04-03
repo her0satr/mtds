@@ -1,3 +1,7 @@
+<?php
+	$array_config = $this->Config_model->init();
+?>
+
 <div class="roundedbox" id="latestbox">
 	<h3 class="blueback">Latest Website Design</h3>
 	<ul id="latest">
@@ -65,9 +69,7 @@
 			<div class="left">Hotline</div>
 			<div class="right">
 				<div class="phone">
-					021 - 3377 9000<br />
-					0274 - 415 585<br />
-					<span style="font-size: 11px;">sms  085741 444 520</span>
+					<?php echo $array_config['hotline']['config_content']; ?>
 				</div>
 			</div>
 			<div class="clear"></div>
@@ -92,22 +94,24 @@
 
 <div class="roundedbox">
 	<div id="getquote">
-		<h3 class="bluebacktwo">Free Web Design Quote</h3>        	
-		<p class="sizeeleven">Enter your details below for a free, no obligation quotation:</p>
+		<h3 class="bluebacktwo">Penawaran Web Desain Gratis</h3>        	
+		<p class="sizeeleven">Masukkan rincian Anda di bawah ini :</p>
 
 		<div id="formcontainer">
 			<form method="post" action="sendscript/sidebar.php" name="quickcontact" id="quickcontact">
-				<p><input name="name" type="text" class="freequotefield" id="name" value="" placeholder="Full name" /></p>
-				<p><input name="email" type="text" class="freequotefield" id="email" value="" placeholder="Email Address" /></p>
+				<p><input name="name" type="text" class="freequotefield" id="name" value="" placeholder="Nama Lengkap" /></p>
+				<p><input name="email" type="text" class="freequotefield" id="email" value="" placeholder="Email" /></p>
 				<p><input name="telephone" type="text" class="freequotefield" id="telephone" value="" placeholder="Telepon" /></p>
-				<p><input name="website" type="text" class="freequotefield" id="website" value="" placeholder="WebSite" /></p>
+				<p><input name="website" type="text" class="freequotefield" id="website" value="" placeholder="Website" /></p>
+				<!--
 				<div class="promocheck"><input name="mailing" type="checkbox" id="mailing" value="Yes" checked="checked" /></div>
 				<div class="promotext">Keep me updated with promotions &amp; special offers from Pom Design</div>
+				-->
 				<div class="clear"></div>
-				<input type="image" src="static/image/submit.png" name="button" id="button" value="Submit" />
+				<div class="space"><input type="image" src="static/image/submit.png" name="button" id="button" value="Submit" /></div>
 				<div class="clear"></div>
 			</form>
 		</div>
 	</div>
 </div>
-<div style="text-align: center;"><img src="static/image/pricematch.png" /></div>
+<div class="center"><img src="static/image/pricematch.png" /></div>

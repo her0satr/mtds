@@ -23,7 +23,7 @@
 				<th class="data">Name</th>
 				<th class="data">Title</th>
 				<th class="data">Content</th>
-				<th class="data">Aksi</th></tr>
+				<th class="data" style="width: 50px;">Aksi</th></tr>
 			<?php foreach ($array_config as $config) { ?>
 				<tr class="data">
 					<td class="data"><?php echo $config['config_name']; ?></td>

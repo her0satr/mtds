@@ -16,13 +16,13 @@
 			<tr class="data">
 				<th class="data">Title</th>
 				<th class="data">Desc</th>
-				<th class="data">Date</th>
-				<th class="data">Aksi</th></tr>
+				<th class="data" style="width: 70px;">Date</th>
+				<th class="data" style="width: 50px;">Aksi</th></tr>
 			<?php foreach ($array_product as $product) { ?>
 				<tr class="data">
 					<td class="data"><?php echo $product['product_title']; ?></td>		
 					<td class="data"><?php echo GetLengthChar(strip_tags($product['product_desc']), 300, ' ...'); ?></td>		
-					<td class="data"><?php echo $product['product_date']; ?></td>
+					<td class="data center"><?php echo $product['product_date']; ?></td>
 					<td class="data center">
 						<?php unset($product['product_desc']); ?>
 						<span class="hide"><?php echo json_encode($product); ?></span>
