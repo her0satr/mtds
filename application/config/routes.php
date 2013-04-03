@@ -38,6 +38,11 @@
 |
 */
 
+$route['order'] = "website/home/order";
+$route['about'] = "website/home/about";
+$route['product'] = "website/home/product";
+$route['contact'] = "website/home/contact";
+
 $route['default_controller'] = "website/home";
 $route['404_override'] = '';
 

@@ -2,29 +2,31 @@
 
 <div id="cssmenu">
 	<ul>
-	   <li class="main active"><a href='#'><span class="home">Home</span></a></li>
-	   <li class="main"><a href='#'><span class="product">Product</span></a></li>
-	   <li class="main"><a href='#'><span class="profile">Profile</span></a></li>
+	   <li class="main active"><a href='<?php echo base_url(); ?>'><span class="home">Home</span></a></li>
+	   <li class="main"><a href='<?php echo base_url('product'); ?>'><span class="product">Product</span></a></li>
+	   <li class="main"><a href='<?php echo base_url('about'); ?>'><span class="profile">Profile</span></a></li>
 	   <li class="main"><a href='#'><span class="payment">Pembayaran</span></a></li>
 	   <li class="main"><a href='#'><span class="porto">Protofolio</span></a></li>
 	   <li class="main has-sub">
 			<a href='#'><span class="news">News</span></a>
+			<!--
 			<ul>
 				<li class='has-sub'><a href='#'><span>Product 1</span></a>
-				<ul>
-				   <li><a href='#'><span>Sub Product</span></a></li>
-				   <li class='last'><a href='#'><span>Sub Product</span></a></li>
-				</ul>
-			 </li>
-			 <li class='has-sub'><a href='#'><span>Product 2</span></a>
-				<ul>
-				   <li><a href='#'><span>Sub Product</span></a></li>
-				   <li class='last'><a href='#'><span>Sub Product</span></a></li>
-				</ul>
-			 </li>
-		  </ul>
+					<ul>
+					   <li><a href='#'><span>Sub Product</span></a></li>
+					   <li class='last'><a href='#'><span>Sub Product</span></a></li>
+					</ul>
+				</li>
+				<li class='has-sub'><a href='#'><span>Product 2</span></a>
+					<ul>
+					   <li><a href='#'><span>Sub Product</span></a></li>
+					   <li class='last'><a href='#'><span>Sub Product</span></a></li>
+					</ul>
+				</li>
+			</ul>
+			-->
 	   </li>
-	   <li class="main"><a href='#'><span class="mail">Hubungi Kami</span></a></li>
+	   <li class="main"><a href='<?php echo base_url('contact'); ?>'><span class="mail">Hubungi Kami</span></a></li>
 	   <li class="main last"><a href='#'><span class="offet">Penawaran</span></a></li>
 	</ul>
 </div>
