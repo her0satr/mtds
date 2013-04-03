@@ -7,6 +7,22 @@ class Config_model extends CI_Model {
         $this->Field = array('config_id', 'config_category', 'config_name', 'config_title', 'config_content', 'config_hide');
     }
 	
+	function init() {
+		$param_config = array(
+			'filter' => '[{"type":"numeric","comparison":"eq","value":"","field":"config_category"}]',
+			'limit' => 1000
+		);
+		$array = $this->get_array($param_config);
+		
+		$result = array();
+		foreach ($array as $config) {
+			$result[$config['config_name']] = $config;
+			$result[$config['config_name']]['config_content_clean'] = strip_tags($config['config_content']);
+		}
+		
+		return $result;
+	}
+	
 	function update($param) {
 		$Result = array();
 		

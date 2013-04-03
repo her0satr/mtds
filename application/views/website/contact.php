@@ -1,3 +1,7 @@
+<?php
+	$array_config = $this->Config_model->init();
+?>
+
 <?php include 'common/meta.php'; ?>
 <body>
 <div class="template">
@@ -14,34 +18,44 @@
 			<div class="pom-right">
 				<div class="roundedbox">
 					<div class="poounder">Contact Us</div>
-					<p>To discuss your requiremaents with one of our website designers please feel free to call us on 0845 2577 187 orcomplete the form below and we'll call or email you straight back.</p>
+					<?php echo $array_config['hubungi-kami']['config_content']; ?>
 				</div>
 				
 				<div class="roundedbox">
-					<p>To discuss your requiremaents with one of our website designers please feel free to call us on 0845 2577 187 orcomplete the form below and we'll call or email you straight back.</p>
 					<div class="space-top">
 						<form id="moreinfo" action="sendscript/findoutmore.php" method="post" class="form-more">
-							<label class="qlabell">Name:</label>
-							<label class="qlabelr">Email address:</label>
+							<label class="qlabell">Nama:</label>
+							<label class="qlabelr">Email:</label>
 							<div class="fr"><input type="text" class="findoutmorefield" name="email" /></div>
 							<div class="fl"><input type="text" class="findoutmorefield" name="name" /></div>
 							<div class="clear"></div>
-							<label class="qlabell">Telephone number:</label>
-							<label class="qlabelr">Current website address:</label>        
+							<label class="qlabell">Telepon:</label>
+							<label class="qlabelr">Website:</label>        
 							<div class="fr"><input type="text" class="findoutmorefield" name="website" /></div>
 							<div class="fl"><input type="text" class="findoutmorefield" name="telephone" /></div>
 							<div class="clear"></div>
-							<label class="qlabell">Nature of enquiry:</label>
-							<label class="qlabelr">How did you hear about us?</label>        
-							<div class="fr"><select class="findoutmorefield select"><option>--- Please Select ---</option></select></div>
-							<div class="fl"><select class="findoutmorefield select"><option>--- Please Select ---</option></select></div>
+							<label class="qlabell">Permintaan:</label>
+							<label class="qlabelr">Dari mana anda mengetahui kami?</label>        
+							<div class="fl"><select class="findoutmorefield select">
+								<option>--- Silahkan pilih ---</option>
+								<option value="Kerjasama">Kerjasama</option>
+								<option value="Recruitment">Recruitment</option>
+								<option value="Permintaan Umum">Permintaan Umum</option>
+								<option value="Permintaan Website">Permintaan Website</option>
+							</select></div>
+							<div class="fr"><select class="findoutmorefield select">
+								<option>--- Silahkan pilih ---</option>
+								<option value="Google">Google</option>
+								<option value="Yahoo">Yahoo</option>
+								<option value="Bing">Bing</option>
+								<option value="Referred website">Referred website</option>
+								<option value="Rekomendasi">Rekomendasi</option>
+								<option value="Berita / Artikel">Berita / Artikel</option>
+							</select></div>
 							<div class="clear"></div>
-							<label class="qlabell">Additional information:</label>
+							<label class="qlabell">Tambahan Informasi:</label>
 							<div class="clear"></div>
 							<div class="row"><textarea class="textarea"></textarea></div>
-							<div class="clear"></div>
-							<div class="promocheck"><input type="checkbox" value="Yes" id="mailing" name="mailing"></div>
-							<div class="promotext2">Keep me updated with promotions &amp; special offers from Pom Design</div>
 							<div class="clear"></div>
 							<div class="button2 fl"><input type="image" value="Submit" id="button" name="button" src="static/image/submit.png"></div>
 							<div class="clear"></div>

@@ -13,7 +13,7 @@
 			
 			<div class="pom-right">
 				<div class="roundedbox">
-					<div class="poounder">Services</div>
+					<div class="poounder">Service</div>
 					<div id="product_list">
 						<div class="productItem new">
 							<div class="thumb">
