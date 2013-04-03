@@ -24,6 +24,14 @@ class home extends CI_Controller {
 		$this->load->view( 'website/product' );
 	}
 	
+	function portofolio() {
+		$this->load->view( 'website/portofolio' );
+	}
+	
+	function service() {
+		$this->load->view( 'website/service' );
+	}
+	
 	function contact() {
 		$this->load->view( 'website/contact' );
 	}

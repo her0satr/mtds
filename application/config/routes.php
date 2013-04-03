@@ -41,7 +41,9 @@
 $route['order'] = "website/home/order";
 $route['about'] = "website/home/about";
 $route['product'] = "website/home/product";
+$route['service'] = "website/home/service";
 $route['contact'] = "website/home/contact";
+$route['portofolio'] = "website/home/portofolio";
 
 $route['default_controller'] = "website/home";
 $route['404_override'] = '';
