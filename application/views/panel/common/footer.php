@@ -1,0 +1,1 @@
+<div id="footer">All Right Reserved &copy; 2013.</div>

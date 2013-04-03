@@ -459,4 +459,24 @@ if (! function_exists('GetMessage')) {
 		return $Array;
 	}
 }
+
+if (! function_exists('EncriptPassword')) {
+	function EncriptPassword($Value) {
+		return md5(sha1(SHA_SECRET . ':' . $Value));
+	}
+}
+
+function flashmsg_set($msg) {
+    if (!isset($_SESSION))
+        @session_start();
+    $_SESSION['_flashmsg'] = $msg;
+}
+
+function flashmsg_get() {
+    if (!isset($_SESSION))
+        @session_start();
+    $msg = isset($_SESSION['_flashmsg']) ? $_SESSION['_flashmsg'] : null;
+    if (!is_null($msg)) unset($_SESSION['_flashmsg']);
+    return $msg;
+}
 ?>

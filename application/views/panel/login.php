@@ -1,9 +1,5 @@
-<html>
-<head>
-	<title>Administrator</title>
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>static/css/mos-style.css">
-	<script type="text/javascript" src="<?php echo base_url(); ?>static/js/jquery.1.7.2.min.js"></script>
-</head>
+<?php $this->load->view( 'panel/common/meta' ); ?>
+
 <body>
 	<div id="header">
 		<div class="inHeaderLogin"></div>
@@ -12,33 +8,47 @@
 	<div id="loginForm">
 		<div class="headLoginForm">Login Administrator</div>
 		<div class="fieldLogin">
-			<form name="login" method="POST" onSubmit="return validasi(this)">
-			<label>Username</label><br>
-			<input type="text" class="login" name="username"><br>
-			<label>Password</label><br>
-			<input type="password" class="login" name="password"><br>
-			<input type="submit" class="button" value="Login">
+			<form name="login" method="POST">
+				<label>Username</label><br>
+				<input type="text" class="login" name="user_name"><br>
+				<label>Password</label><br>
+				<input type="password" class="login" name="user_pass"><br>
+				<input type="submit" class="button" name="button" value="Login">
 			</form>
+			<div class="message red"></div>
 		</div>
 	</div>
-	<script language="javascript">
-	$('input[name="username"]').focus();
-	
-function validasi(form) {
-	if (form.username.value == ""){
-		alert("Anda belum mengisikan Username.");
-		form.username.focus();
-		return (false);
-	}
-    
-	if (form.password.value == ""){
-		alert("Anda belum mengisikan Password.");
-		form.password.focus();
-		return (false);
-	}
-	
-	return true;
-}
+	<script type="text/javascript">
+$(document).ready(function() {
+	$('#loginForm form').submit(function() {
+		if ($('input[name="user_name"]').val().length == 0) {
+			alert("Anda belum mengisikan Username.");
+			$('input[name="user_name"]').focus();
+			return false;
+		}
+		if ($('input[name="user_pass"]').val().length == 0) {
+			alert("Anda belum mengisikan Password.");
+			$('input[name="user_pass"]').focus();
+			return false;
+		}
+		
+		var param = Site.Form.GetValue('loginForm');
+		param.action = 'Login';
+		delete param.button;
+		
+		$('#loginForm .message').html('');
+		Site.ajax({ url: Site.Host + 'panel/user/action', param: param, callback: function(result) {
+			if (result.status) {
+				window.location = result.redirect;
+			} else {
+				$('#loginForm .message').html(result.message);
+			}
+		} });
+		
+		return false;
+	});
+	$('input[name="user_name"]').focus();
+});
 	</script>
 </body>
 </html>

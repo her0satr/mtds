@@ -36,25 +36,15 @@ define('FOPEN_READ_WRITE_CREATE',				'a+b');
 define('FOPEN_WRITE_CREATE_STRICT',				'xb');
 define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
-define('TAHUN',									2013);
-define('IS_GANJIL',								1);
-define('K_SELEKSI_SPMK',						3);
-define('K_SELEKSI_ISA',							45);
-define('K_SELEKSI_PASCA',						46);
+define('SHA_SECRET',							'DOTA 2');
 
-define('DB_NAME',								'selmanew');
-define('DB_USER',								'db2admin');
-define('DB_PASSWORD',							'd3v3ldbun1br4w');
-
-
-define('SFTP_HOST', 'ws.ub.ac.id');
-define('SFTP_USER', 'webmaster');
-define('SFTP_PASS', 'webmasterub0k3');
-define('SFTP_URL', 'http://ws.ub.ac.id/selma2010/public/images/UserTemp');
-define('SFTP_PATH', '/var/www/html/selma2010/public/images/UserTemp');
-
-define('PHOTO_WIDTH', 115);
-define('PHOTO_HEIGHT', 150);
+define('CONFIG',								'config');
+define('DISPLAY_TYPE',							'display_type');
+define('PORTOFOLIO',							'portofolio');
+define('PRODUCT',								'product');
+define('PRODUCT_CATEGORY',						'product_category');
+define('PRODUCT_DETAIL',						'product_detail');
+define('USER',									'user');
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */

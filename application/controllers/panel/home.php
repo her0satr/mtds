@@ -6,7 +6,12 @@ class home extends CI_Controller {
 	}
 	
 	function dashboard() {
-//        $this->User_model->LoginRequired();
+        $this->User_model->login_required();
         $this->load->view( 'panel/dashboard' );
+	}
+	
+	function logout() {
+		$this->User_model->logout();
+		exit;
 	}
 }
