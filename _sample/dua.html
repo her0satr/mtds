@@ -1,0 +1,617 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<style>
+html,body,h1,h2,h3,h4,h5,p,form,textarea { padding:0px; margin:0px; }
+body										{ font:12px/20px Arial, Helvetica, sans-serif; color:#333; }
+a											{ color:#318091; text-decoration:underline; }
+img { border:none; }
+textarea { font-family:Arial, Helvetica, sans-serif; }
+
+.clear { clear:both; }
+
+.pom .fl { float:left; }
+.pom .fr { float:right; }
+.pom .findoutmorefield							{width:225px; margin-bottom:10px; padding:7px; font-size:11px; color:#555;}
+.pom .roundedbox									{-webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; behavior: url(PIE.htc); position:relative; border:1px solid #ccc; background:#fff; padding: 10px; margin: 0 0 5px 0;}
+
+.pom .standardlist a								{ display:block; padding-left:40px; color:#333; text-decoration:none; margin-bottom:10px; line-height:17px; }
+.pom .standardlist a:hover						{color:#47ACC1; text-decoration:none;}
+.pom .standardlist a.sfdomain					{background:url(sf-domain.png) left center no-repeat; line-height:30px; }
+.pom .standardlist a.sfvoucher					{background:url(sf-voucher.png) left center no-repeat;}
+.pom .standardlist a.sfhosting					{background:url(sf-hosting.png) left center no-repeat; line-height:30px; }
+.pom .standardlist a.sfemail						{background:url(sf-email.png) left center no-repeat;}
+.pom .standardlist a.sfsupport					{background:url(sf-support.png) left center no-repeat; line-height:30px; }
+.pom .standardlist a.sfseo						{background:url(sf-seo.png) left center no-repeat;}
+.pom .standardlist a.sfstats						{background:url(sf-stats.png) left center no-repeat;}
+.pom .standardlist a.sflogo						{background:url(sf-logo.png) left center no-repeat; line-height:30px; }
+.pom .standardlist a.sfphoto						{background:url(sf-photo.png) left center no-repeat; line-height:30px; }
+.pom .standardlist a.sfcms						{background:url(sf-cms.png) left center no-repeat; line-height:30px; }
+
+.pom .button	a									{-webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px; behavior: url(PIE.htc); position:relative; background:url(arrow.png) right center no-repeat #48ADC2; line-height:30px; padding:0 30px 0 10px; display:block; color:#fff; text-decoration:none; font-size:11px;}
+.pom .button a:hover								{background:url(arrow.png) right center no-repeat #FF9900;}
+.pom .button2 a									{-webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px; behavior: url(PIE.htc); position:relative; background:url(arrow.png) right center no-repeat #223232; line-height:30px; padding:0 30px 0 10px; display:block; color:#fff; text-decoration:none; font-size:11px;}
+.pom .button2 a:hover							{background:url(arrow.png) right center no-repeat #000;}
+
+.pom h1											{font:lighter 20px/25px Arial, Helvetica, sans-serif; color:#333; display:block; margin-bottom:10px; padding-bottom:5px;}
+.pom h2											{font:bold 16px/40px Arial, Helvetica, sans-serif; color:#333; margin-bottom:10px; display:inline; padding-bottom:5px;}
+.pom h3											{font:lighter 13px/43px Arial, Helvetica, sans-serif; color:#333; display:block; margin-bottom:10px; padding-bottom:5px;}
+.pom #getquote h3								{margin-bottom:0px;}
+
+.pom .bluesixteen								{color:#47ACC1; font-size:16px; font-weight:bold;}
+.pom .blue										{color:#47ACC1;}
+.pom .dbluesixteen								{color:#213232; font-size:15px; font-weight:bold;}
+.pom .orangesixteen								{color:#FF9900; font-size:15px; font-weight:bold;}
+.pom .orangesixteen a							{color:#FF9900; font-size:15px; font-weight:bold; text-decoration:none;}
+.pom .orangesixteen a:hover						{color:#000; text-decoration:none;}
+.pom .orange										{color:#FF9900; font-weight:bold;}
+.pom .orangelight								{color:#FF9900;}
+.pom .sizeeleven									{font-size:11px;}
+.pom .poounder									{border-bottom:3px solid #CCC77A;}
+
+.pom .blueback									{color:#fff; background:url(sidebarback.png); height:34px; line-height:32px; text-indent:10px; font-weight:bold; display:block;}
+.pom .bluebacktwo								{color:#fff; background:url(sidebarback2.png); height:34px; line-height:32px; text-indent:10px; font-weight:bold; display:block;}
+.pom #iconScreen									{background:url(screen.png) left center no-repeat; padding-left:28px; line-height:30px; padding-top:2px;}
+
+.pom ul.poolist, ul.poolist li					{list-style:none; padding:0; margin:0;}
+.pom ul.poolist 									{margin-top:10px;}
+.pom ul.poolist li								{background:url(orangebullet.png) left top no-repeat; padding-left:18px; margin-bottom:5px;}
+
+.pom #listleft									{width:230px; padding-right:10px; float:left;}
+.pom #listright									{width:230px; padding-left:10px; float:left;}
+.pom .freequotefield								{font-size:11px; color:#666; width:180px; padding:7px; border:1px solid #ccc; margin-top:5px;}
+.pom .promocheck									{float:left; width:20px; padding-right:5px; margin:5px 0;}
+.pom .promotext									{float:left; width:168px; font-size:10px; color:#555; line-height:15px; margin:5px 0;}
+.pom .promotext2									{float:left; width:350px; font-size:10px; color:#555; line-height:15px; margin:5px 0; line-height:20px;}
+.pom .pricematch img								{margin-bottom:10px;}
+.pom .testimonaials								{font-size:11px; line-height:18px;}
+.pom .testimonaials .orange						{padding-top:10px;}
+
+.pom .qlabell, .pom .qlabelr					{width:226px; font-size:11px; color:#666; margin:0; display:block; float:left; font-weight:bold; color:#000;}
+.pom .qlabelr							{margin-left:30px;}
+
+.pom ul#showcase, ul#showcase li {list-style:none; margin:0; padding:0; height:220px; overflow:hidden;}
+.pom .showcaseitem {float:left; width:225px; padding:10px; height:220px;}
+.pom ul#latest, ul#latest li {list-style:none; margin:0; padding:0; height:245px; overflow:hidden; font-weight:bold; color:#000;}
+.pom ul#latest li span {color:#3FA7BE;}
+.pom ul#latest li p a {font-size:11px; color:#666; text-decoration:none; font-weight:lighter; line-height:25px;}
+.pom ul#latest li p a:hover {color:#3FA7BE;}
+.pom ul#latest li img {margin-bottom:10px;}	
+.pom ul#testimonials, ul#testimonials li {margin:0; padding:0 0 10px 0; height:360px; overflow:hidden; line-height:15px;}
+
+.pom .bx-next { position:absolute; top:-27px; right:0px; z-index:999; width: 21px; height: 21px; text-indent: -999999px; background: url(gray_next.png) no-repeat 0 -21px; }
+.pom .bx-prev { position:absolute; top:-27px; right:25px; z-index:999; width: 21px; height: 21px; text-indent: -999999px; background: url(gray_before.png) no-repeat 0 -21px; }
+.pom .bx-next:hover, .bx-prev:hover { background-position: 0 0; }
+
+.pom .ui-tooltip, .pom .qtip { position: absolute; left: -28000px; top: -28000px; display: none; max-width: 200px; min-width: 50px; font-size: 12px; line-height: 18px; }
+.pom .ui-tooltip-fluid { display: block; visibility: hidden; position: static !important; float: left !important; }
+.pom .ui-tooltip-content{ position: relative; padding: 5px 9px; overflow: hidden; border: 3px solid #000001; text-align: left; word-wrap: break-word; overflow: hidden; }
+.pom .ui-tooltip-titlebar{ position: relative; min-height: 14px; padding: 5px 35px 5px 10px; overflow: hidden; border: 1px solid #000001; border-width: 1px 1px 0; font-weight: bold; }
+.pom .ui-tooltip-titlebar .ui-state-default{ position: absolute; right: 4px; top: 50%; margin-top: -9px; cursor: pointer; outline: medium none; border-width: 1px; border-style: solid; }
+.pom .ui-tooltip-titlebar .ui-icon,
+.pom .ui-tooltip-icon .ui-icon{ display: block; text-indent: -1000em; }
+.pom .ui-tooltip-icon, .pom .ui-tooltip-icon .ui-icon{ -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+.pom .ui-tooltip-icon .ui-icon{ width: 18px; height: 14px; text-align: center; text-indent: 0; color: inherit; background: transparent none no-repeat -100em -100em; }
+.pom .ui-tooltip-default .ui-tooltip-titlebar,
+.pom .ui-tooltip-default .ui-tooltip-content { border-color: #F1D031; background-color: #FFFFA3; color: #000; }
+.pom .ui-tooltip-default .ui-tooltip-titlebar{ background-color: #FFEF93; }
+.pom .ui-tooltip-default .ui-tooltip-icon{ border-color: #CCC; background: #F1F1F1; color: #777; }
+.pom .ui-tooltip-default .ui-tooltip-titlebar .ui-state-hover{ border-color: #AAA; color: #111; }
+.pom .ui-tooltip .ui-tooltip-tip{ margin: 0 auto; overflow: hidden; z-index: 10; }
+.pom .ui-tooltip .ui-tooltip-tip { position: absolute; line-height: 0.1px !important; font-size: 0.1px !important; color: #123456; background: transparent; border: 0px dashed transparent; }
+.pom .ui-tooltip .ui-tooltip-tip canvas{ top: 0; left: 0; }
+.pom #qtip-overlay{ position: fixed; left: -10000em; top: -10000em; }
+.pom #qtip-overlay.blurs{ cursor: pointer; }
+.pom #qtip-overlay div { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: black; opacity: 0.7; }
+
+.pom .accordion > ol { position: relative; overflow: hidden; height: 100%; margin: 0; padding: 0; list-style-type: none;}
+.pom .accordion .slide > h2 { -webkit-border-radius:6px 6px 0 0; -moz-border-radius:6px 6px 0 0; border-radius:6px 6px 0 0; color: black; font-size: 16px; font-weight: normal; margin: 0;  z-index: 100;  position: absolute;  top: 0;  left: 0;  -webkit-transform: translateX(-100%) rotate(-90deg); -webkit-transform-origin: right top; -moz-transform: translateX(-100%) rotate(-90deg); -moz-transform-origin: right top; -o-transform: translateX(-100%) rotate(-90deg); -o-transform-origin: right top; transform: translateX(-100%) rotate(-90deg); transform-origin: right top; -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)"; filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); }
+.pom .accordion .slide > h2 span { display: block; padding-right: 8%; text-align: left; padding-left:10px; height: 90%; margin-top: 5px; -moz-user-select: none; -khtml-user-select: none; user-select: none; font-weight:bold; font-size:17px; }
+.pom .accordion .slide > h2 b { display: inline-block; position: absolute; top: 13%; left: 10%; text-align: center; -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -o-transform: rotate(90deg); transform: rotate(90deg);-ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)"; filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1); }
+.pom .accordion .slide > h2:hover { cursor: pointer }
+.pom .accordion .slide > div { height: 100%; position: absolute; top: 0; z-index: 10; overflow: hidden; background:#fff; }
+
+.pom #headerslide img { -webkit-border-radius:0 6px 6px 0; -moz-border-radius:0 6px 6px 0; border-radius:0 6px 6px 0; behavior: url(PIE.htc); padding-top:1px;}
+.pom #slidepink {background:url(slidearrow.png) right no-repeat #D23A83;}
+.pom #slideblue {background:url(slidearrow.png) right no-repeat #00ADEC;}
+.pom #slidegrey {background:url(slidearrow.png) right no-repeat #8EADB0;}
+.pom #slideorange {background:url(slidearrow.png) right no-repeat #F79E18;}
+.pom #slidegreen {background:url(slidearrow.png) right no-repeat #B2D44C;}
+	</style>
+	<link href="prices.css" rel="stylesheet" type="text/css" />
+	
+	<script type="text/javascript" src="http://localhost:8666/mitradesain/trunk/static/js/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.bxslider.js"></script> 
+	<script type="text/javascript" src="easing.js"></script> 
+	<script type="text/javascript" src="jquery.qtip.min.js"></script>
+	<script type="text/javascript" src="liteaccordion.jquery.js"></script>  
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('.standardlist a[title]').qtip({ position: {my: 'bottom right', at: 'top left',}, style: {classes: 'ui-tooltip-shadow'}, } );
+		$('#vertical-slide').liteAccordion();
+		$('#showcase').bxSlider({
+			mode: 'fade',			
+			infiniteLoop: true,
+			auto: true,
+			pager: false,
+			easing: 'easeInOutQuad'
+		});
+    $('#latest').bxSlider({
+    mode: 'vertical',
+			infiniteLoop: true,
+			auto: true,
+			pager: false,
+			controls: false,
+			easing: 'easeInOutQuad',
+			pause: 6000
+    });
+    $('#testimonials').bxSlider({
+    mode: 'fade',
+			infiniteLoop: true,
+			auto: true,
+			pager: false,
+			controls: false,
+			easing: 'easeInOutQuad',
+			pause: 6000
+    });
+	});
+	</script>
+</head>
+<body style="background: #CCCCCC;">
+
+<div style="width: 980px; margin: 0px auto;" class="pom">
+	<div style="background: #F1EEEB; padding: 10px 5px;">
+		<div style="float: left; width: 220px;">
+			<div class="roundedbox" id="latestbox">
+				<h3 class="blueback">Latest Website Design</h3>
+				<ul id="latest">
+					<li>
+						<img src="design2.jpg" alt="Our latest website design" title="Our latest website design" />
+						Oakmont Capital <span>Brochure Site</span>
+						<p><a href="http://www.oakmontcapital.co.uk">www.oakmontcapital.co.uk</a></p>
+						<div class="button2 fr"><a href="/get-a-quote.php">get quote</a></div>
+						<div class="button fl"><a href="/portfolio.php">view more</a></div>
+						<div class="clear"></div>
+					</li>
+					<li>
+						<img src="design1.jpg" alt="Our latest website design" title="Our latest website design" />
+						Monsters Baby <span>eCommerce</span>
+						<p><a href="http://www.monstersbaby.co.uk">www.monstersbaby.co.uk</a></p>
+						<div class="button2 fr"><a href="/get-a-quote.php">get quote</a></div>
+						<div class="button fl"><a href="/portfolio.php">view more</a></div>
+						<div class="clear"></div>
+					</li>
+					<li>
+						<img src="design3.jpg" alt="Our latest website design" title="Our latest website design" />
+						StudentPodShop <span>Property Portal</span>
+						<p><a href="http://www.studentpodshop.com">www.studentpodshop.com</a></p>
+						<div class="button2 fr"><a href="/get-a-quote.php">get quote</a></div>
+						<div class="button fl"><a href="/portfolio.php">view more</a></div>
+						<div class="clear"></div>
+					</li>  
+					<li>
+						<img src="design4.jpg" alt="Our latest website design" title="Our latest website design" />
+						GSA <span>Bespoke</span>
+						<p><a href="http://www.globalstudentadmissions.com">www.globalstudentadmissions.com</a></p>
+						<div class="button2 fr"><a href="/get-a-quote.php">get quote</a></div>
+						<div class="button fl"><a href="/portfolio.php">view more</a></div>
+						<div class="clear"></div>
+					</li>      
+				</ul>
+			</div>
+			
+			<div class="roundedbox">
+				<div id="getquote">
+					<h3 class="bluebacktwo">Free Web Design Quote</h3>    	
+					<p class="sizeeleven">Enter your details below for a free, no obligation quotation:</p>
+
+					<div id="formcontainer">
+						<form method="post" action="sendscript/sidebar.php" name="quickcontact" id="quickcontact">
+							<p><input name="name" type="text" class="freequotefield" id="name" value="" placeholder="Full name" /></p>
+							<p><input name="email" type="text" class="freequotefield" id="email" value="" placeholder="Email Address" /></p>
+							<p><input name="telephone" type="text" class="freequotefield" id="telephone" value="" placeholder="Telepon" /></p>
+							<p><input name="website" type="text" class="freequotefield" id="website" value="" placeholder="WebSite" /></p>
+							<div class="promocheck"><input name="mailing" type="checkbox" id="mailing" value="Yes" checked="checked" /></div>
+							<div class="promotext">Keep me updated with promotions &amp; special offers from Pom Design</div>
+							<div class="clear"></div>
+							<input type="image" src="submit.png" name="button" id="button" value="Submit" />
+							<div class="clear"></div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div style="text-align: center;"><img src="pricematch.png" /></div>
+		</div>
+		
+		<div style="float: right; width: 745px;">
+			<div class="roundedbox">
+				<h1 class="poounder">Website and Ecommerce Design Prices</h1>
+				<p><img width="175" height="139" align="right" src="pricematch.png">We have developed over four thousand website's for clients from all sectors, industries and locations around the world. </p>
+				<p>&nbsp;</p>
+				<p>Here you will find a small selection of our web designs from standard brochure web sites to eCommerce solutions, online shops and bespoke web applications. </p>
+				<h5 id="pricespage">Select a website specification from the tabs below for more information.</h5>
+				<div class="clear"></div>
+			</div>
+			
+			<div class="roundedbox">
+				<div id="pricescont">
+					<ul id="pricestab">
+						<li><a class="selected" rel="price1" href="#">1 Page</a></li>
+						<li><a rel="price2" href="#" class="">2-4 Pages</a></li>
+						<li><a rel="price3" href="#" class="">5-8 Pages</a></li>
+						<li><a rel="price4" href="#" class="">9-12 Pages</a></li>
+						<li><a rel="price5" href="#" class="">Premium Online Store</a></li>
+						<li><a rel="price9" href="#" class="">eShopper</a></li>
+						<li><a rel="price6" href="#" class="">Estate Agents / Property</a></li>
+						<li><a rel="price7" href="#" class="">Blog</a></li>
+						<li><a rel="price8" href="#" class="">Email Marketing</a></li>
+						<li><a href="website-quote-generator.php" class="">Quote Generator</a></li>      
+					</ul>    
+				</div>
+				
+				<div id="priceinfo">
+					<div class="tabcontent" id="price1" style="display: block;">
+						<h1><span class="blue">1 Page Website</span> £295</h1>
+						<p>Our basic web design package. One page bespoke website design including  all our standard features at no extra cost.:</p>
+						
+						<ul>
+							<li>Entirely bespoke web designs, no templates used</li>
+							<li>Unlimited design concepts and revisions</li>
+							<li>Spam protected contact / enquiry forms</li>
+							<li>Integration with Facebook, Twitter and other social networking websites</li>
+							<li>Cross browser and device compatibility <em>(tested on PC, Mac, iPhone, iPad, Android, Internet Explorer, Safari, Firefox, Chrome, Opera and many others)</em></li>
+							<li>Free selection of millions of professional photographs</li>
+							<li>Expandable websites</li>              
+						</ul>                          
+						<ul>
+							<li>Free hosting</li>
+							<li>Free domain name</li>
+							<li>Logo design</li>
+							<li>On-site Search Engine Optimsation</li>
+							<li>Expert technical support</li>
+							<li>Free extensive content management</li>
+							<li>Animation and user interaction</li>
+							<li>Advanced JavaScript functionality</li>
+							<li>Image galleries</li>
+							<li>Embedded video support</li>
+							<li>Audio player support</li>        
+						</ul>                    				
+						<div class="clear"></div>
+					</div>
+					<div class="tabcontent" id="price2" style="display: none;">
+						<h1><span class="blue">2-4 Page Website</span> £395</h1>
+						<p>Our 2-4 page website's are ideal for start up businesses taking their first steps towards establishing an online identity. They include all our standard features at no extra cost.</p>
+						
+						<ul>
+							<li>Entirely bespoke web designs, no templates used</li>
+							<li>Unlimited design concepts and revisions</li>
+							<li>Spam protected contact / enquiry forms</li>
+							<li>Integration with Facebook, Twitter and other social networking websites</li>
+							<li>Cross browser and device compatibility <em>(tested on PC, Mac, iPhone, iPad, Android, Internet Explorer, Safari, Firefox, Chrome, Opera and many others)</em></li>
+							<li>Free selection of millions of professional photographs</li>
+							<li>Expandable websites</li>              
+						</ul>
+						<ul>
+							<li>Free hosting</li>
+							<li>Free domain name</li>
+							<li>Logo design</li>
+							<li>On-site Search Engine Optimsation</li>
+							<li>Expert technical support</li>
+							<li>Free extensive content management</li>
+							<li>Animation and user interaction</li>
+							<li>Advanced JavaScript functionality</li>
+							<li>Image galleries</li>
+							<li>Embedded video support</li>
+							<li>Audio player support</li>        
+						</ul>                    				
+						<div class="clear"></div>
+					</div>
+					<div class="tabcontent" id="price3" style="display: none;">
+						<h1><span class="blue">5-8 Page Website</span> £525</h1>
+						<p>The 5-8 page brochure package enables you to advertise your services in more depth and detail.  They include all our standard features at no extra cost.</p>
+						<ul>
+							<li>Entirely bespoke web designs, no templates used</li>
+							<li>Unlimited design concepts and revisions</li>
+							<li>Spam protected contact / enquiry forms</li>
+							<li>Integration with Facebook, Twitter and other social networking websites</li>
+							<li>Cross browser and device compatibility <em>(tested on PC, Mac, iPhone, iPad, Android, Internet Explorer, Safari, Firefox, Chrome, Opera and many others)</em></li>
+							<li>Free selection of millions of professional photographs</li>
+							<li>Expandable websites</li>              
+						</ul>                          
+						<ul>
+							<li>Free hosting</li>
+							<li>Free domain name</li>
+							<li>Logo design</li>
+							<li>On-site Search Engine Optimsation</li>
+							<li>Expert technical support</li>
+							<li>Free extensive content management</li>
+							<li>Animation and user interaction</li>
+							<li>Advanced JavaScript functionality</li>
+							<li>Image galleries</li>
+							<li>Embedded video support</li>
+							<li>Audio player support</li>        
+						</ul>                    				
+						<div class="clear"></div>  
+					</div>
+					<div class="tabcontent" id="price4" style="display: none;">
+						<h1><span class="blue">9-12 Page Website</span> £625</h1>
+						<p>Expand your site to 9-12 pages and take the opportunity to maximise your online sales and enquiries. Ideal for well established companies looking to advertise their services online through a professional, eye catching website. Our 9-12 page website's include all our standard features at no extra cost.</p>
+						<ul>
+							<li>Entirely bespoke web designs, no templates used</li>
+							<li>Unlimited design concepts and revisions</li>
+							<li>Spam protected contact / enquiry forms</li>
+							<li>Integration with Facebook, Twitter and other social networking websites</li>
+							<li>Cross browser and device compatibility <em>(tested on PC, Mac, iPhone, iPad, Android, Internet Explorer, Safari, Firefox, Chrome, Opera and many others)</em></li>
+							<li>Free selection of millions of professional photographs</li>
+							<li>Expandable websites</li>              
+						</ul>                          
+						<ul>
+							<li>Free hosting</li>
+							<li>Free domain name</li>
+							<li>Logo design</li>
+							<li>On-site Search Engine Optimsation</li>
+							<li>Expert technical support</li>
+							<li>Free extensive content management</li>
+							<li>Animation and user interaction</li>
+							<li>Advanced JavaScript functionality</li>
+							<li>Image galleries</li>
+							<li>Embedded video support</li>
+							<li>Audio player support</li>        
+						</ul>                    				
+						<div class="clear"></div>  
+					</div>
+					<div class="tabcontent2" id="price5" style="display: none;">
+						<h1><span class="blue">Premium Online Store</span> £975</h1>          
+						<p>Start trading online from only £975 and enjoy a fully admin controlled, unlimited eCommerce package.</p>
+						<p>&nbsp;</p>
+						<h3 class="blueunder">Stock, Customer &amp; Order Management</h3>
+						<ul>
+							<li>Support for unlimited products.</li>
+							<li>Support for unlimited categories and sub-categories.</li>
+							<li>Ability to move, copy and mirror products across multiple locations.</li>
+							<li>Best sellers, sales and special offer sections</li>
+							<li>Brand management / categorisation</li>
+							<li>Create product attributes such as size and colour with unique prices if required.</li>
+							<li>Media gallery for all products supporting unlimited photographs and embedded videos</li>
+							<li>Auto-resize product images including full screen popup and "zoom" function.</li>
+							<li>Stock control offering various options for when stock levels reach zero (item can be purchased, item remains on site but cannot be purchased, item is temporarily disabled on the site).</li>
+							<li>Low-stock alert system notifying you when stock of any product breaches a preset limit.</li>
+							<li>Orders console allowing the management of orders received between numerous defined areas such as New, Dispatched and Archived.</li>
+							<li>Export all customer data to CSV / Excel format</li>
+							<li>Export all order data to CSV / Excel format</li>
+							<li>Ability to manage customer reviews incorporating functionality to review, approve and decline submissions.</li>
+						</ul>
+						
+						<h3 class="blueunder">Checkout / Postage Options</h3>
+						<ul>
+							<li>Support for shipping tariffs based on weight, price and quantity bands</li>
+							<li>Free postage levels</li>
+							<li>Support for postage options across defined zones such as UK, Europe and the rest of the world.</li>
+							<li>Ability to define shipping types such as next day delivery, standard delivery, airsure etc...</li>
+							<li>Option to checkout without creating account as well as logging in or creating a new account.</li>
+							<li>Submit additional information on checkout</li>
+							<li>"Gift wrapping" option for each product</li>
+							<li>Integration with any payment gateway including but not limited to Sagepay, PayPal, Worldpay, Barclays, HSBC, PaymentSense, Secure Trading and many more.</li>
+						</ul>
+						
+						<h3 class="blueunder">Product Search &amp; Filter</h3>
+						<ul>
+							<li>Find products by keyword, category, brand. </li>
+							<li>Filter products by price, brand, colour, size etc...</li>
+							<li>Sort results by price and number of results per page</li>
+						</ul>
+						
+						<h3 class="blueunder">Product Display Features</h3>
+						<ul>
+							<li>Bespoke video / photo gallery including pop-ups and zoom functions.</li>
+							<li>"Send to a friend" feature</li>
+							<li>"Save for later" feature</li>
+							<li>Related products / customers who bought X also bought Y.</li>
+							<li>Customer reviews / rating system</li>
+						</ul>
+						
+						<h3 class="blueunder">Customer Accounts</h3>
+						<ul>
+							<li>View saved products / wish list</li>
+							<li>Previous order history</li>
+							<li>Manage  delivery / shipping address book</li>
+							<li>Update password / password reminder system</li>
+						</ul>
+						
+						<h3 class="blueunder">Other Features</h3>
+						<ul>
+							<li>Discount code / coupon module. Create coupons of fixed or percentage values and apply them to your entire range or just certain product, categories and users. Set start and end dates, minimum sub-total order values and number of uses per customer.</li>
+							<li>Banner management to display your adverts or those of affiliate / paid advertisers.</li>
+							<li>HTML Newsletter system for sending updates and offers to registered users</li>
+							<li>HTML, branded emails triggered on events such as orders being placed, password reminders, order status updates and account creation</li>
+							<li>Invoice created for each order and emailed to customer</li>
+							<li>Support for informational pages such as About us, FAQ, Terms and Conditions etc... Includes administration functionality to manage content whenever required.</li>
+							<li>Generic product / site gallery</li>
+							<li>Self generating product, category and page sitemap</li>
+						</ul>
+						
+						<h3 class="blueunder">Optional Extras</h3>
+						<ul>
+							<li>Blog system seamlessly integrated into your bespoke design.</li>
+							<li>Wholesale accounts offering unique pricing system and minimum quantity limits.</li>
+						</ul>
+						
+						<p>&nbsp;</p>      
+						<p>Alternatively please contact us or complete the form on the right hand side of this page.</p>
+					</div>
+					<div class="tabcontent2" id="price9" style="display: none;">
+						<h1><span class="blue">eShopper</span> £699</h1>
+						Our eShopper solution allows you to sell your products / virtual items via your website cost-effectively and easily through PayPal.  This solution is ideal for those customers with a small, fixed range of products.
+						<p>&nbsp;</p>
+						
+						<h3 class="blueunder">Products / Features</h3>
+						<ul>
+							<li>Up to 10 products (more included at additional cost)</li>
+							<li>Allow customers to select from product variants such as size and colour</li>
+							<li>Unlimited images and videos to support each product</li>
+							<li>Unlimited supporting text and documents</li>
+						</ul>
+						
+						<h3 class="blueunder">Checkout Process</h3>
+						<ul>
+							<li>Secure cart and checkout via PayPal</li>
+							<li>Email notifications to you and the customer once payment is made</li>
+							<li>Options for VAT and postage charges</li>
+						</ul>
+					</div>
+					<div class="tabcontent" id="price6" style="display: none;">
+						<h1><span class="blue">Property Rentals &amp; Sales / Estate Agency</span> £1250</h1>
+						<p>Our property listing developments are bursting with functionality, enabling your customers to easily locate and enquire about properties and you and your agents to manage properties from user friendly control panels. Our highly competitive prices start from £1250 and  include all our standard features along with additional functionality for the managing of properties and customer enquiries.</p>
+						
+						<ul>
+							<li>Full property search / filtering system for your customers</li>
+							<li>"Property Shortlist" feature for your visitors</li>
+							<li>Support for unlimited properties to be added to the site</li>
+							<li>Google Maps &amp; Street View integration</li>
+							<li>Unlimited photo gallery for each property added</li>
+							<li>Property downloads (floor plans etc...)</li>
+							<li>On-page, spam protected enquiry forms for each property</li>
+							<li>Entirely bespoke web designs, no templates used</li>
+							<li>Unlimited design concepts and revisions</li>
+							<li>Integration with Facebook, Twitter and other social networking websites</li>
+							<li>Optional integration with property portals such as Rightmove and Primelocation</li>
+							<li>Support for integration with property management software such as CFP and Gemini.</li>              
+						</ul>                          
+						<ul>
+							<li>Cross browser and device compatibility <em>(tested on PC, Mac, iPhone, iPad, Android, Internet Explorer, Safari, Firefox, Chrome, Opera and many others)</em></li>
+							<li>Free selection of millions of professional photographs</li>
+							<li>Expandable websites</li>
+							<li>Free hosting</li>
+							<li>Free domain name</li>
+							<li>Logo design</li>
+							<li>On-site Search Engine Optimsation</li>
+							<li>Expert technical support</li>
+							<li>Free extensive content management</li>
+							<li>Animation and user interaction</li>
+							<li>Advanced JavaScript functionality</li>
+							<li>Image galleries</li>
+							<li>Embedded video support</li>
+							<li>Audio player support</li>        
+						</ul>                    				
+						<div class="clear"></div>  
+					</div>
+					<div class="tabcontent" id="price7" style="display: none;">
+						<h1><span class="blue">Blog</span> £395</h1>
+						<p>Whether you already have a website and are seeking new way to engage your visitors, or are seeking a platform from which to tell the world about your products, services or opinions, our blogging system will arm you with all the tools you need.</p>
+						
+						<ul>
+							<li>Create unlimited articles and organise by your own system of categories, tags and dates.</li>
+							<li>Automated article archiving</li>
+							<li>Reader commenting facility including  account system</li>
+							<li>Article voting / polls</li>
+							<li>Audio / Video Embedding</li>
+							<li>Keyword search tools</li>
+							<li>Unlimited pages</li>
+							<li>RSS feeds<br />And much more...</li>
+							<li>Entirely bespoke web designs, no templates used</li>
+							<li>Unlimited design concepts and revisions</li>
+							<li>Spam protected contact / enquiry forms</li>
+							<li>Cross browser and device compatibility <em>(tested on PC, Mac, iPhone, iPad, Android, Internet Explorer, Safari, Firefox, Chrome, Opera and many others)</em></li>              
+						</ul>                          
+						<ul>
+							<li>Integration with Facebook, Twitter and other social networking websites.</li>
+							<li> Post automatically to Facebook and Twitter every time you create a new blog post</li>
+							<li>Free hosting</li>
+							<li>Free domain name</li>
+							<li>Logo design</li>
+							<li>On-site Search Engine Optimsation</li>
+							<li>Expert technical support</li>
+							<li>Free extensive content management</li>
+							<li>Animation and user interaction</li>
+							<li>Advanced JavaScript functionality</li>
+							<li>Image galleries</li>
+							<li>Free selection of millions of professional photographs</li>
+							<li>Expandable websites</li>        
+						</ul>                    				
+						<div class="clear"></div>
+					</div>
+					<div class="tabcontent" id="price8" style="display: none;">
+						<h1><span class="blue">Email Marketing</span> <em>from </em>£0.03 p/recipient</h1>
+						<p>Reach thousands of your customers instantly with our email marketing campaigns.</p>
+						<p>&nbsp;</p>
+						<p>Newsletter and email marketing campaigns are a proven way to reach new customers and stay in touch with existing ones, but can take hours or even days of your time in creating attractive newsletters and managing the campaigns. This is where we can help.</p>
+						<p>&nbsp;</p>
+						<p>We are able to create attractive and eye catching email newsletters and handle the sending to your client base, all you need are customer email addresses.</p>
+						<p>&nbsp;</p>
+						<p>Not only will we create the newsletter for your business and send it to your customer database, we will also supply feedback and reports including:</p>
+						
+						<ul style="width:500px;">
+							<li>Who opened your email</li>
+							<li>Who clicked what link, when and how many times</li>
+							<li>Who subscribed / unsubscribed</li>
+							<li>Who forwarded your email to a friend</li>
+							<li>Bounce and spam rates</li>
+							<li>And much more...</li>
+						</ul>
+						<div class="clear"></div>
+						
+						<p>In letting us handle your email campaign it takes the load away from your business allowing you to concentrate on other areas, and most importantly removes any risk of being blacklisted by spam lists - 
+						leaving it to be professionally managed and maintained by our service. You can even select send HTML and simple text based emails within each campaign in allow greater exposure to customers using mobile 
+						devices and other text based email clients.</p>
+						<p>&nbsp;</p>
+						<p>As a customer you will receive your own unique login from which you can chose to mange your campaigns entirely by yourself if you prefer. Some of the features included are:</p>
+						<ul style="width:550px;">
+							<li>Start your own campaigns, use one of the templates we have created for you (or ask us to create you a new one), edit the content and send your newsletter.</li>
+							<li>Define the campaign start date - set the newsletter to send whenever you like in the future.</li>
+							<li>View extensive live reports and user feedback</li>
+							<li>Update your customer email list manually and mass update it by uploading an excel / CSV file.</li>
+							<li>Before you send your newsletter you have the option to preview it to selected email addresses and even view examples of how it will look in 15 different email clients such as Outlook, Outlook Express and Apple Mail.</li>
+						</ul>
+						<div class="clear"></div>
+						
+						<p>Prices are based around a tariff of £10 per campaign and 3p per recipient, allowing you to reach a customer base of 3000 for only £95.</p>
+						<p>&nbsp;</p>
+						<p>If you are interested in learning more about our email campaign service please contact us by email on info@pomdesign.com or by telephone on 0845 2577 187</p>
+						<p>&nbsp;</p>
+					</div>            
+				</div>
+				<div class="clear"></div>
+				<div class="poounderpad"></div>
+				
+				<div id="extras">
+					<div class="extras">
+						<h3><span class="qgorange"><strong>We</strong></span> <strong><span class="qgblue">Love</span> <span class="qgpink">Social</span> <span class="qggreen">Media</span></strong><span class="qggreen"></span></h3>
+						<p>We can fully integrate your social media accounts into your website, for no extra cost.</p>
+						<img class="magtop" alt="Facebook, Twitter, Google and other social media integrated as stadndard" src="social-media.png">
+					</div>
+					<div class="extras">
+						<h3><span class="orange">FREE</span> Google Adwords</h3>
+						<img alt="Free Google AdWords vouchers with every web design" src="google-adwords-logo.gif">
+						<p>We offer £50 of FREE Google Adwords vouchers with every sale.  </p>
+					</div>
+					<div class="extras">
+						<h3>Integrated Blog</h3>
+						<p>Add a fully integrated, custom designed blog to your website and keep your client up to date whilst boosting your SEO.</p>
+						<h4>£150</h4> <em>(save £299)</em>
+					</div>
+					<div style="margin:0;" class="extras">
+						<h3>Advanced Gallery</h3>
+						<p>Present your images with impact and take  control via a custom built management system</p>
+						<h4>£125</h4> <em>(save £125)</em>    
+					</div>        
+					<div class="clear"></div>
+
+					<h1 class="poounder">Interested?</h1>
+					If you would like to speak to one of our experts about your project please  <a href="get-a-quote.php">click here to request an online website quotation.</a>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+
+<script type="text/javascript" src="tabcontent.js"></script>
+<script type="text/javascript">
+	var countries=new ddtabcontent("pricestab")
+	countries.setpersist(false)
+	countries.setselectedClassTarget("link")
+	countries.init()
+</script>
+
+</body>
+</html>
