@@ -150,7 +150,7 @@ img { border:none; }
 .pom ul#latest li span {color:#3FA7BE;}
 .pom ul#latest li p a {font-size:11px; color:#666; text-decoration:none; font-weight:lighter; line-height:25px;}
 .pom ul#latest li p a:hover {color:#3FA7BE;}
-.pom ul#latest li img {margin-bottom:10px;}	
+.pom ul#latest li img {margin-bottom:10px; width: 198px; height: 153px; }	
 .pom ul#testimonials, ul#testimonials li {margin:0; padding:0 0 10px 0; height:250px; overflow:hidden; line-height:15px;}
 
 .pom .bx-next { position:absolute; top:-27px; right:0px; z-index:999; width: 21px; height: 21px; text-indent: -999999px; background: url(../image/gray_next.png) no-repeat 0 -21px; }
@@ -312,7 +312,7 @@ img { border:none; }
 #list-port .title { color: #225E69; padding: 0 0 2px 0; }
 #list-port .link { color: #F79E19; border-bottom: 1px solid #225E69; padding: 0 0 3px 0; }
 #list-port .image { padding: 5px 0; }
-#list-port .image img { padding: 3px; border: 1px solid #2F97DE; }
+#list-port .image img { padding: 3px; border: 1px solid #2F97DE; width: 150px; height: 110px; }
 
 #pricescont {-webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; behavior: url(PIE.htc); position:relative; border:1px solid #ccc; background:#F4F4F4; float:left; width:151px; height:320px;}
 ul#pricestab	{position:absolute; top:10px; left:-5px; width:168px;}
