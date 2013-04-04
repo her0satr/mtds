@@ -1,17 +1,22 @@
-<?php include 'common/meta.php'; ?>
+<?php
+	$array_portofolio = $this->Portofolio_model->get_array();
+?>
+
+<?php $this->load->view( 'website/common/meta.php'); ?>
 <body>
 <div class="template">
-	<?php include 'common/template_fix.php'; ?>
+	<?php $this->load->view( 'website/common/template_fix.php'); ?>
 	
 	<div class="fix-width">
-		<?php include 'common/header.php'; ?>
+		<?php $this->load->view( 'website/common/header.php'); ?>
 		
 		<div class="pom">
 			<div class="pom-left">
-				<?php include 'common/cnt_left.php'; ?>
+				<?php $this->load->view( 'website/common/cnt_left.php'); ?>
 			</div>
 			
 			<div class="pom-right">
+				<!--
 				<div class="roundedbox">
 					<div class="poounder">Portofolio</div>
 					<div id="portfolio">
@@ -30,50 +35,24 @@
 						<div class="clear"></div>
 					</div>
 				</div>
+				-->
 				
 				<div id="list-port" class="roundedbox">
-					<div class="item">
-						<div class="title">SSS & CO Law and Business Co</div>
-						<div class="link">www.ssslawbusiness.com</div>
-						<div class="image"><img src="static/upload/porto1.png" /></div>
-					</div>
-					<div class="item">
-						<div class="title">SSS & CO Law and Business Co</div>
-						<div class="link">www.ssslawbusiness.com</div>
-						<div class="image"><img src="static/upload/porto1.png" /></div>
-					</div>
-					<div class="item">
-						<div class="title">SSS & CO Law and Business Co</div>
-						<div class="link">www.ssslawbusiness.com</div>
-						<div class="image"><img src="static/upload/porto1.png" /></div>
-					</div>
-					<div class="item">
-						<div class="title">SSS & CO Law and Business Co</div>
-						<div class="link">www.ssslawbusiness.com</div>
-						<div class="image"><img src="static/upload/porto1.png" /></div>
-					</div>
-					<div class="item">
-						<div class="title">SSS & CO Law and Business Co</div>
-						<div class="link">www.ssslawbusiness.com</div>
-						<div class="image"><img src="static/upload/porto1.png" /></div>
-					</div>
-					<div class="item">
-						<div class="title">SSS & CO Law and Business Co</div>
-						<div class="link">www.ssslawbusiness.com</div>
-						<div class="image"><img src="static/upload/porto1.png" /></div>
-					</div>
-					<div class="item">
-						<div class="title">SSS & CO Law and Business Co</div>
-						<div class="link">www.ssslawbusiness.com</div>
-						<div class="image"><img src="static/upload/porto1.png" /></div>
-					</div>
-					<div class="item">
-						<div class="title">SSS & CO Law and Business Co</div>
-						<div class="link">www.ssslawbusiness.com</div>
-						<div class="image"><img src="static/upload/porto1.png" /></div>
-					</div>
+					<div class="poounder">Portofolio</div>
+					<?php foreach ($array_portofolio as $portofolio) { ?>
+						<div class="item">
+							<div class="title"><?php echo $portofolio['portofolio_title']; ?></div>
+							<div class="link"><?php echo $portofolio['portofolio_link']; ?></div>
+							<div class="image">
+								<a href="<?php echo $portofolio['portofolio_name_link']; ?>">
+									<img src="<?php echo $portofolio['portofolio_image_link']; ?>" />
+								</a>
+							</div>
+						</div>
+					<?php } ?>
 					<div class="clear"></div>
 					
+					<!--
 					<div id="product_list">
 						<div class="pagination">
 							<a href="#" class="">1</a>
@@ -82,12 +61,13 @@
 							<a href="#" class="bold">Next</a>
 						</div>
 					</div>
+					-->
 				</div>
 			</div>
 			<div class="clear"></div>
 		</div>
 		
-		<?php include 'common/footer.php'; ?>
+		<?php $this->load->view( 'website/common/footer.php'); ?>
 	</div>
 </div>
 </body>

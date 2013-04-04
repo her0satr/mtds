@@ -1,51 +1,32 @@
 <?php
 	$array_config = $this->Config_model->init();
+	$array_portofolio = $this->Portofolio_model->get_array(array('limit' => 4));
 ?>
 
 <div class="roundedbox" id="latestbox">
 	<h3 class="blueback">Latest Website Design</h3>
 	<ul id="latest">
-		<li>
-			<img src="<?php echo base_url(); ?>static/upload/design2.jpg" alt="Our latest website design" title="Our latest website design" />
-			Oakmont Capital <span>Brochure Site</span>
-			<p><a href="http://www.oakmontcapital.co.uk">www.oakmontcapital.co.uk</a></p>
-			<div class="button2 fr"><a href="/get-a-quote.php">get quote</a></div>
-			<div class="button fl"><a href="/portfolio.php">view more</a></div>
-			<div class="clear"></div>
-		</li>
-		<li>
-			<img src="<?php echo base_url(); ?>static/upload/design1.jpg" alt="Our latest website design" title="Our latest website design" />
-			Monsters Baby <span>eCommerce</span>
-			<p><a href="http://www.monstersbaby.co.uk">www.monstersbaby.co.uk</a></p>
-			<div class="button2 fr"><a href="/get-a-quote.php">get quote</a></div>
-			<div class="button fl"><a href="/portfolio.php">view more</a></div>
-			<div class="clear"></div>
-		</li>
-		<li>
-			<img src="<?php echo base_url(); ?>static/upload/design3.jpg" alt="Our latest website design" title="Our latest website design" />
-			StudentPodShop <span>Property Portal</span>
-			<p><a href="http://www.studentpodshop.com">www.studentpodshop.com</a></p>
-			<div class="button2 fr"><a href="/get-a-quote.php">get quote</a></div>
-			<div class="button fl"><a href="/portfolio.php">view more</a></div>
-			<div class="clear"></div>
-		</li>  
-		<li>
-			<img src="<?php echo base_url(); ?>static/upload/design4.jpg" alt="Our latest website design" title="Our latest website design" />
-			GSA <span>Bespoke</span>
-			<p><a href="http://www.globalstudentadmissions.com">www.globalstudentadmissions.com</a></p>
-			<div class="button2 fr"><a href="/get-a-quote.php">get quote</a></div>
-			<div class="button fl"><a href="/portfolio.php">view more</a></div>
-			<div class="clear"></div>
-		</li>                
+		<?php foreach ($array_portofolio as $portofolio) { ?>
+			<li>
+				<img src="<?php echo $portofolio['portofolio_image_link']; ?>" alt="<?php echo $portofolio['portofolio_title']; ?>" title="<?php echo $portofolio['portofolio_title']; ?>" />
+				<?php echo $portofolio['portofolio_title']; ?>
+				<p><a href="<?php echo $portofolio['portofolio_link']; ?>"><?php echo $portofolio['portofolio_link']; ?></a></p>
+				<div class="button2 fr"><a href="<?php echo base_url('contact'); ?>">Penawaran</a></div>
+				<div class="button fl"><a href="<?php echo base_url('portofolio'); ?>">Portofolio</a></div>
+				<div class="clear"></div>
+			</li>
+		<?php } ?>             
 	</ul>
 </div>
 
 <div id="service">
+	<!--
 	<div class="search">
 		<form action="http://jogjacamp.com/index.php?action=search.main" method="get" name="searchForm">
 			<input type="text" placeholder="Search keyword..." class="searchText" id="search_input" name="keyword">		
 		</form>
 	</div>
+	-->
 	<div class="support">
 		<div class="title">Customer Support</div>
 		<div class="live"><img src="<?php echo base_url(); ?>static/upload/live.png" /></div>
@@ -136,7 +117,7 @@
 				<div class="promotext">Keep me updated with promotions &amp; special offers from Pom Design</div>
 				-->
 				<div class="clear"></div>
-				<div class="space"><input type="image" src="<?php echo base_url(); ?>static/image/submit.png" name="button" id="button" value="Submit" /></div>
+				<div class="space button2 fl"><a href="<?php echo base_url('portofolio'); ?>">Submit</a></div>
 				<div class="clear"></div>
 			</form>
 		</div>

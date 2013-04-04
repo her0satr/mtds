@@ -42,7 +42,7 @@ class Portofolio_model extends CI_Model {
         
 		$SelectResult = mysql_query($SelectQuery) or die(mysql_error());
 		if (false !== $Row = mysql_fetch_assoc($SelectResult)) {
-			$Array = StripArray($Row);
+			$Array = $this->sync($Row);
 		}
 		
 		return $Array;
@@ -54,7 +54,7 @@ class Portofolio_model extends CI_Model {
 		
 		$PageOffset = (isset($param['start']) && !empty($param['start'])) ? $param['start'] : 0;
 		$PageLimit = (isset($param['limit']) && !empty($param['limit'])) ? $param['limit'] : 25;
-		$StringSorting = (isset($param['sort'])) ? GetStringSorting($param['sort']) : 'portofolio_title ASC';
+		$StringSorting = (isset($param['sort'])) ? GetStringSorting($param['sort']) : 'portofolio_date DESC';
 		
 		$SelectQuery = "
 			SELECT Portofolio.*
@@ -65,8 +65,7 @@ class Portofolio_model extends CI_Model {
 		";
 		$SelectResult = mysql_query($SelectQuery) or die(mysql_error());
 		while (false !== $Row = mysql_fetch_assoc($SelectResult)) {
-			$Row = StripArray($Row);
-			$Array[] = $Row;
+			$Array[] = $this->sync($Row);
 		}
 		
 		return $Array;
@@ -98,5 +97,13 @@ class Portofolio_model extends CI_Model {
         $Result['Message'] = 'Data berhasil dihapus.';
 		
 		return $Result;
+	}
+	
+	function sync($row) {
+		$row = StripArray($row);
+		$row['portofolio_name_link'] = base_url('portofolio/'.$row['portofolio_name']);
+		$row['portofolio_image_link'] = base_url('static/upload/'.$row['portofolio_image']);
+		
+		return $row;
 	}
 }
