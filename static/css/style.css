@@ -13,6 +13,7 @@ img { border:none; }
 .f-16 { font-size: 16px; }
 .bold { font-weight: bold; }
 .hide { display: none; }
+.cursor { cursor: pointer; }
 .clear { clear: both; }
 
 .box_skitter { position: relative; width: 500px; height:171px; border:0px solid #000; background:#000 }
@@ -329,7 +330,7 @@ ul#pricestab li a.selected {background:url(../image/website-price-on.png); color
 #priceinfo .tabcontent2 ul {margin:0; padding:10px 0 0 0;}
 #priceinfo .tabcontent2 ul li {list-style:none; margin:0 0 8px 0; padding:0 20px 0 20px; background:url(../image/orangebullet.png) left top no-repeat; display:block;}
 
-#extras .extras {float:left; width: 162px; margin-right:20px; font-size:11px; line-height:17px; margin-bottom:10px;}
+#extras .extras {float:left; width: 162px; margin-right:18px; font-size:11px; line-height:17px; margin-bottom:10px;}
 #extras .no-margin { margin: 0px; }
 #extras .extras img {margin-bottom:10px;}
 #extras .extras h3 {margin-bottom:5px; line-height:20px; font-size:15px;}

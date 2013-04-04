@@ -27,6 +27,7 @@
 						<?php unset($product['product_desc']); ?>
 						<span class="hide"><?php echo json_encode($product); ?></span>
 						<a href="<?php echo base_url('panel/product/edit/'.$product['product_id']); ?>"><img title="edit data" src="<?php echo base_url(); ?>static/image/edit.png"></a> |
+						<a href="<?php echo base_url('panel/product_detail/index/'.$product['product_id']); ?>"><img title="detail data" src="<?php echo base_url(); ?>static/image/detail.png"></a> |
 						<a class="cursor"><img title="hapus data" src="<?php echo base_url(); ?>static/image/delete.png" class="product_delete"></a></td>
 					</tr>
 			<?php } ?>

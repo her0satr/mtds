@@ -11,7 +11,7 @@ class Display_Type_model extends CI_Model {
 		
 		$PageOffset = (isset($param['start']) && !empty($param['start'])) ? $param['start'] : 0;
 		$PageLimit = (isset($param['limit']) && !empty($param['limit'])) ? $param['limit'] : 25;
-		$StringSorting = (isset($param['sort'])) ? GetStringSorting($param['sort']) : 'display_type_name ASC';
+		$StringSorting = (isset($param['sort'])) ? GetStringSorting($param['sort']) : 'display_type_order ASC';
 		
 		$SelectQuery = "
 			SELECT DisplayType.*

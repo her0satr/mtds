@@ -479,4 +479,9 @@ function flashmsg_get() {
     if (!is_null($msg)) unset($_SESSION['_flashmsg']);
     return $msg;
 }
+
+function tinymc_fix($value) {
+	$result = preg_replace('/((\.\.\/)+static)/i', base_url('static'), $value);
+	return $result;
+}
 ?>
