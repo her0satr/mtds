@@ -42,6 +42,7 @@
 					</div>
 				</div>
 				
+				<?php $show_tab = 0; ?>
 				<?php foreach ($product_detail as $detail) { ?>
 					<?php if ($detail['display_type_name'] == 'top') { ?>
 						<div class="roundedbox">
@@ -49,59 +50,63 @@
 							<?php echo $detail['product_detail_desc']; ?>
 							<div class="clear"></div>
 						</div>
+					<?php } else { ?>
+						<?php $show_tab = 1; ?>
 					<?php } ?>
 				<?php } ?>
-			
-				<div class="roundedbox">
-					<div id="pricescont">
-						<ul id="pricestab">
+				
+				<?php if ($show_tab == 1) { ?>
+					<div class="roundedbox">
+						<div id="pricescont">
+							<ul id="pricestab">
+								<?php $counter = 0; ?>
+								<?php foreach ($product_detail as $detail) { ?>
+									<?php if ($detail['display_type_name'] == 'tab') { ?>
+										<?php $select = ($counter == 0) ? 'selected' : ''; ?>
+										<li><a class="<?php echo $select; ?>" style="cursor: pointer;" rel="tap_<?php echo $counter; ?>"><?php echo $detail['product_detail_title']; ?></a></li>
+										<?php $counter++; ?>
+									<?php } ?>
+								<?php } ?>
+							</ul>
+							<div class="clear"></div>
+						</div>
+						
+						<div id="priceinfo">
 							<?php $counter = 0; ?>
 							<?php foreach ($product_detail as $detail) { ?>
 								<?php if ($detail['display_type_name'] == 'tab') { ?>
-									<?php $select = ($counter == 0) ? 'selected' : ''; ?>
-									<li><a class="<?php echo $select; ?>" style="cursor: pointer;" rel="tap_<?php echo $counter; ?>"><?php echo $detail['product_detail_title']; ?></a></li>
+									<?php $display = ($counter == 0) ? '' : 'hide'; ?>
+									<div class="tabcontent2 <?php echo $display; ?>" id="tap_<?php echo $counter; ?>">
+										<?php echo $detail['product_detail_desc']; ?>
+										<div class="clear"></div>
+									</div>
 									<?php $counter++; ?>
 								<?php } ?>
 							<?php } ?>
-						</ul>
+						</div>
 						<div class="clear"></div>
-					</div>
-					
-					<div id="priceinfo">
-						<?php $counter = 0; ?>
-						<?php foreach ($product_detail as $detail) { ?>
-							<?php if ($detail['display_type_name'] == 'tab') { ?>
-								<?php $display = ($counter == 0) ? '' : 'hide'; ?>
-								<div class="tabcontent2 <?php echo $display; ?>" id="tap_<?php echo $counter; ?>">
-									<?php echo $detail['product_detail_desc']; ?>
-									<div class="clear"></div>
-								</div>
-								<?php $counter++; ?>
-							<?php } ?>
-						<?php } ?>
-					</div>
-					<div class="clear"></div>
-					<div class="poounderpad"></div>
-					
-					<div id="extras">
-						<?php foreach ($product_detail as $detail) { ?>
-							<?php if ($detail['display_type_name'] == 'column') { ?>
-								<div class="extras">
-									<h3><?php echo $detail['product_detail_title']; ?></h3>
-									<?php echo $detail['product_detail_desc']; ?>
-								</div>
-							<?php } ?>
-						<?php } ?>
-						<div class="clear"></div>
+						<div class="poounderpad"></div>
 						
-						<?php foreach ($product_detail as $detail) { ?>
-							<?php if ($detail['display_type_name'] == 'bottom') { ?>
-								<h1 class="poounder"><?php echo $detail['product_detail_title']; ?></h1>
-								<?php echo $detail['product_detail_desc']; ?>
+						<div id="extras">
+							<?php foreach ($product_detail as $detail) { ?>
+								<?php if ($detail['display_type_name'] == 'column') { ?>
+									<div class="extras">
+										<h3><?php echo $detail['product_detail_title']; ?></h3>
+										<?php echo $detail['product_detail_desc']; ?>
+									</div>
+								<?php } ?>
 							<?php } ?>
-						<?php } ?>
+							<div class="clear"></div>
+							
+							<?php foreach ($product_detail as $detail) { ?>
+								<?php if ($detail['display_type_name'] == 'bottom') { ?>
+									<h1 class="poounder"><?php echo $detail['product_detail_title']; ?></h1>
+									<?php echo $detail['product_detail_desc']; ?>
+								<?php } ?>
+							<?php } ?>
+						</div>
 					</div>
-				</div>
+				<?php } ?>
 			</div>
 			<div class="clear"></div>
 		</div>
