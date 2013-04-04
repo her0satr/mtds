@@ -9,7 +9,7 @@
 	}
 ?>
 
-<?php $this->load->view( 'website/common/meta.php'); ?>
+<?php $this->load->view( 'website/common/meta.php', array('title' => 'Produk - '.$product['product_title']) ); ?>
 <body>
 <div class="template">
 	<?php $this->load->view( 'website/common/template_fix.php'); ?>

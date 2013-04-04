@@ -7,7 +7,7 @@
 <div id="cssmenu">
 	<ul>
 		<li class="main active"><a href="<?php echo base_url(); ?>"><span class="home">Home</span></a></li>
-		<li class="main"><a href="<?php echo base_url('product'); ?>"><span class="product">Product</span></a></li>
+		<li class="main"><a href="<?php echo base_url('product'); ?>"><span class="product">Produk</span></a></li>
 		<li class="main"><a href="<?php echo base_url('order'); ?>"><span class="payment">Cara Pesan</span></a></li>
 		<li class="main"><a href="<?php echo base_url('portofolio'); ?>"><span class="porto">Protofolio</span></a></li>
 		<li class="main"><a href="<?php echo base_url('about'); ?>"><span class="profile">Profile</span></a></li>

@@ -12,7 +12,7 @@
 	$array_payment = $this->Config_model->get_array($param_payment);
 ?>
 
-<?php include 'common/meta.php'; ?>
+<?php $this->load->view( 'website/common/meta.php', array('title' => 'Profile') ); ?>
 <body>
 <div class="template">
 	<?php include 'common/template_fix.php'; ?>

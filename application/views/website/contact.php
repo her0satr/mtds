@@ -2,7 +2,7 @@
 	$array_config = $this->Config_model->init();
 ?>
 
-<?php include 'common/meta.php'; ?>
+<?php $this->load->view( 'website/common/meta.php', array('title' => 'Hubungi Kami') ); ?>
 <body>
 <div class="template">
 	<?php include 'common/template_fix.php'; ?>

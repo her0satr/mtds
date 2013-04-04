@@ -1,4 +1,4 @@
-<?php $this->load->view( 'website/common/meta.php' ); ?>
+<?php $this->load->view( 'website/common/meta.php', array('title' => 'Home') ); ?>
 
 <body>
 <div class="template">

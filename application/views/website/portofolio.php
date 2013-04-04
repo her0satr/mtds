@@ -2,7 +2,7 @@
 	$array_portofolio = $this->Portofolio_model->get_array();
 ?>
 
-<?php $this->load->view( 'website/common/meta.php'); ?>
+<?php $this->load->view( 'website/common/meta.php', array('title' => 'Portofolio') ); ?>
 <body>
 <div class="template">
 	<?php $this->load->view( 'website/common/template_fix.php'); ?>

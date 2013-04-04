@@ -2,7 +2,7 @@
 	$array_product = $this->Product_model->get_array();
 ?>
 
-<?php include 'common/meta.php'; ?>
+<?php $this->load->view( 'website/common/meta.php', array('title' => 'Produk') ); ?>
 <body>
 <div class="template">
 	<?php include 'common/template_fix.php'; ?>
