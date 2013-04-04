@@ -20,4 +20,5 @@
 	<script type="text/javascript" src="<?php echo base_url(); ?>static/js/coda-slider.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>static/js/tabcontent.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>static/js/common.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>static/js/jquery.public.js"></script>
 </head>

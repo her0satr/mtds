@@ -1,56 +1,39 @@
-<?php include 'common/meta.php'; ?>
+<?php
+	preg_match('/product\/([a-z0-9\_]+)/i', $_SERVER['REQUEST_URI'], $match);
+	$product_name = (empty($match[1])) ? '' : $match[1];
+	$product = $this->Product_model->get_by_id(array('product_name' => $product_name));
+	if (count($product) == 0) {
+		show_404();
+		exit;
+	}
+?>
+
+<?php $this->load->view( 'website/common/meta.php'); ?>
 <body>
 <div class="template">
-	<?php include 'common/template_fix.php'; ?>
+	<?php $this->load->view( 'website/common/template_fix.php'); ?>
 	
 	<div class="fix-width">
-		<?php include 'common/header.php'; ?>
+		<?php $this->load->view( 'website/common/header.php'); ?>
 		
 		<div class="pom">
 			<div class="pom-left">
-				<?php include 'common/cnt_left.php'; ?>
+				<?php $this->load->view( 'website/common/cnt_left.php'); ?>
 			</div>
 			
 			<div class="pom-right">
 				<div class="roundedbox">
-					<h1 class="poounder">New jCommerce Standart</h1>
+					<h1 class="poounder">Product Detail - <?php echo $product['product_title']; ?></h1>
 					<div id="product_list">
 						<div class="noborder">
-							<div class="productItem top">
+							<div class="productItem <?php echo $product['product_category_name']; ?>">
 								<div class="thumb">
-									<a href="script_42_jejualan.com.html" title="jejualan.com">
-										<img src="static/upload/50c80e33e829b.jpg" ></a>
+									<a href="<?php echo $product['product_link']; ?>" title="<?php echo $product['product_title']; ?>">
+										<img src="<?php echo $product['product_image_link']; ?>" ></a>
 								</div>
 								<div class="desc">
-									<div class="title"><a href="#">Toko Online</a></div>
-									<div class="brief">
-										<p><a href="http://jogjacamp.com">Jogjacamp</a> sebagai pelopor <a href="http://jogjacamp.com">pembuatan website instan</a>t kembali menghadirkan produk jcommerce, sebagai hasil penyempurnaan produk <a href="http://jogjacamp.org/demo/jcommerce_demo/?q=std">jCommerce Standart generasi pertama</a>. Produk baru ini kami sebut <font color="#3366ff"><strong>New jCommerce Standart</strong></font>.<br>
-										Dengan <a href="http://jogjacamp.com">desain website</a> dan fitur2 tambahan menarik, produk ini sangat layak untuk bisnis toko online Anda<br>
-										<br>
-										Dalam website <a href="http://jogjacamp.org/demo/jcommercestandarnew/?temp=jStandar2">New Jcommerce Standart </a>ini mencakup Fitur:<br>
-										<br>
-										<strong>Halaman Publik :</strong><br>
-										1. Home<br>
-										2. Shopping cart<br>
-										3. Konfirmasi<br>
-										4. About us<br>
-										5. Search<br>
-										6. Kategori Barang<br>
-										7. Login member dilengkapi lupa password<br>
-										8. Promo Rotator<br>
-										9. Produk terbaru<br>
-										10. YM Online<br>
-										11. Banner<br>
-										<br>
-									</div>
-									<div class="price">
-										<span>Price :</span>
-										Rp 60.000,00 /bulan
-									</div>
-									<div class="price">
-										<span>Promo :</span>
-										Rp 60.000,00 /bulan
-									</div>
+									<div class="title"><a href="<?php echo $product['product_link']; ?>"><?php echo $product['product_title']; ?></a></div>
+									<div class="brief"><?php echo $product['product_desc']; ?></div>
 									<div class="clear"></div>
 								</div>
 							</div>
@@ -60,7 +43,7 @@
 				
 				<div class="roundedbox">
 					<h1 class="poounder">Website and Ecommerce Design Prices</h1>
-					<p><img width="175" height="139" align="right" src="static/image/pricematch.png">We have developed over four thousand website's for clients from all sectors, industries and locations around the world. </p>
+					<p><img width="175" height="139" align="right" src="<?php echo base_url(); ?>static/image/pricematch.png">We have developed over four thousand website's for clients from all sectors, industries and locations around the world. </p>
 					<p>&nbsp;</p>
 					<p>Here you will find a small selection of our web designs from standard brochure web sites to eCommerce solutions, online shops and bespoke web applications. </p><br /><br />
 					
@@ -115,7 +98,7 @@
 						</div>
 						<div class="tabcontent hide" id="price2">
 							<h1><span class="blue">2-4 Page Website</span> £395</h1>
-							<p>Our 2-4 page website's are ideal for start up businesses taking their first steps towards establishing an online identity. They include all our standard features at no extra cost.</p>
+							<p>Our 2-4 page website's are ideal for start up businesses taking their first steps towards establishing an online identity. They $this->load->view( all our standard features at no extra cost.</p>
 							
 							<ul>
 								<li>Entirely bespoke web designs, no templates used</li>
@@ -143,7 +126,7 @@
 						</div>
 						<div class="tabcontent hide" id="price3">
 							<h1><span class="blue">5-8 Page Website</span> £525</h1>
-							<p>The 5-8 page brochure package enables you to advertise your services in more depth and detail.  They include all our standard features at no extra cost.</p>
+							<p>The 5-8 page brochure package enables you to advertise your services in more depth and detail.  They $this->load->view( all our standard features at no extra cost.</p>
 							<ul>
 								<li>Entirely bespoke web designs, no templates used</li>
 								<li>Unlimited design concepts and revisions</li>
@@ -170,7 +153,7 @@
 						</div>
 						<div class="tabcontent hide" id="price4">
 							<h1><span class="blue">9-12 Page Website</span> £625</h1>
-							<p>Expand your site to 9-12 pages and take the opportunity to maximise your online sales and enquiries. Ideal for well established companies looking to advertise their services online through a professional, eye catching website. Our 9-12 page website's include all our standard features at no extra cost.</p>
+							<p>Expand your site to 9-12 pages and take the opportunity to maximise your online sales and enquiries. Ideal for well established companies looking to advertise their services online through a professional, eye catching website. Our 9-12 page website's $this->load->view( all our standard features at no extra cost.</p>
 							<ul>
 								<li>Entirely bespoke web designs, no templates used</li>
 								<li>Unlimited design concepts and revisions</li>
@@ -281,7 +264,7 @@
 							
 							<h3 class="blueunder">Products / Features</h3>
 							<ul>
-								<li>Up to 10 products (more included at additional cost)</li>
+								<li>Up to 10 products (more $this->load->view(d at additional cost)</li>
 								<li>Allow customers to select from product variants such as size and colour</li>
 								<li>Unlimited images and videos to support each product</li>
 								<li>Unlimited supporting text and documents</li>
@@ -296,7 +279,7 @@
 						</div>
 						<div class="tabcontent hide" id="price6">
 							<h1><span class="blue">Property Rentals &amp; Sales / Estate Agency</span> £1250</h1>
-							<p>Our property listing developments are bursting with functionality, enabling your customers to easily locate and enquire about properties and you and your agents to manage properties from user friendly control panels. Our highly competitive prices start from £1250 and  include all our standard features along with additional functionality for the managing of properties and customer enquiries.</p>
+							<p>Our property listing developments are bursting with functionality, enabling your customers to easily locate and enquire about properties and you and your agents to manage properties from user friendly control panels. Our highly competitive prices start from £1250 and  $this->load->view( all our standard features along with additional functionality for the managing of properties and customer enquiries.</p>
 							
 							<ul>
 								<li>Full property search / filtering system for your customers</li>
@@ -389,7 +372,7 @@
 							leaving it to be professionally managed and maintained by our service. You can even select send HTML and simple text based emails within each campaign in allow greater exposure to customers using mobile 
 							devices and other text based email clients.</p>
 							<p>&nbsp;</p>
-							<p>As a customer you will receive your own unique login from which you can chose to mange your campaigns entirely by yourself if you prefer. Some of the features included are:</p>
+							<p>As a customer you will receive your own unique login from which you can chose to mange your campaigns entirely by yourself if you prefer. Some of the features $this->load->view(d are:</p>
 							<ul class="full">
 								<li>Start your own campaigns, use one of the templates we have created for you (or ask us to create you a new one), edit the content and send your newsletter.</li>
 								<li>Define the campaign start date - set the newsletter to send whenever you like in the future.</li>
@@ -412,11 +395,11 @@
 						<div class="extras">
 							<h3><span class="qgorange"><strong>We</strong></span> <strong><span class="qgblue">Love</span> <span class="qgpink">Social</span> <span class="qggreen">Media</span></strong><span class="qggreen"></span></h3>
 							<p>We can fully integrate your social media accounts into your website, for no extra cost.</p>
-							<img class="magtop" alt="Facebook, Twitter, Google and other social media integrated as stadndard" src="static/upload/social-media.png">
+							<img class="magtop" alt="Facebook, Twitter, Google and other social media integrated as stadndard" src="<?php echo base_url(); ?>static/upload/social-media.png">
 						</div>
 						<div class="extras">
 							<h3><span class="orange">FREE</span> Google Adwords</h3>
-							<img alt="Free Google AdWords vouchers with every web design" src="static/upload/google-adwords-logo.gif">
+							<img alt="Free Google AdWords vouchers with every web design" src="<?php echo base_url(); ?>static/upload/google-adwords-logo.gif">
 							<p>We offer £50 of FREE Google Adwords vouchers with every sale.  </p>
 						</div>
 						<div class="extras">
@@ -439,7 +422,7 @@
 			<div class="clear"></div>
 		</div>
 		
-		<?php include 'common/footer.php'; ?>
+		<?php $this->load->view( 'website/common/footer.php'); ?>
 	</div>
 </div>
 </body>

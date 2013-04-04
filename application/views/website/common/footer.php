@@ -17,7 +17,7 @@
 		<div class="clear"></div>
 	</div>
 	
-	<div class="top hide"><a href="#header" ><img src="static/image/back-top.png"></a></div>
+	<div class="top hide"><a href="#header" ><img src="<?php echo base_url(); ?>static/image/back-top.png"></a></div>
 </div>
 
 <div id="footer">

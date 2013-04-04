@@ -6,7 +6,7 @@
 	<h3 class="blueback">Latest Website Design</h3>
 	<ul id="latest">
 		<li>
-			<img src="static/upload/design2.jpg" alt="Our latest website design" title="Our latest website design" />
+			<img src="<?php echo base_url(); ?>static/upload/design2.jpg" alt="Our latest website design" title="Our latest website design" />
 			Oakmont Capital <span>Brochure Site</span>
 			<p><a href="http://www.oakmontcapital.co.uk">www.oakmontcapital.co.uk</a></p>
 			<div class="button2 fr"><a href="/get-a-quote.php">get quote</a></div>
@@ -14,7 +14,7 @@
 			<div class="clear"></div>
 		</li>
 		<li>
-			<img src="static/upload/design1.jpg" alt="Our latest website design" title="Our latest website design" />
+			<img src="<?php echo base_url(); ?>static/upload/design1.jpg" alt="Our latest website design" title="Our latest website design" />
 			Monsters Baby <span>eCommerce</span>
 			<p><a href="http://www.monstersbaby.co.uk">www.monstersbaby.co.uk</a></p>
 			<div class="button2 fr"><a href="/get-a-quote.php">get quote</a></div>
@@ -22,7 +22,7 @@
 			<div class="clear"></div>
 		</li>
 		<li>
-			<img src="static/upload/design3.jpg" alt="Our latest website design" title="Our latest website design" />
+			<img src="<?php echo base_url(); ?>static/upload/design3.jpg" alt="Our latest website design" title="Our latest website design" />
 			StudentPodShop <span>Property Portal</span>
 			<p><a href="http://www.studentpodshop.com">www.studentpodshop.com</a></p>
 			<div class="button2 fr"><a href="/get-a-quote.php">get quote</a></div>
@@ -30,7 +30,7 @@
 			<div class="clear"></div>
 		</li>  
 		<li>
-			<img src="static/upload/design4.jpg" alt="Our latest website design" title="Our latest website design" />
+			<img src="<?php echo base_url(); ?>static/upload/design4.jpg" alt="Our latest website design" title="Our latest website design" />
 			GSA <span>Bespoke</span>
 			<p><a href="http://www.globalstudentadmissions.com">www.globalstudentadmissions.com</a></p>
 			<div class="button2 fr"><a href="/get-a-quote.php">get quote</a></div>
@@ -48,18 +48,18 @@
 	</div>
 	<div class="support">
 		<div class="title">Customer Support</div>
-		<div class="live"><img src="static/upload/live.png" /></div>
+		<div class="live"><img src="<?php echo base_url(); ?>static/upload/live.png" /></div>
 		<div class="sales">
 			<div class="left">Sales <span>:</span></div>
 			<div class="right">
 				<div class="row">
 					<div class="name">Ronni</div>
-					<div class="widget"><img src="static/upload/yahoo.png" /></div>
+					<div class="widget"><img src="<?php echo base_url(); ?>static/upload/yahoo.png" /></div>
 					<div class="clear"></div>
 				</div>
 				<div class="row">
 					<div class="name">Wawan</div>
-					<div class="widget"><img src="static/upload/yahoo.png" /></div>
+					<div class="widget"><img src="<?php echo base_url(); ?>static/upload/yahoo.png" /></div>
 					<div class="clear"></div>
 				</div>
 			</div>
@@ -77,19 +77,47 @@
 	</div>
 </div>
 
-<div class="login-jogja">
+<div class="login-jogja" id="loginForm">
 	<div class="login">
 		<div class="loginCell">
 			<h2 class="title">User Login</h2>
-			<form method="post" action="index.php?action=admin.login">
-				<p><input type="text" class="loginText" name="username" value="Username" /></p>
-				<p><input type="password" class="loginText" name="password" value="Password" /></p>
-				<p><input type="submit" class="loginButton" name="B12" value="Login"></p>
+			<form method="post">
+				<p><input type="text" class="loginText" name="user_name" value="Username" /></p>
+				<p><input type="password" class="loginText" name="user_pass" value="Password" /></p>
+				<p><input type="submit" class="loginButton" name="button" value="Login"></p>
 			</form>
 			<div class="loginLink"><a href="index.php?action=chpasswd.forgotpass">Forgot Password?</a></div>
 			<div class="clear"></div>
 		</div>
 	</div>
+	<script type="text/javascript">
+		$('#loginForm form').submit(function() {
+			if ($('input[name="user_name"]').val().length == 0) {
+				alert("Anda belum mengisikan Username.");
+				$('input[name="user_name"]').focus();
+				return false;
+			}
+			if ($('input[name="user_pass"]').val().length == 0) {
+				alert("Anda belum mengisikan Password.");
+				$('input[name="user_pass"]').focus();
+				return false;
+			}
+			
+			var param = Site.Form.GetValue('loginForm');
+			param.action = 'Login';
+			delete param.button;
+			
+			Site.ajax({ url: Site.Host + 'panel/user/action', param: param, callback: function(result) {
+				if (result.status) {
+					window.location = result.redirect;
+				} else {
+					alert(result.message);
+				}
+			} });
+			
+			return false;
+		});
+	</script>
 </div>
 
 <div class="roundedbox">
@@ -108,10 +136,10 @@
 				<div class="promotext">Keep me updated with promotions &amp; special offers from Pom Design</div>
 				-->
 				<div class="clear"></div>
-				<div class="space"><input type="image" src="static/image/submit.png" name="button" id="button" value="Submit" /></div>
+				<div class="space"><input type="image" src="<?php echo base_url(); ?>static/image/submit.png" name="button" id="button" value="Submit" /></div>
 				<div class="clear"></div>
 			</form>
 		</div>
 	</div>
 </div>
-<div class="center"><img src="static/image/pricematch.png" /></div>
+<div class="center"><img src="<?php echo base_url(); ?>static/image/pricematch.png" /></div>

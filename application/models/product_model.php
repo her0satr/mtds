@@ -34,9 +34,17 @@ class Product_model extends CI_Model {
         
 		if (isset($param['product_id'])) {
             $SelectQuery  = "
-                SELECT Product.*
+                SELECT Product.*, ProductCategory.product_category_name
                 FROM ".PRODUCT." Product
+				LEFT JOIN ".PRODUCT_CATEGORY." ProductCategory ON ProductCategory.product_category_id = Product.product_category_id
                 WHERE Product.product_id = '".$param['product_id']."'
+                LIMIT 1";
+		} else if (isset($param['product_name'])) {
+            $SelectQuery  = "
+                SELECT Product.*, ProductCategory.product_category_name
+                FROM ".PRODUCT." Product
+				LEFT JOIN ".PRODUCT_CATEGORY." ProductCategory ON ProductCategory.product_category_id = Product.product_category_id
+                WHERE Product.product_name = '".$param['product_name']."'
                 LIMIT 1";
         }
         
@@ -57,8 +65,9 @@ class Product_model extends CI_Model {
 		$StringSorting = (isset($param['sort'])) ? GetStringSorting($param['sort']) : 'product_title ASC';
 		
 		$SelectQuery = "
-			SELECT Product.*
+			SELECT Product.*, ProductCategory.product_category_name
 			FROM ".PRODUCT." Product
+			LEFT JOIN ".PRODUCT_CATEGORY." ProductCategory ON ProductCategory.product_category_id = Product.product_category_id
 			WHERE 1 $StringFilter
 			ORDER BY $StringSorting
 			LIMIT $PageOffset, $PageLimit

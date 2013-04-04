@@ -28,7 +28,7 @@
 				</select></td></tr>
 			<tr>
 				<td width="70">Desc</td>
-				<td><textarea name="product_desc" class="tinymce"><?php echo @$product['product_desc']; ?></textarea></td></tr>
+				<td><textarea name="product_desc" class="tinymce" style="height: 600px;"><?php echo @$product['product_desc']; ?></textarea></td></tr>
 			<tr>
 				<td width="70">Date</td>
 				<td><input type="text" name="product_date" value="<?php echo @$product['product_date']; ?>" class="datepicker" /></td></tr>
