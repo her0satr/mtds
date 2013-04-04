@@ -1,5 +1,5 @@
 var Site = {
-    Host: Web.HOST,
+    Host: (typeof(web) == 'undefined') ? Web.HOST : web.host,
     IsValidEmail: function (Email) {
         var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
         return emailPattern.test(Email);  

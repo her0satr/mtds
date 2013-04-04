@@ -214,7 +214,6 @@ img { border:none; }
 #product_list .productItem .desc .brief a, #product_list .productItem .desc .brief a:hover { text-decoration: none; }
 #product_list .productItem .desc .price { font-size: 12px; font-weight: bold; color: #1c252e; }
 #product_list .productItem .desc .price span { padding-right: 10px; font-size: 11px; font-weight: lighter; color: #888; }
-#product_list .productItem .desc .buttons { padding: 18px 0 0 0; }
 #product_list .productItem .desc .buttons input { margin-right: 8px; }
 #product_list .pagination { text-align: right; background-color: #ffffff; border: 1px solid #ebebeb; border-width: 0 0px; padding: 4px 0px 4px 0px; }
 #product_list .pagination a { padding: 2px 5px; text-decoration: none; color: #8d8c8c; background-color: white; border: 1px solid #d9d5cd; }
