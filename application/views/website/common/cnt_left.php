@@ -4,7 +4,7 @@
 ?>
 
 <div class="roundedbox" id="latestbox">
-	<h3 class="blueback">Latest Website Design</h3>
+	<h3 class="blueback">Portofolio Terbaru</h3>
 	<ul id="latest">
 		<?php foreach ($array_portofolio as $portofolio) { ?>
 			<li>
@@ -29,18 +29,28 @@
 	-->
 	<div class="support">
 		<div class="title">Customer Support</div>
-		<div class="live"><img src="<?php echo base_url(); ?>static/upload/live.png" /></div>
+		<div class="live">
+			<a href="javascript:void(window.open('http://mitradesain.com/livezilla/chat.php','','width=590,height=610,left=0,top=0,resizable=yes,menubar=no,location=no,status=yes,scrollbars=yes'))">
+				<img src="<?php echo base_url(); ?>static/upload/live.png" />
+			</a>
+		</div>
 		<div class="sales">
 			<div class="left">Sales <span>:</span></div>
 			<div class="right">
 				<div class="row">
-					<div class="name">Ronni</div>
-					<div class="widget"><img src="<?php echo base_url(); ?>static/upload/yahoo.png" /></div>
+					<div class="name">Mitra</div>
+					<div class="widget">
+						<a href="ymsgr:sendIM?mitradesain&amp;m=hello+Mitra Desain+:+">
+							<img src="http://opi.yahoo.com/online?u=mitradesain&amp;m=g&amp;t=1" /></a>
+					</div>
 					<div class="clear"></div>
 				</div>
 				<div class="row">
-					<div class="name">Wawan</div>
-					<div class="widget"><img src="<?php echo base_url(); ?>static/upload/yahoo.png" /></div>
+					<div class="name">Wahib</div>
+					<div class="widget">
+						<a href="ymsgr:sendIM?wahib_dr&amp;m=hello+Mitra Desain+:+">
+							<img src="http://opi.yahoo.com/online?u=wahib_dr&amp;m=g&amp;t=1" /></a>
+					</div>
 					<div class="clear"></div>
 				</div>
 			</div>

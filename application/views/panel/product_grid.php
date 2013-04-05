@@ -17,7 +17,7 @@
 				<th class="data">Title</th>
 				<th class="data">Desc</th>
 				<th class="data" style="width: 70px;">Date</th>
-				<th class="data" style="width: 50px;">Aksi</th></tr>
+				<th class="data" style="width: 70px;">Aksi</th></tr>
 			<?php foreach ($array_product as $product) { ?>
 				<tr class="data">
 					<td class="data"><?php echo $product['product_title']; ?></td>		

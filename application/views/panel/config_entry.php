@@ -27,7 +27,7 @@
 				<td><input type="text" name="config_title" value="<?php echo @$config['config_title']; ?>" /></td></tr>
 			<tr>
 				<td>Content</td>
-				<td><textarea name="config_content" class="tinymce"><?php echo @$config['config_content']; ?></textarea></td></tr>
+				<td><textarea name="config_content" class="tinymce" style="height: 500px;"><?php echo @$config['config_content']; ?></textarea></td></tr>
 			<tr>
 				<td colspan="2">
 					<input type="button" class="button" value="Update" name="FormUpdate" />

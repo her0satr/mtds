@@ -9,6 +9,7 @@
 		<li><a href="<?php echo base_url('panel/config/?config_category=Why Choose'); ?>">Why Choose</a></li>
 		<li><a href="<?php echo base_url('panel/config/?config_category=Payment'); ?>">Payment</a></li>
 		<li><a href="<?php echo base_url('panel/config/?config_category=Cara Pemesanan'); ?>">Cara Pemesanan</a></li>
+		<li><a href="<?php echo base_url('panel/config/?config_category=Testimony'); ?>">Testimony</a></li>
 		<li><a href="<?php echo base_url('panel/config/?config_category=Contact Us'); ?>">Contact Us</a></li>
 		<li><a href="<?php echo base_url('panel/config'); ?>">Config</a></li>
 	</ul>

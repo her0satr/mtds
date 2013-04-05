@@ -1,5 +1,13 @@
-<?php $this->load->view( 'website/common/meta.php', array('title' => 'Home') ); ?>
+<?php
+	$array_config = $this->Config_model->init();
+	$array_product = $this->Product_model->get_array(array('limit' => 1));
+	$array_portofolio = $this->Portofolio_model->get_array(array('start' => 4, 'limit' => 8));
+	
+	$param_testimony = array( 'filter' => '[{"type":"numeric","comparison":"eq","value":"Testimony","field":"config_category"}]' );
+	$array_testimony = $this->Config_model->get_array($param_testimony);
+?>
 
+<?php $this->load->view( 'website/common/meta.php', array('title' => 'Home') ); ?>
 <body>
 <div class="template">
 	<?php $this->load->view( 'website/common/template_fix.php') ; ?>
@@ -55,89 +63,51 @@
 					<div class="roundedbox">
 						<div id="iconScreen"><h2>Web Design</h2> <span class="bluesixteen">Showcase</span></div>
 						<ul id="showcase">
-							<li>
-								<div class="showcaseitem"><img src="static/upload/web-design-3.gif" width="225" height="192" alt="Our web design showcase" /></div>
-								<div class="showcaseitem"><img src="static/upload/web-design-4.gif" width="225" height="192" alt="Our bespoke website design showcase" /></div>
-								<div class="clear"></div>
-							</li>  
-							<li>
-								<div class="showcaseitem"><img src="static/upload/web-design-1.gif" width="225" height="192" alt="Our web design showcase" /></div>
-								<div class="showcaseitem"><img src="static/upload/web-design-8.gif" width="225" height="192" alt="Our bespoke website design showcase" /></div>
-								<div class="clear"></div>
-							</li>
-							<li>
-								<div class="showcaseitem"><img src="static/upload/web-design-5.gif" width="225" height="192" alt="Our web design showcase" /></div>
-								<div class="showcaseitem"><img src="static/upload/web-design-6.gif" width="225" height="192" alt="Our bespoke website design showcase" /></div>
-								<div class="clear"></div>
-							</li>
-							<li>
-								<div class="showcaseitem"><img src="static/upload/web-design-7.gif" width="225" height="192" alt="Our web design showcase" /></div>
-								<div class="showcaseitem"><img src="static/upload/web-design-2.gif" width="225" height="192" alt="Our bespoke website design showcase" /></div>
-								<div class="clear"></div>
-							</li>                       
+							<?php for ($i = 0; $i < 8; $i++) { ?>
+								<li>
+									<div class="showcaseitem"><img src="<?php echo $array_portofolio[$i]['portofolio_image_link']; ?>" width="225" height="192" alt="<?php echo $array_portofolio[$i]['portofolio_title']; ?>" title="<?php echo $array_portofolio[$i]['portofolio_title']; ?>" /></div>
+									<div class="showcaseitem"><img src="<?php echo $array_portofolio[++$i]['portofolio_image_link']; ?>" width="225" height="192" alt="<?php echo $array_portofolio[$i]['portofolio_image_link']; ?>" title="<?php echo $array_portofolio[$i]['portofolio_title']; ?>" /></div>
+									<div class="clear"></div>
+								</li>
+							<?php } ?>
 						</ul>
 						<div class="clear"></div>
-						<div class="button fr space-left"><a href="get-a-quote.php">Get a Quote</a></div>
-						<div class="button2 fr"><a href="portfolio.php">View Our Portfolio</a></div>        
+						<div class="button2 fr space-left"><a href="<?php echo base_url('contact'); ?>">Penawaran</a></div>
+						<div class="button fr"><a href="<?php echo base_url('portofolio'); ?>">Portofolio</a></div>        
 						<div class="clear"></div>
 					</div>
 					
 					<div class="roundedbox">
-						<h2>Website Design</h2> <span class="bluesixteen">Services</span>
-						<p>We understand that your online presence is the forefront of communicating your  companies persona to an online audience. Our <strong>website developers</strong> have an in  depth understanding of the constantly changing online landscape and the  behaviours of Internet users. Our web design team have expert knowledge of  <strong>search engine optimisation</strong> and <strong>search engine marketing</strong> as well as payment  gateway options for our <a href="/e-commerce.php">online shop</a> developments. Your website design can be  integrated with all leading <strong>social media </strong>applications. With Pom Design web  design you have all the knowledge and expertise needed for an excellent online  presence in one place, at an unbeatable price.</p>
-						<div id="listleft">
-							<ul class="poolist">
-								<li>Custom, bespoke website design &amp; development</li>
-								<li>No ongoing payments</li>
-								<li>Content Management for ALL websites</li>            
-								<li>Logo design / branding</li>
-								<li>Unlimited web design revisions</li>
-								<li>Free hosting, updates and support</li>            
-							</ul>                                    
-						</div>
-						<div id="listright">
-							<ul class="poolist">
-								<li>Free domain name</li>
-								<li>Free professional stock photography</li>
-								<li>Email accounts</li>            
-								<li>Website visitor statistics</li>
-								<li>Search Engine Optimisation</li>
-								<li>Expert technical support</li>            
-							</ul>                                    
-						</div>
-						<div class="clear"></div>        
+						<?php echo $array_config['home-webdesain']['config_content']; ?>
+						<div class="clear"></div>
 					</div>
 					
 					<div class="roundedbox">
-						<h2>Would you like to find out more about our web design services?</h2>
+						<div class="poounder">Ingin mengetahui tentang produk unggulan kami ?</div>
 						<div id="product_list">
 							<div class="noborder">
-								<div class="productItem new">
-									<div class="thumb">
-										<a href="script_42_jejualan.com.html" title="jejualan.com">
-											<img src="static/upload/50c80e33e829b.jpg" ></a>
+								<?php foreach ($array_product as $key => $product) { ?>
+									<div class="productItem <?php echo $product['product_category_name']; ?>">
+										<div class="thumb">
+											<a href="<?php echo $product['product_link']; ?>" title="<?php echo $product['product_title']; ?>">
+												<img src="<?php echo $product['product_image_link']; ?>" /></a>
+										</div>
+										<div class="desc">
+											<div class="title">
+												<a href="<?php echo $product['product_link']; ?>" title="<?php echo $product['product_title']; ?>">
+													<?php echo $product['product_title']; ?></a></div>
+											<div class="brief"><?php echo $product['product_desc_simple']; ?></div>
+											<div class="buttons">
+												<a href="<?php echo $product['product_link']; ?>"><input type="image" src="static/image/button-detail.gif" /></a>
+												<a href="<?php echo base_url('contact'); ?>"><input type="image" src="static/image/button-buy.gif" /></a>
+												<!-- <a href="<?php echo base_url('contact'); ?>"><input type="image" src="static/image/button-demo.gif" /></a> -->
+											</div>
+											<div class="clear"></div>
+										</div>
 									</div>
-									<div class="desc">
-										<div class="title"><a href="#">Toko Online</a></div>
-										<div class="brief">Mudahnya buat website jualan online hanya dengan 20 detik. Daftarkan segera dan dapatkan kemudahan dalam menjalankan toko online Anda.</div>
-										<div class="price">
-											<span>Price :</span>
-											Rp 60.000,00 /bulan
-										</div>
-										<div class="price">
-											<span>Promo :</span>
-											Rp 60.000,00 /bulan
-										</div>
-										<div class="buttons">
-											<input type="image" src="static/image/button-detail.gif" />
-											<input type="image" src="static/image/button-buy.gif" />
-											<input type="image" src="static/image/button-demo.gif" />
-										</div>
-										<div class="clear"></div>
-									</div>
-								</div>
+								<?php } ?>
 								<div class="pagination">
-									<a href="#">More</a>
+									<a href="<?php echo base_url('product'); ?>">More</a>
 								</div>
 							</div>
 						</div>
@@ -145,7 +115,7 @@
 				</div>
 				<div class="template-right">
 					<div class="roundedbox">
-						<h3 class="blueback">Standard Features</h3>
+						<h3 class="blueback">Fitur Standard</h3>
 						<div class="standardlist">
 							<a href="/prices.php" class="sfdomain" title="1 years domain name registration as standard.">Free Domain Name</a>    
 							<a href="/prices.php" class="sfvoucher" title="&pound;50 FREE Google Adword voucher.">Free Google Adwords Voucher</a>           
@@ -162,41 +132,22 @@
 					</div>
 					
 					<div class="roundedbox">
-						<h3 class="blueback">Client Testimonials</h3>
+						<h3 class="blueback">Testimonial</h3>
 						<div class="testimonaials">
 							<ul id="testimonials">
-								<li>
-									<p>Setting up website the help and support from Pom Design has been excellent. I am far from IT literate but everything was clearly explained and nothing was too much trouble. I lost count of the number of alterations I made as I kept changing my mind.</p>
-									<p>&nbsp;</p>
-									<p>I would definately recommend to anyone looking for a web design company.</p>
-									<p class="orange">Barry Sutton</p>
-								</li> 
-								<li>
-									<p>Having taken the decision to set up my own business it was important for me to find the best people at the right price to help me create the all important web site. I could not have done better than finding Luke at Pomdesign. I looked at a lot of web designers and had quotes from those that I thought had the requisite abilities and design flair to provide what I was looking for.</p>
-									<p class="orange">David Clarke - Holland Clarke Property</p>
-								</li>             
-								<li>
-									<p>I have just set up a new Financial Advser business and asked Luke at Pom Design to design my website.</p>
-									<p>&nbsp;</p>
-									<p>I have been entirely happy with the service Luke and his team provided and I can't recommend them highly enough. Any queries they are very competitive. I am a very happy customer.</p>
-									<p class="orange">David Hopkinson - David Hopkinson IFA LTD</p>
-								</li>
-								<li>
-									<p>For an incredibly modest fee we have an attractive ten page website, optimised and submitted to the major search engines, complete with company logo and branding. The web-surfing statistics for Safetycor are impressive. In fact, our new website has already brought us good quality enquiries.</p>
-									<p>&nbsp;</p>
-									<p>Thanks to everyone at POM Design; we cannot praise you enough.</p>
-									<p class="orange">Trevor Harris - Safteycor</p>
-								</li> 
+								<?php foreach ($array_testimony as $testimony) { ?>
+									<li><?php echo $testimony['config_content']; ?></li> 
+								<?php } ?>
 							</ul>             
 						</div>
-						<div class="button fl"><a href="#">read more</a></div>    
+						<!-- <div class="button fl"><a href="#">read more</a></div> -->
 						<div class="clear"></div>
 					</div>
 					
 					<div class="roundedbox">
-						<p><span class="orangesixteen">Free</span> <span class="dbluesixteen">Content Management</span></p>
-						<img src="static/image/free-content-management.png" align="right" />All our clients enjoy the ability to update the contents of their websites whenever they like, for free, forever...
-						<div class="button2 fr space-top"><a href="/content-management-solutions.php">read more</a></div>
+						<p><span class="dbluesixteen">Content Management</span> <span class="orangesixteen">Gratis</span></p>
+						<div class="f-11"><img src="static/image/free-content-management.png" align="right" />Semua klien kami menikmati kemampuan untuk memperbarui isi situs Web mereka kapan pun mereka suka, secara gratis, selamanya ...</div>
+						<div class="button2 fr space-top"><a href="<?php echo base_url('contact'); ?>">Penawaran</a></div>
 						<div class="clear"></div>
 					</div>
 				</div>
