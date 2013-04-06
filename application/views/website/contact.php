@@ -26,24 +26,24 @@
 						<form id="moreinfo" action="sendscript/findoutmore.php" method="post" class="form-more">
 							<label class="qlabell">Nama Lengkap :</label>
 							<label class="qlabelr">Email :</label>
-							<div class="fr"><input type="text" class="findoutmorefield" name="email" /></div>
 							<div class="fl"><input type="text" class="findoutmorefield" name="name" /></div>
+							<div class="fr"><input type="text" class="findoutmorefield" name="email" /></div>
 							<div class="clear"></div>
 							<label class="qlabell">Telepon :</label>
 							<label class="qlabelr">Website :</label>        
+							<div class="fl"><input type="text" class="findoutmorefield" name="phone" /></div>
 							<div class="fr"><input type="text" class="findoutmorefield" name="website" /></div>
-							<div class="fl"><input type="text" class="findoutmorefield" name="telephone" /></div>
 							<div class="clear"></div>
 							<label class="qlabell">Permintaan :</label>
 							<label class="qlabelr">Dari mana anda mengetahui kami ?</label>        
-							<div class="fl"><select class="findoutmorefield select">
+							<div class="fl"><select class="findoutmorefield select" name="request">
 								<option>--- Silahkan pilih ---</option>
 								<option value="Kerjasama">Kerjasama</option>
 								<option value="Recruitment">Recruitment</option>
 								<option value="Permintaan Umum">Permintaan Umum</option>
 								<option value="Permintaan Website">Permintaan Website</option>
 							</select></div>
-							<div class="fr"><select class="findoutmorefield select">
+							<div class="fr"><select class="findoutmorefield select" name="notice_from">
 								<option>--- Silahkan pilih ---</option>
 								<option value="Google">Google</option>
 								<option value="Yahoo">Yahoo</option>
@@ -55,9 +55,9 @@
 							<div class="clear"></div>
 							<label class="qlabell">Tambahan Informasi:</label>
 							<div class="clear"></div>
-							<div class="row"><textarea class="textarea"></textarea></div>
+							<div class="row"><textarea class="textarea" name="message"></textarea></div>
 							<div class="clear"></div>
-							<div class="button2 fl"><input type="image" value="Submit" id="button" name="button" src="static/image/submit.png"></div>
+							<div class="button2 fl"><a class="cursor submit-form">Submit</a></div>
 							<div class="clear"></div>
 						</form>                                  
 					</div>

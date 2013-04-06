@@ -5,6 +5,9 @@
 	
 	$param_testimony = array( 'filter' => '[{"type":"numeric","comparison":"eq","value":"Testimony","field":"config_category"}]' );
 	$array_testimony = $this->Config_model->get_array($param_testimony);
+	
+	$param_fitur = array( 'filter' => '[{"type":"numeric","comparison":"eq","value":"Fitur Standart","field":"config_category"}]' );
+	$array_fitur = $this->Config_model->get_array($param_fitur);
 ?>
 
 <?php $this->load->view( 'website/common/meta.php', array('title' => 'Home') ); ?>
@@ -117,16 +120,10 @@
 					<div class="roundedbox">
 						<h3 class="blueback">Fitur Standard</h3>
 						<div class="standardlist">
-							<a href="/prices.php" class="sfdomain" title="1 years domain name registration as standard.">Free Domain Name</a>    
-							<a href="/prices.php" class="sfvoucher" title="&pound;50 FREE Google Adword voucher.">Free Google Adwords Voucher</a>           
-							<a href="/prices.php" class="sfhosting" title="Fast, reliable &amp; secure managed hosting for 1 year.">1 Years Free Hosting</a>            
-							<a href="/prices.php" class="sfemail" title="Accessible via webmail, POP3 and IMAP connections. Fully supported by all phones and email clients.">Personalised Email Accounts</a>
-							<a href="/prices.php" class="sfsupport" title="Technical support from experienced people with years of experience in web design &amp; managing related services.">Expert Technical Support</a>
-							<a href="/prices.php" class="sfseo" title="Clean web design code with solid on-site SEO and registration / sitemap submission to all major search engines.">Search Engine Optimisation &amp; Submission</a>            
-							<a href="/prices.php" class="sfstats" title="Find out who visited your website, when and for how long via our Google Analytics integration.">Visitor Stats &amp; Marketing Reports</a>        			
-							<a href="/prices.php" class="sflogo" title="Free logo design $this->load->view(d, provided in all major formats ready use on for business stationery">Logo Design &amp; Branding</a>            
-							<a href="/prices.php" class="sfphoto" title="Access to a selection of over 5 million professional stock photography photos, illustrations, videos and audio">Professional Photography</a>
-							<a href="content-management-solutions.php" class="sfcms" title="Manage your content from any internet connection, no technical experience required &amp; nothing to download or install">Content Management</a>
+							<?php foreach ($array_fitur as $key => $array) { ?>
+								<?php $array_class = explode(' ', $array['config_name'], 2); ?>
+								<a class="cursor <?php echo $array_class[1]; ?>" title="<?php echo $array['config_content_clean']; ?>"><?php echo $array['config_title']; ?></a>
+							<?php } ?>
 							<div class="clear"></div> 
 						</div>           
 					</div>
@@ -146,7 +143,7 @@
 					
 					<div class="roundedbox">
 						<p><span class="dbluesixteen">Content Management</span> <span class="orangesixteen">Gratis</span></p>
-						<div class="f-11"><img src="static/image/free-content-management.png" align="right" />Semua klien kami menikmati kemampuan untuk memperbarui isi situs Web mereka kapan pun mereka suka, secara gratis, selamanya ...</div>
+						<div class="f-11"><img src="<?php echo base_url(); ?>static/image/free-content-management.png" align="right" /><?php echo $array_config['config-content-management']['config_content_clean']; ?></div>
 						<div class="button2 fr space-top"><a href="<?php echo base_url('contact'); ?>">Penawaran</a></div>
 						<div class="clear"></div>
 					</div>

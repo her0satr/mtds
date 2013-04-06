@@ -74,4 +74,18 @@ $(document).ready(function(){
 	init_button_top();
 	$(window).scroll(function () { init_button_top(); });
 	$(window).resize(function () { init_button_top(); });
+	
+	// contact us
+	$('.submit-form').click(function() {
+		var id = $(this).parent('div').parent('form').attr('id');
+		var param = Site.Form.GetValue(id);
+		param.action = 'SubmitEmail';
+		$.post(web.host + 'ajax', param, function(raw) {
+			eval('var result = ' + raw);
+			if (result.status) {
+				alert(result.message);
+				$('#' + id)[0].reset();
+			}
+		});
+	});
 });

@@ -45,6 +45,7 @@ $route['product/(:any)'] = "website/home/product";
 $route['service'] = "website/home/service";
 $route['contact'] = "website/home/contact";
 $route['portofolio'] = "website/home/portofolio";
+$route['ajax'] = "website/ajax";
 
 $route['default_controller'] = "website/home";
 $route['404_override'] = '';

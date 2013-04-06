@@ -118,16 +118,16 @@
 
 		<div id="formcontainer">
 			<form method="post" action="sendscript/sidebar.php" name="quickcontact" id="quickcontact">
-				<p><input name="name" type="text" class="freequotefield" id="name" value="" placeholder="Nama Lengkap" /></p>
-				<p><input name="email" type="text" class="freequotefield" id="email" value="" placeholder="Email" /></p>
-				<p><input name="telephone" type="text" class="freequotefield" id="telephone" value="" placeholder="Telepon" /></p>
-				<p><input name="website" type="text" class="freequotefield" id="website" value="" placeholder="Website" /></p>
+				<p><input name="name" type="text" class="freequotefield" placeholder="Nama Lengkap" /></p>
+				<p><input name="email" type="text" class="freequotefield" placeholder="Email" /></p>
+				<p><input name="phone" type="text" class="freequotefield" placeholder="Telepon" /></p>
+				<p><input name="website" type="text" class="freequotefield" placeholder="Website" /></p>
 				<!--
 				<div class="promocheck"><input name="mailing" type="checkbox" id="mailing" value="Yes" checked="checked" /></div>
 				<div class="promotext">Keep me updated with promotions &amp; special offers from Pom Design</div>
 				-->
 				<div class="clear"></div>
-				<div class="space button2 fl"><a href="<?php echo base_url('portofolio'); ?>">Submit</a></div>
+				<div class="button2 fl space"><a class="cursor submit-form">Submit</a></div>
 				<div class="clear"></div>
 			</form>
 		</div>

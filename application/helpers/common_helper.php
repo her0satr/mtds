@@ -403,11 +403,11 @@ if (! function_exists('SentMail')) {
     function SentMail($Param) {
         $headers  = 'MIME-Version: 1.0' . "\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-
-        // Additional headers
-        $headers .= 'To: ' . $Param['To'] . "\r\n";
-        $headers .= 'From: ' . $Param['From'] . "\r\n";
-        mail($Param['To'], $Param['Subject'], $Param['Message'], $headers);
+		
+		if (isset($Param['Header'])) {
+			$headers .= $Param['Header'];
+		}
+        @mail($Param['To'], $Param['Subject'], $Param['Message'], $headers);
     }
 }
 
