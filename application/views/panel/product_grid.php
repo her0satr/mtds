@@ -25,6 +25,7 @@
 					<td class="data center"><?php echo $product['product_date']; ?></td>
 					<td class="data center">
 						<?php unset($product['product_desc']); ?>
+						<?php unset($product['product_desc_simple']); ?>
 						<span class="hide"><?php echo json_encode($product); ?></span>
 						<a href="<?php echo base_url('panel/product/edit/'.$product['product_id']); ?>"><img title="edit data" src="<?php echo base_url(); ?>static/image/edit.png"></a> |
 						<a href="<?php echo base_url('panel/product_detail/index/'.$product['product_id']); ?>"><img title="detail data" src="<?php echo base_url(); ?>static/image/detail.png"></a> |
