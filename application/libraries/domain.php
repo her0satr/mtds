@@ -14,7 +14,7 @@ class domain {
 	}
 	
 	function submit($param) {
-		set_time_limit(0);
+		@set_time_limit(0);
 		ob_start();
 		
 		if (!empty($param['domain']) && !empty($param['extension'])) {
@@ -27,7 +27,7 @@ class domain {
 		foreach ($this->extensions as $ext => $data) {
 			if ($ext == $param['extension']) {
 				continue;
-			} else if (count($result) >= 5) {
+			} else if (count($result) >= 3) {
 				break;
 			}
 			
