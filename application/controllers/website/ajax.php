@@ -23,6 +23,8 @@ class ajax extends CI_Controller {
 			
 			$result['status'] = true;
 			$result['message'] = 'Terima Kasih, informasi anda berhasil dikirim.';
+		} else if ($action == 'CheckDomain') {
+			$result = $this->domain->submit(array('domain' => $_POST['domain'], 'extension' => $_POST['extension']));
 		}
 		
 		echo json_encode($result);

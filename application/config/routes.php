@@ -43,6 +43,7 @@ $route['about'] = "website/home/about";
 $route['product'] = "website/home/product";
 $route['product/(:any)'] = "website/home/product";
 $route['service'] = "website/home/service";
+$route['domain'] = "website/home/domain";
 $route['contact'] = "website/home/contact";
 $route['portofolio'] = "website/home/portofolio";
 $route['ajax'] = "website/ajax";

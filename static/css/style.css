@@ -288,7 +288,7 @@ img { border:none; }
 
 .order-form { color: #666666; }
 .order-form .title { background: #055789; border-bottom: 4px solid #0985CB; padding: 10px; color: #FFFFFF; margin: 0 0 25px 0; }
-.order-form .left { float: left; width: 200px; text-align: right; padding: 3px 0 75px 0; }
+.order-form .left { float: left; width: 200px; text-align: right; padding: 3px 0 42px 0; }
 .order-form .right { float: left; width: 400px; padding: 0 0 0 25px; }
 .order-form .right .domain { padding: 0 0 15px 0; }
 .order-form .right .text { width: 250px; }
@@ -355,3 +355,9 @@ ul#pricestab li a.selected {background:url(../image/website-price-on.png); color
 
 #menu { color: #D4D4D4; padding-top: 3px; border-bottom: 4px solid #205E6D; background: url('../image/promo-bg.png') repeat; }
 #menu .title { margin: -20px auto auto; font-weight: bold; text-align: center; font-size: 13px; }
+
+.cnt-domain { margin: 0 0 25px 0; }
+.cnt-domain .box { margin: 3px 0; padding: 7px; border: 2px solid #CCCCCC; }
+.cnt-domain .avaliable { background: #BCE67B; padding: 3px; }
+.cnt-domain .taken { background: #F08F78; padding: 3px; }
+.cnt-domain .box:hover { background: #DDF2BC; }

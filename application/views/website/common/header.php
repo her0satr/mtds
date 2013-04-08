@@ -11,8 +11,8 @@
 		<li class="main"><a href="<?php echo base_url('order'); ?>"><span class="payment">Cara Pesan</span></a></li>
 		<li class="main"><a href="<?php echo base_url('portofolio'); ?>"><span class="porto">Protofolio</span></a></li>
 		<li class="main"><a href="<?php echo base_url('about'); ?>"><span class="profile">Profile</span></a></li>
+		<li class="main"><a href="<?php echo base_url('domain'); ?>"><span class="news">Domain</span></a></li>
 		<!--
-		<li class="main"><a href="<?php echo base_url('service'); ?>"><span class="news">Service</span></a></li>
 		<li class="main has-sub">
 			<a href="service"><span class="news">Service</span></a>
 			<ul>

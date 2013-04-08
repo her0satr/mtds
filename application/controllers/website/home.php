@@ -38,6 +38,10 @@ class home extends CI_Controller {
 		$this->load->view( 'website/service' );
 	}
 	
+	function domain() {
+		$this->load->view( 'website/domain' );
+	}
+	
 	function contact() {
 		$this->load->view( 'website/contact' );
 	}
