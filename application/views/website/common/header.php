@@ -7,11 +7,13 @@
 <div id="cssmenu">
 	<ul>
 		<li class="main active"><a href="<?php echo base_url(); ?>"><span class="home">Home</span></a></li>
-		<li class="main"><a href="<?php echo base_url('product'); ?>"><span class="product">Produk</span></a></li>
-		<li class="main"><a href="<?php echo base_url('order'); ?>"><span class="payment">Cara Pesan</span></a></li>
-		<li class="main"><a href="<?php echo base_url('portofolio'); ?>"><span class="porto">Protofolio</span></a></li>
-		<li class="main"><a href="<?php echo base_url('about'); ?>"><span class="profile">Profile</span></a></li>
+		<li class="main"><a href="<?php echo base_url('product'); ?>"><span class="product">Produk Jasa</span></a></li>
+		<li class="main"><a href="<?php echo base_url('about'); ?>"><span class="profile">About Us</span></a></li>
+		<li class="main"><a href="<?php echo base_url('order'); ?>"><span class="payment">How to Order</span></a></li>
+		<li class="main"><a href="<?php echo base_url('portofolio'); ?>"><span class="porto">Portofolio</span></a></li>
 		<li class="main"><a href="<?php echo base_url('domain'); ?>"><span class="news">Domain</span></a></li>
+		<li class="main"><a href="<?php echo base_url('contact'); ?>"><span class="mail">Hubungi Kami</span></a></li>
+		
 		<!--
 		<li class="main has-sub">
 			<a href="service"><span class="news">Service</span></a>
@@ -31,7 +33,6 @@
 			</ul>
 		</li>
 		-->
-	   <li class="main"><a href="<?php echo base_url('contact'); ?>"><span class="mail">Hubungi Kami</span></a></li>
 	</ul>
 </div>
 

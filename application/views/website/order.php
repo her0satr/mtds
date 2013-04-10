@@ -18,7 +18,7 @@
 			
 			<div class="pom-right">
 				<div class="roundedbox">
-					<div class="poounder">Cara Pemesanan</div>
+					<div class="poounder">How To Order</div>
 					
 					<div id="order-step">
 						<ul class="navigation">

@@ -205,7 +205,7 @@ img { border:none; }
 .login-jogja .loginLink { float: right; font-size: 10px; margin-top: -28px; padding: 0 2px; }
 .login-jogja .loginLink a { color: #747474; text-decoration: underline; }
 
-#product_list .productItem { padding: 5px 5px 5px 0px; border-bottom: 1px solid #eee; clear: both; }
+#product_list .productItem { padding: 5px 5px 5px 0px; border-bottom: 1px solid #eee; clear: both; min-height: 135px; }
 #product_list .productItem.new { padding-right: 35px; background: url(../image/new-icon.gif) no-repeat; background-position: 100% 10px; border-bottom: 1px solid #eee; }
 #product_list .productItem.top { padding-right: 35px; background: url(../image/top-icon.gif) no-repeat; background-position: 100% 10px; border-bottom: 1px solid #eee; }
 #product_list .productItem .thumb { float: left; width: 135px; text-align: left; }
@@ -218,7 +218,7 @@ img { border:none; }
 #product_list .productItem .desc .price span { padding-right: 10px; font-size: 11px; font-weight: lighter; color: #888; }
 #product_list .productItem .desc .buttons input { margin-right: 8px; }
 #product_list .pagination { text-align: right; background-color: #ffffff; border: 1px solid #ebebeb; border-width: 0 0px; padding: 4px 0px 4px 0px; }
-#product_list .pagination a { padding: 2px 5px; text-decoration: none; color: #8d8c8c; background-color: white; border: 1px solid #d9d5cd; }
+#product_list .pagination a { padding: 5px 9px; text-decoration: none; color: #8d8c8c; background-color: white; border: 1px solid #d9d5cd; }
 #product_list .pagination a:hover, #product_list .pagination a.selected { color: #ff0000; background-color: #FEE496; }
 #product_list .service { padding: 15px 0 8px 0; }
 #product_list .noborder .productItem { border: none; }

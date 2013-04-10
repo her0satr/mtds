@@ -27,7 +27,7 @@
 			
 			<div class="pom-right">
 				<div class="roundedbox">
-					<div class="poounder">Profile</div>
+					<div class="poounder">About Us</div>
 					
 					<div class="intro_text">
 						<ul class="intro_slider">

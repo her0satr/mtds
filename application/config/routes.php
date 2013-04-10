@@ -46,6 +46,7 @@ $route['service'] = "website/home/service";
 $route['domain'] = "website/home/domain";
 $route['contact'] = "website/home/contact";
 $route['portofolio'] = "website/home/portofolio";
+$route['portofolio/(:any)'] = "website/home/portofolio";
 $route['ajax'] = "website/ajax";
 
 $route['default_controller'] = "website/home";

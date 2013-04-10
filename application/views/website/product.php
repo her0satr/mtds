@@ -17,7 +17,7 @@
 			
 			<div class="pom-right">
 				<div class="roundedbox">
-					<div class="poounder">Produk</div>
+					<div class="poounder">Produk Jasa</div>
 					<div id="product_list">
 						<?php foreach ($array_product as $key => $product) { ?>
 							<div class="productItem <?php echo $product['product_category_name']; ?>">
@@ -29,7 +29,7 @@
 									<div class="title">
 										<a href="<?php echo $product['product_link']; ?>" title="<?php echo $product['product_title']; ?>">
 											<?php echo $product['product_title']; ?></a></div>
-									<div class="brief"><?php echo $product['product_desc']; ?></div>
+									<div class="brief"><?php echo $product['product_desc_simple']; ?></div>
 									<div class="buttons">
 										<a href="<?php echo $product['product_link']; ?>"><input type="image" src="static/image/button-detail.gif" /></a>
 										<a href="<?php echo base_url('contact'); ?>"><input type="image" src="static/image/button-buy.gif" /></a>

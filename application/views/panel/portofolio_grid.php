@@ -1,5 +1,5 @@
 <?php
-	$array_portofolio = $this->Portofolio_model->get_array();
+	$array_portofolio = $this->Portofolio_model->get_array(array('limit' => 100));
 ?>
 <?php $this->load->view( 'panel/common/meta' ); ?>
 

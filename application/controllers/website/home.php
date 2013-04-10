@@ -31,7 +31,10 @@ class home extends CI_Controller {
 	}
 	
 	function portofolio() {
-		$this->load->view( 'website/portofolio' );
+		preg_match('/page\_([0-9]+)/i', $_SERVER['REQUEST_URI'], $match);
+		$page_active = (isset($match[1])) ? $match[1] : 1;
+		
+		$this->load->view( 'website/portofolio', array( 'page_active' => $page_active ) );
 	}
 	
 	function service() {
