@@ -4,7 +4,7 @@ class Product_Detail_model extends CI_Model {
 	function __construct() {
         parent::__construct();
 		
-        $this->Field = array('product_detail_id', 'product_id', 'display_type_id', 'product_detail_title', 'product_detail_desc', 'order_no');
+        $this->Field = array('product_detail_id', 'product_id', 'display_type_id', 'is_show', 'product_detail_title', 'product_detail_desc', 'order_no');
     }
 	
 	function update($param) {

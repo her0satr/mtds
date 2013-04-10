@@ -1,4 +1,5 @@
 <?php
+	$array_is_show = array( array( 'value' => '0', 'title' => 'Tidak'), array( 'value' => '1', 'title' => 'Ya') );
 	$array_display_type = $this->Display_Type_model->get_array();
 	$product_detail = $this->Product_Detail_model->get_by_id(array('product_detail_id' => $product_detail_id));
 	$product_detail['product_id'] = (!empty($product_id)) ? $product_id : @$product_detail['product_id'];
@@ -23,6 +24,11 @@
 			<tr>
 				<td width="70">Order No</td>
 				<td><input type="text" name="order_no" value="<?php echo @$product_detail['order_no']; ?>" /></td></tr>
+			<tr>
+				<td width="70">Ditampilkan</td>
+				<td><select name="is_show">
+					<?php echo ShowOption(array('Array' => $array_is_show, 'ArrayID' => 'value', 'ArrayTitle' => 'title', 'Selected' => @$product_detail['is_show'])) ?>
+				</select></td></tr>
 			<tr>
 				<td width="70">Display</td>
 				<td><select name="display_type_id">
