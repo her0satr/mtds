@@ -1,5 +1,7 @@
 <?php
-	$portofolio_per_page = 15;
+	$portofolio_single = $this->Portofolio_model->get_by_id(array( 'portofolio_name' => $portofolio_name ));
+	
+	$portofolio_per_page = 12;
 	$portofolio_param = array('start' => ($page_active * $portofolio_per_page) - $portofolio_per_page, 'limit' => $portofolio_per_page);
 	$portofolio_array = $this->Portofolio_model->get_array($portofolio_param);
 	$portofolio_count = $this->Portofolio_model->get_count();
@@ -20,26 +22,19 @@
 			</div>
 			
 			<div class="pom-right">
-				<!--
-				<div class="roundedbox">
-					<div class="poounder">Portofolio</div>
-					<div id="portfolio">
-						<div class="left"><img src="static/upload/portfolio.png" /></div>
-						<div class="right">
-							<div class="title">SSS & CO. Law and Business Consultants</div>
-							<div class="desc">
-								Kami adalah Konsultan Hukum dan Bisnis yang berkedudukan di Jakarta yang selalu berusaha untuk memahami serta mengutamakan jasa kami untuk kepentingan serta kepuasan Klien dalam pelayan serta membantu Klien  sesuai dengan kebutuhan.<br /><br />
-								Perusahaan kami menyediakan secara profesional suatu kualitas hasil kerja yang tinggi. Kami juga selalu memelihara hubungan yang kuat antara partners dan sumber daya manusia kami, sehingga kami dapat menghasilkan suatu hasil kerja yang berstandart tinggi baik secara lokal maupun internasional.<br /><br />
-								<strong>Web development :</strong> Multi Language, Content Management System<br />
-								<strong>Launcher :</strong> March 2013<br />
-								<strong>Category :</strong> Company Profile<br />
-								<strong>Website :</strong> www.ssslawbusiness.com<br />
+				<?php if (count($portofolio_single) > 0) { ?>
+					<div class="roundedbox">
+						<div class="poounder">Portofolio</div>
+						<div id="portfolio">
+							<div class="left"><img src="<?php echo $portofolio_single['portofolio_image_link']; ?>" /></div>
+							<div class="right">
+								<div class="title"><?php echo $portofolio_single['portofolio_title']; ?></div>
+								<div class="desc"><?php echo $portofolio_single['portofolio_desc']; ?></div>
 							</div>
+							<div class="clear"></div>
 						</div>
-						<div class="clear"></div>
 					</div>
-				</div>
-				-->
+				<?php } ?>
 				
 				<div id="list-port" class="roundedbox">
 					<div class="poounder">Portofolio</div>

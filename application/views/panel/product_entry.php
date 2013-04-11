@@ -39,6 +39,14 @@
 					<div class="upload_right"><iframe width="95px" height="25px" frameborder="0" src="<?php echo base_url('panel/upload?callback=image_callback'); ?>"></iframe></div>
 					<div class="clear"></div>
 				</td></tr>
+			
+			<tr>
+				<td width="70">Meta Keyword</td>
+				<td><textarea name="product_meta_keyword" style="height: 100px; width: 100%;"><?php echo @$product['product_meta_keyword']; ?></textarea></td></tr>
+			<tr>
+				<td width="70">Meta Description</td>
+				<td><textarea name="product_meta_desc" style="height: 100px; width: 100%;"><?php echo @$product['product_meta_desc']; ?></textarea></td></tr>
+			
 			<tr>
 				<td colspan="2">
 					<input type="button" class="button" value="Update" name="FormUpdate" />

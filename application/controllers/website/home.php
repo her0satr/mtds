@@ -31,10 +31,25 @@ class home extends CI_Controller {
 	}
 	
 	function portofolio() {
+		// get page
 		preg_match('/page\_([0-9]+)/i', $_SERVER['REQUEST_URI'], $match);
 		$page_active = (isset($match[1])) ? $match[1] : 1;
 		
-		$this->load->view( 'website/portofolio', array( 'page_active' => $page_active ) );
+		// get portofolio name
+		preg_match('/portofolio\/([0-9a-z\_]+)/i', $_SERVER['REQUEST_URI'], $match);
+		$portofolio_name = (isset($match[1])) ? $match[1] : '';
+		
+		$this->load->view( 'website/portofolio', array( 'page_active' => $page_active, 'portofolio_name' => $portofolio_name ) );
+	}
+	
+	function news() {
+		$product_name = (empty($this->uri->segments[2])) ? '' : $this->uri->segments[2];
+		
+		if (empty($product_name)) {
+			$this->load->view( 'website/news' );
+		} else {
+			$this->load->view( 'website/news_detail' );
+		}
 	}
 	
 	function service() {

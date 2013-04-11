@@ -1,27 +1,27 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Portofolio_model extends CI_Model {
+class News_model extends CI_Model {
 	function __construct() {
         parent::__construct();
 		
-        $this->Field = array('portofolio_id', 'portofolio_name', 'portofolio_title', 'portofolio_desc', 'portofolio_link', 'portofolio_image', 'portofolio_date');
+        $this->Field = array('news_id', 'news_name', 'news_title', 'news_desc', 'news_date');
     }
 	
 	function update($param) {
 		$Result = array();
 		
-		if (empty($param['portofolio_id'])) {
-			$InsertQuery  = GenerateInsertQuery($this->Field, $param, PORTOFOLIO);
+		if (empty($param['news_id'])) {
+			$InsertQuery  = GenerateInsertQuery($this->Field, $param, NEWS);
 			$InsertResult = mysql_query($InsertQuery) or die(mysql_error());
 		   
-			$Result['portofolio_id'] = mysql_insert_id();
+			$Result['news_id'] = mysql_insert_id();
 			$Result['QueryStatus'] = '1';
 			$Result['Message'] = 'Data berhasil disimpan..';
 		} else {
-			$UpdateQuery  = GenerateUpdateQuery($this->Field, $param, PORTOFOLIO);
+			$UpdateQuery  = GenerateUpdateQuery($this->Field, $param, NEWS);
 			$UpdateResult = mysql_query($UpdateQuery) or die(mysql_error());
 		   
-			$Result['portofolio_id'] = $param['portofolio_id'];
+			$Result['news_id'] = $param['news_id'];
 			$Result['QueryStatus'] = '1';
 			$Result['Message'] = 'Data berhasil diperbaharui..';
 		}
@@ -32,17 +32,17 @@ class Portofolio_model extends CI_Model {
 	function get_by_id($param) {
 		$Array = array();
         
-		if (isset($param['portofolio_id'])) {
+		if (isset($param['news_id'])) {
             $SelectQuery  = "
-                SELECT Portofolio.*
-                FROM ".PORTOFOLIO." Portofolio
-                WHERE Portofolio.portofolio_id = '".$param['portofolio_id']."'
+                SELECT News.*
+                FROM ".NEWS." News
+                WHERE News.news_id = '".$param['news_id']."'
                 LIMIT 1";
-		} else if (isset($param['portofolio_name'])) {
+		} else if (isset($param['news_name'])) {
             $SelectQuery  = "
-                SELECT Portofolio.*
-                FROM ".PORTOFOLIO." Portofolio
-                WHERE Portofolio.portofolio_name = '".$param['portofolio_name']."'
+                SELECT News.*
+                FROM ".NEWS." News
+                WHERE News.news_name = '".$param['news_name']."'
                 LIMIT 1";
         }
         
@@ -60,11 +60,11 @@ class Portofolio_model extends CI_Model {
 		
 		$PageOffset = (isset($param['start']) && !empty($param['start'])) ? $param['start'] : 0;
 		$PageLimit = (isset($param['limit']) && !empty($param['limit'])) ? $param['limit'] : 25;
-		$StringSorting = (isset($param['sort'])) ? GetStringSorting($param['sort']) : 'portofolio_date DESC';
+		$StringSorting = (isset($param['sort'])) ? GetStringSorting($param['sort']) : 'news_date DESC';
 		
 		$SelectQuery = "
-			SELECT Portofolio.*
-			FROM ".PORTOFOLIO." Portofolio
+			SELECT News.*
+			FROM ".NEWS." News
 			WHERE 1 $StringFilter
 			ORDER BY $StringSorting
 			LIMIT $PageOffset, $PageLimit
@@ -84,7 +84,7 @@ class Portofolio_model extends CI_Model {
 		
 		$SelectQuery = "
 			SELECT COUNT(*) AS TotalRecord
-			FROM ".PORTOFOLIO." Portofolio
+			FROM ".NEWS." News
 			WHERE 1 $StringFilter
 		";
 		$SelectResult = mysql_query($SelectQuery) or die(mysql_error());
@@ -102,7 +102,7 @@ class Portofolio_model extends CI_Model {
 	}
 	
 	function delete($param) {
-        $DeleteQuery  = "DELETE FROM ".PORTOFOLIO." WHERE portofolio_id = '".$param['portofolio_id']."' LIMIT 1";
+        $DeleteQuery  = "DELETE FROM ".NEWS." WHERE news_id = '".$param['news_id']."' LIMIT 1";
         $DeleteResult = mysql_query($DeleteQuery) or die(mysql_error());
         
         $Result['QueryStatus'] = '1';
@@ -113,8 +113,10 @@ class Portofolio_model extends CI_Model {
 	
 	function sync($row) {
 		$row = StripArray($row);
-		$row['portofolio_name_link'] = base_url('portofolio/'.$row['portofolio_name']);
-		$row['portofolio_image_link'] = base_url('static/upload/'.$row['portofolio_image']);
+		$row['news_link'] = base_url('news/'.$row['news_name']);
+		
+		$array_news_desc = explode('<!-- pagebreak -->', $row['news_desc'], 2);
+		$row['news_desc_simple'] = $array_news_desc[0];
 		
 		return $row;
 	}

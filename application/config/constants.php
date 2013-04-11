@@ -39,7 +39,9 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 define('SHA_SECRET',							'DOTA 2');
 
 define('CONFIG',								'config');
+define('CONTACT_LOG',							'contact_log');
 define('DISPLAY_TYPE',							'display_type');
+define('NEWS',									'news');
 define('PORTOFOLIO',							'portofolio');
 define('PRODUCT',								'product');
 define('PRODUCT_CATEGORY',						'product_category');

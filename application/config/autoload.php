@@ -110,7 +110,8 @@ $autoload['language'] = array();
 */
 
 $autoload['model'] = array(
-	'User_model', 'Product_Detail_model', 'Product_Category_model', 'Portofolio_model', 'Display_Type_model', 'Config_model', 'Product_model'
+	'User_model', 'Product_Detail_model', 'Product_Category_model', 'Portofolio_model', 'Display_Type_model', 'Config_model', 'Product_model',
+	'News_model', 'Contact_Log_model'
 );
 
 

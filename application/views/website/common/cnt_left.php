@@ -8,9 +8,11 @@
 	<ul id="latest">
 		<?php foreach ($array_portofolio as $portofolio) { ?>
 			<li>
-				<img src="<?php echo $portofolio['portofolio_image_link']; ?>" alt="<?php echo $portofolio['portofolio_title']; ?>" title="<?php echo $portofolio['portofolio_title']; ?>" />
+				<a href="<?php echo $portofolio['portofolio_name_link']; ?>">
+					<img src="<?php echo $portofolio['portofolio_image_link']; ?>" alt="<?php echo $portofolio['portofolio_title']; ?>" title="<?php echo $portofolio['portofolio_title']; ?>" />
+				</a>
 				<?php echo $portofolio['portofolio_title']; ?>
-				<p><a href="<?php echo $portofolio['portofolio_link']; ?>"><?php echo $portofolio['portofolio_link']; ?></a></p>
+				<p><a href="<?php echo $portofolio['portofolio_name_link']; ?>"><?php echo $portofolio['portofolio_link']; ?></a></p>
 				<div class="button2 fr"><a href="<?php echo base_url('contact'); ?>">Penawaran</a></div>
 				<div class="button fl"><a href="<?php echo base_url('portofolio'); ?>">Portofolio</a></div>
 				<div class="clear"></div>

@@ -6,12 +6,13 @@
 
 <div id="cssmenu">
 	<ul>
-		<li class="main active"><a href="<?php echo base_url(); ?>"><span class="home">Home</span></a></li>
+		<li class="main active"><a href="<?php echo base_url(); ?>"><span class="home">Beranda</span></a></li>
 		<li class="main"><a href="<?php echo base_url('product'); ?>"><span class="product">Produk Jasa</span></a></li>
 		<li class="main"><a href="<?php echo base_url('about'); ?>"><span class="profile">About Us</span></a></li>
 		<li class="main"><a href="<?php echo base_url('order'); ?>"><span class="payment">How to Order</span></a></li>
+		<li class="main"><a href="<?php echo base_url('news'); ?>"><span class="news">News</span></a></li>
 		<li class="main"><a href="<?php echo base_url('portofolio'); ?>"><span class="porto">Portofolio</span></a></li>
-		<li class="main"><a href="<?php echo base_url('domain'); ?>"><span class="news">Domain</span></a></li>
+		<li class="main"><a href="<?php echo base_url('domain'); ?>"><span class="domain">Domain</span></a></li>
 		<li class="main"><a href="<?php echo base_url('contact'); ?>"><span class="mail">Hubungi Kami</span></a></li>
 		
 		<!--

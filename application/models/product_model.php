@@ -4,7 +4,7 @@ class Product_model extends CI_Model {
 	function __construct() {
         parent::__construct();
 		
-        $this->Field = array('product_id', 'product_category_id', 'product_name', 'product_title', 'product_desc', 'product_image', 'product_date');
+        $this->Field = array('product_id', 'product_category_id', 'product_name', 'product_title', 'product_desc', 'product_image', 'product_date', 'product_meta_keyword', 'product_meta_desc');
     }
 	
 	function update($param) {

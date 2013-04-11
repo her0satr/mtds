@@ -40,11 +40,13 @@
 
 $route['order'] = "website/home/order";
 $route['about'] = "website/home/about";
-$route['product'] = "website/home/product";
-$route['product/(:any)'] = "website/home/product";
 $route['service'] = "website/home/service";
 $route['domain'] = "website/home/domain";
 $route['contact'] = "website/home/contact";
+$route['news'] = "website/home/news";
+$route['news/(:any)'] = "website/home/news";
+$route['product'] = "website/home/product";
+$route['product/(:any)'] = "website/home/product";
 $route['portofolio'] = "website/home/portofolio";
 $route['portofolio/(:any)'] = "website/home/portofolio";
 $route['ajax'] = "website/ajax";

@@ -1,4 +1,15 @@
 <?php
+	/*
+	$array_portofolio = $this->Portofolio_model->get_array(array('limit' => 200));
+	foreach ($array_portofolio as $array) {
+		$array['portofolio_name'] = $this->Portofolio_model->get_name($array['portofolio_title']);
+		
+		$update = array('portofolio_id' => $array['portofolio_id'], 'portofolio_name' => $array['portofolio_name']);
+		$this->Portofolio_model->update($update);
+	}
+	echo 'done'; exit;
+	/*	*/
+	
 	$array_config = $this->Config_model->init();
 	$array_product = $this->Product_model->get_array(array('limit' => 1));
 	$array_portofolio = $this->Portofolio_model->get_array(array('start' => 4, 'limit' => 8));
@@ -68,8 +79,16 @@
 						<ul id="showcase">
 							<?php for ($i = 0; $i < 8; $i++) { ?>
 								<li>
-									<div class="showcaseitem"><img src="<?php echo $array_portofolio[$i]['portofolio_image_link']; ?>" width="225" height="192" alt="<?php echo $array_portofolio[$i]['portofolio_title']; ?>" title="<?php echo $array_portofolio[$i]['portofolio_title']; ?>" /></div>
-									<div class="showcaseitem"><img src="<?php echo $array_portofolio[++$i]['portofolio_image_link']; ?>" width="225" height="192" alt="<?php echo $array_portofolio[$i]['portofolio_image_link']; ?>" title="<?php echo $array_portofolio[$i]['portofolio_title']; ?>" /></div>
+									<div class="showcaseitem">
+										<a href="<?php echo $array_portofolio[$i]['portofolio_name_link']; ?>">
+											<img src="<?php echo $array_portofolio[$i]['portofolio_image_link']; ?>" alt="<?php echo $array_portofolio[$i]['portofolio_title']; ?>" title="<?php echo $array_portofolio[$i]['portofolio_title']; ?>" />
+										</a>
+									</div>
+									<div class="showcaseitem">
+										<a href="<?php echo $array_portofolio[$i]['portofolio_name_link']; ?>">
+											<img src="<?php echo $array_portofolio[++$i]['portofolio_image_link']; ?>" alt="<?php echo $array_portofolio[$i]['portofolio_image_link']; ?>" title="<?php echo $array_portofolio[$i]['portofolio_title']; ?>" />
+										</a>
+									</div>
 									<div class="clear"></div>
 								</li>
 							<?php } ?>

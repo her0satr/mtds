@@ -21,6 +21,13 @@ class ajax extends CI_Controller {
 			}
 			SentMail($mail_param);
 			
+			$param_update = array(
+				'contact_log_id' => 0,
+				'contact_log_desc' => $mail_param['Message'],
+				'contact_log_date' => date("Y-m-d")
+			);
+			$this->Contact_Log_model->update($param_update);
+			
 			$result['status'] = true;
 			$result['message'] = 'Terima Kasih, informasi anda berhasil dikirim.';
 		} else if ($action == 'CheckDomain') {

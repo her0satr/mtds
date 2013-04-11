@@ -2,19 +2,20 @@
 	preg_match('/product\/([a-z0-9\_]+)/i', $_SERVER['REQUEST_URI'], $match);
 	$product_name = (empty($match[1])) ? '' : $match[1];
 	$product = $this->Product_model->get_by_id(array('product_name' => $product_name));
-	
-	$product_detail_param = array(
-		'product_id' => $product['product_id'],
-		'filter' => '[{"type":"numeric","comparison":"eq","value":"1","field":"is_show"}]'
-	);
-	$product_detail = $this->Product_Detail_model->get_array($product_detail_param);
+	$product_detail = $this->Product_Detail_model->get_array(array('product_id' => $product['product_id']));
 	if (count($product) == 0) {
 		show_404();
 		exit;
 	}
+	
+	$param_meta = array(
+		'title' => 'Produk - '.$product['product_title'],
+		'meta_keyword' => $product['product_meta_keyword'],
+		'meta_desc' => $product['product_meta_desc']
+	);
 ?>
 
-<?php $this->load->view( 'website/common/meta.php', array('title' => 'Produk - '.$product['product_title']) ); ?>
+<?php $this->load->view( 'website/common/meta', $param_meta ); ?>
 <body>
 <div class="template">
 	<?php $this->load->view( 'website/common/template_fix.php'); ?>

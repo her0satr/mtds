@@ -20,7 +20,7 @@
 					<div class="poounder">Produk Jasa</div>
 					<div id="product_list">
 						<?php foreach ($array_product as $key => $product) { ?>
-							<div class="productItem <?php echo $product['product_category_name']; ?>">
+							<div class="productItem fix-height <?php echo $product['product_category_name']; ?>">
 								<div class="thumb">
 									<a href="<?php echo $product['product_link']; ?>" title="<?php echo $product['product_title']; ?>">
 										<img src="<?php echo $product['product_image_link']; ?>" /></a>
