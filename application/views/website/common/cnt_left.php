@@ -37,7 +37,7 @@
 			</a>
 		</div>
 		<div class="sales">
-			<div class="left">Sales <span>:</span></div>
+			<div class="left">Helpdesk <span>:</span></div>
 			<div class="right">
 				<div class="row">
 					<div class="name">Mitra</div>

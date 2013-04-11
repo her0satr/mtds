@@ -40,8 +40,8 @@
 					<div class="poounder">Portofolio</div>
 					<?php foreach ($portofolio_array as $portofolio) { ?>
 						<div class="item">
-							<div class="title"><?php echo $portofolio['portofolio_title']; ?></div>
-							<div class="link"><?php echo $portofolio['portofolio_link']; ?></div>
+							<div class="title"><a href="<?php echo $portofolio['portofolio_name_link']; ?>"><?php echo $portofolio['portofolio_title']; ?></a></div>
+							<div class="link"><a href="http://<?php echo $portofolio['portofolio_link']; ?>" target="_blank"><?php echo $portofolio['portofolio_link']; ?></a></div>
 							<div class="image">
 								<a href="<?php echo $portofolio['portofolio_name_link']; ?>">
 									<img src="<?php echo $portofolio['portofolio_image_link']; ?>" />

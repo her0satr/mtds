@@ -11,7 +11,7 @@
 	/*	*/
 	
 	$array_config = $this->Config_model->init();
-	$array_product = $this->Product_model->get_array(array('limit' => 1));
+	$array_product = $this->Product_model->get_array(array('limit' => 2));
 	$array_portofolio = $this->Portofolio_model->get_array(array('start' => 4, 'limit' => 8));
 	
 	$param_testimony = array( 'filter' => '[{"type":"numeric","comparison":"eq","value":"Testimony","field":"config_category"}]' );
@@ -21,7 +21,7 @@
 	$array_fitur = $this->Config_model->get_array($param_fitur);
 ?>
 
-<?php $this->load->view( 'website/common/meta.php', array('title' => 'Home') ); ?>
+<?php $this->load->view( 'website/common/meta.php', array('title' => 'Jasa Pembuatan Website | Mitra Desain', 'title_override' => 1) ); ?>
 <body>
 <div class="template">
 	<?php $this->load->view( 'website/common/template_fix.php') ; ?>
@@ -64,6 +64,7 @@
 				<div class="clear"></div>
 				
 				<div class="template-left">
+					<!--
 					<div class="roundedbox">
 						<div class="box_skitter">
 							<ul>
@@ -73,6 +74,7 @@
 							</ul>
 						</div>
 					</div>
+					-->
 					
 					<div class="roundedbox">
 						<div id="iconScreen"><h2>Web Design</h2> <span class="bluesixteen">Showcase</span></div>

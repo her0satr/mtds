@@ -23,7 +23,7 @@
 					<td class="data"><a href="<?php echo $portofolio['portofolio_link']; ?>"><?php echo $portofolio['portofolio_title']; ?></a></td>		
 					<td class="data"><?php echo GetLengthChar(strip_tags($portofolio['portofolio_desc']), 300, ' ...'); ?></td>		
 					<td class="data"><?php echo $portofolio['portofolio_date']; ?></td>
-					<td class="data center">
+					<td class="data center" style="width: 50px;">
 						<?php unset($portofolio['portofolio_desc']); ?>
 						<span class="hide"><?php echo json_encode($portofolio); ?></span>
 						<a href="<?php echo base_url('panel/portofolio/edit/'.$portofolio['portofolio_id']); ?>"><img title="edit data" src="<?php echo base_url(); ?>static/image/edit.png"></a> |

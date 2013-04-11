@@ -39,6 +39,11 @@ class home extends CI_Controller {
 		preg_match('/portofolio\/([0-9a-z\_]+)/i', $_SERVER['REQUEST_URI'], $match);
 		$portofolio_name = (isset($match[1])) ? $match[1] : '';
 		
+		if (empty($portofolio_name)) {
+			$array = $this->Portofolio_model->get_array(array( 'limit' => 1 ));
+			$portofolio_name = $array[0]['portofolio_name'];
+		}
+		
 		$this->load->view( 'website/portofolio', array( 'page_active' => $page_active, 'portofolio_name' => $portofolio_name ) );
 	}
 	

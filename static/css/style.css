@@ -9,7 +9,7 @@ img { border:none; }
 .template { background-image: url('../image/master-bg.jpg'); padding: 8px 0; }
 .template-left { float: left; width: 520px; }
 .template-right { float: right; width: 220px; }
-.fix-width { width: 980px; margin: 0px auto; }
+.fix-width { width: 980px; margin: 0px auto; border: 2px solid #000000; }
 .f-11 { font-size: 11px; }
 .f-16 { font-size: 16px; }
 .bold { font-weight: bold; }
@@ -299,7 +299,7 @@ img { border:none; }
 .order-form .right .select { color: #666666; }
 
 #order-step { width: 700px; margin: 0 auto; position: relative; }
-#order-step .scroll { height: 300px; width: 700px; overflow: auto; overflow-x: hidden; position: relative; clear: left; border-style:solid; border-width:1px; }
+#order-step .scroll { height: 175px; width: 700px; overflow: auto; overflow-x: hidden; position: relative; clear: left; border-style:solid; border-width:1px; }
 #order-step .scrollContainer div.panel { padding: 20px; height: 260px; width: 660px; }
 #order-step ul.navigation { list-style: none; margin: 0; margin: 20px 0;  }
 #order-step ul.navigation li { display: inline; margin-right: 10px; }
@@ -315,8 +315,10 @@ img { border:none; }
 #portfolio .right .desc { color: #225E69; }
 
 #list-port .item { float: left; width: 220px; height: 190px; margin: 0 10px; }
-#list-port .title { color: #225E69; padding: 0 0 2px 0; }
-#list-port .link { color: #F79E19; border-bottom: 1px solid #225E69; padding: 0 0 3px 0; }
+#list-port .title { padding: 0 0 2px 0; }
+#list-port .title a { color: #225E69; }
+#list-port .link { border-bottom: 1px solid #225E69; padding: 0 0 3px 0; }
+#list-port .link a { color: #F79E19; }
 #list-port .image { padding: 5px 0; }
 #list-port .image img { padding: 3px; border: 1px solid #2F97DE; width: 150px; height: 110px; }
 
@@ -349,7 +351,7 @@ ul#pricestab li a.selected {background:url(../image/website-price-on.png); color
 #service .support .live { padding: 10px 5px 0 0; text-align: right; }
 #service .support .sales { padding: 10px 0 0 0; border-bottom: 1px dotted #999999; }
 #service .support .left { float: left; width: 70px; color: #318091; font-size: 11px; }
-#service .support .left span { padding: 0 0 0 25px; }
+#service .support .left span { padding: 0 0 0 10px; }
 #service .support .right { float: left; width: 135px; font-size: 11px; }
 #service .support .right .row { padding: 0 0 8px 0; }
 #service .support .right .name { float: left; width: 70px; }

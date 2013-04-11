@@ -17,7 +17,7 @@
 			
 			<div class="pom-right">
 				<div class="roundedbox">
-					<div class="poounder">Produk Jasa</div>
+					<div class="poounder">News</div>
 					<div id="product_list">
 						<?php foreach ($array_news as $key => $news) { ?>
 							<div class="productItem">

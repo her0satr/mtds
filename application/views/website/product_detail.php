@@ -2,14 +2,19 @@
 	preg_match('/product\/([a-z0-9\_]+)/i', $_SERVER['REQUEST_URI'], $match);
 	$product_name = (empty($match[1])) ? '' : $match[1];
 	$product = $this->Product_model->get_by_id(array('product_name' => $product_name));
-	$product_detail = $this->Product_Detail_model->get_array(array('product_id' => $product['product_id']));
 	if (count($product) == 0) {
 		show_404();
 		exit;
 	}
 	
+	$param = array(
+		'product_id' => $product['product_id'],
+		'filter' => '[{"type":"numeric","comparison":"eq","value":"1","field":"is_show"}]'
+	);
+	$product_detail = $this->Product_Detail_model->get_array($param);
+	
 	$param_meta = array(
-		'title' => 'Produk - '.$product['product_title'],
+		'title' => 'Jasa Pembuatan Website - '.$product['product_title'],
 		'meta_keyword' => $product['product_meta_keyword'],
 		'meta_desc' => $product['product_meta_desc']
 	);

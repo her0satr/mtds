@@ -1,6 +1,10 @@
 <?php
 	$array_config = $this->Config_model->init();
-	$title = (isset($title)) ? $array_config['meta-title']['config_content_clean'].' '.$title : $array_config['meta-title']['config_content_clean'];
+	
+	if (empty($title_override)) {
+		$title = (isset($title)) ? $array_config['meta-title']['config_content_clean'].' '.$title : $array_config['meta-title']['config_content_clean'];
+	}
+	
 	$meta_keyword = (isset($meta_keyword) && !empty($meta_keyword)) ? $meta_keyword : $array_config['meta-keyword']['config_content_clean'];
 	$meta_desc = (isset($meta_desc) && !empty($meta_desc)) ? $meta_desc : $array_config['meta-desc']['config_content_clean'];
 ?>

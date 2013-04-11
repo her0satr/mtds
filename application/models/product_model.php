@@ -113,8 +113,7 @@ class Product_model extends CI_Model {
 		$row['product_link'] = base_url('product/'.$row['product_name']);
 		$row['product_image_link'] = base_url('static/upload/'.$row['product_image']);
 		
-		$product_desc = preg_replace('/\<p([a-z \=\"\:\;\-]+)\>/i', '<p>', $row['product_desc']);
-		$array_product_desc = explode('<p><!-- pagebreak --></p>', $product_desc, 2);
+		$array_product_desc = explode('<!-- pagebreak -->', $row['product_desc'], 2);
 		$row['product_desc_simple'] = $array_product_desc[0];
 		
 		return $row;

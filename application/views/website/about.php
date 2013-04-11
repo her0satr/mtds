@@ -57,7 +57,7 @@
 					</div>
 					
 					<div class="why_choose_explore">
-						<h4>Why Choose Mitra Desain ?  We’ll Tell You!</h4>
+						<h4>Why Choose Mitra Desain ?  We'll Tell You!</h4>
 						<div class="why_choose">
 							<ul>
 								<?php foreach ($array_choose as $choose) { ?>
