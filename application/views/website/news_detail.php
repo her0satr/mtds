@@ -8,10 +8,16 @@
 		exit;
 	}
 	
-	$array_news = $this->News_model->get_array( array( 'limit' => 10 ) );
+	$array_news = $this->News_model->get_array( array( 'limit' => 5 ) );
+	
+	$param_meta = array(
+		'title' => 'News - '.$news['news_title'],
+		'meta_keyword' => $news['news_meta_keyword'],
+		'meta_desc' => $news['news_meta_desc']
+	);
 ?>
 
-<?php $this->load->view( 'website/common/meta.php', array('title' => 'News - '.$news['news_title']) ); ?>
+<?php $this->load->view( 'website/common/meta.php', $param_meta ); ?>
 <body>
 <div class="template">
 	<?php $this->load->view( 'website/common/template_fix.php'); ?>

@@ -48,13 +48,18 @@ class home extends CI_Controller {
 	}
 	
 	function news() {
-		$product_name = (empty($this->uri->segments[2])) ? '' : $this->uri->segments[2];
+		// get news name
+		preg_match('/news\/([0-9a-z\_]+)/i', $_SERVER['REQUEST_URI'], $match);
+		$news_data = (isset($match[1])) ? $match[1] : '';
+		$news_prefix = substr($news_data, 0, 5);
 		
-		if (empty($product_name)) {
-			$this->load->view( 'website/news' );
+		if (empty($news_data) || $news_prefix == 'page_') {
+			$page_view = 'website/news';
 		} else {
-			$this->load->view( 'website/news_detail' );
+			$page_view = 'website/news_detail';
 		}
+		
+		$this->load->view( $page_view );
 	}
 	
 	function service() {

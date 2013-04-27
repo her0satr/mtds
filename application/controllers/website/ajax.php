@@ -8,22 +8,23 @@ class ajax extends CI_Controller {
 		
 		$result = array();
 		if ($action == 'SubmitEmail') {
-			$mail_param = array();
-			$mail_param['To']  = html_entity_decode($array_config['admin-email']['config_content_clean']);
-			$mail_param['From']  = $_POST['email'];
-			$mail_param['Header']  = 'To: ' . html_entity_decode($array_config['admin-email']['config_content_clean']) . "\r\n";
-			$mail_param['Header'] .= 'From: ' . $_POST['email'] . "\r\n";
-			$mail_param['Subject'] = 'Penawaran Mitra Desain';
-			
-			$mail_param['Message'] = '';
+			$message = '';
 			foreach ($_POST as $key => $value) {
-				$mail_param['Message'] .= $key.' : '.$value."\n";
+				$message .= $key.' : '.$value."<br />\n";
 			}
-			SentMail($mail_param);
+			
+			$email_dest = $array_config['admin-email']['config_content_clean'];
+			$array_email_to = explode(',',  $email_dest);
+			foreach ($array_email_to as $email_to) {
+				$headers  = 'MIME-Version: 1.0' . "\r\n";
+				$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+				$headers .= 'From: ' . $_POST['email'] . "\r\n";
+				mail(trim($email_to), 'Penawaran Mitra Desain', $message, $headers);
+			}
 			
 			$param_update = array(
 				'contact_log_id' => 0,
-				'contact_log_desc' => $mail_param['Message'],
+				'contact_log_desc' => $message,
 				'contact_log_date' => date("Y-m-d")
 			);
 			$this->Contact_Log_model->update($param_update);
